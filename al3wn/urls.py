@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('fb_bot/', include(fb_bot.urls)),
+    path('fb_bot/', include('fb_bot.urls')),
 ]
