@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
 <html>
 
@@ -9,9 +10,9 @@
 	<meta name="description" content="">
 
 	{% if title%}
-		<title> Al3wn | {{ title }}</title>
+		<title> {% translate "Al3wn" %} | {{ title }}</title>
 	{% else %}
-		<title> Al3wn </title>
+		<title> {% translate "Al3wn" %} </title>
 	{% endif %}
 
 	<link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
@@ -35,8 +36,7 @@
 			<div class="container p-0">
 				<!-- Logo Area Begin -->
 				<a class="navbar-brand" href="{% url 'Home' %}">
-					<span><img src="{% static 'core/images/logo.png' %}" alt="Logo">
-						Al-Awn</span>
+					<span><img src="{% static 'core/images/logo.png' %}" alt="Logo">{% translate "Al3wn" %}</span>
 				</a>
 				<!-- Logo Area End -->
 
@@ -52,46 +52,46 @@
 					<ul class="navbar-nav ml-auto">
 						<!-- Home Button -->
 						<li class="nav-item active">
-							<a class="nav-link" href="{% url 'Home' %}">Home</a>
+							<a class="nav-link" href="{% url 'Home' %}">{% translate "Home" %}</a>
 						</li>
 
 						<!-- About Button -->
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'About' %}">About</a>
+							<a class="nav-link" href="{% url 'About' %}">{% translate "About" %}</a>
 						</li>
 
 						<!-- Price Button -->
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'Price' %}">Price</a>
+							<a class="nav-link" href="{% url 'Price' %}">{% translate "Price" %}</a>
 						</li>
 
 						<!-- Plan Dropdown -->
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">Plan</a>
+								aria-haspopup="true" aria-expanded="false">{% translate "Plan" %}</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown03">
-								<li><a class="dropdown-item" href="{% url 'Stage1' %}">Stage 1</a></li>
-								<li><a class="dropdown-item" href="{% url 'Stage2' %}">Stage 2</a></li>
+								<li><a class="dropdown-item" href="{% url 'Stage1' %}">{% translate "Stage 1" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'Stage2' %}">{% translate "Stage 2" %}</a></li>
 							</ul>
 						</li>
 
 						<!-- Speciality Dropdown -->
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">Speciality</a>
+								aria-haspopup="true" aria-expanded="false">{% translate "Speciality" %}</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown05">
-								<li><a class="dropdown-item" href="{% url 'Dev' %}">University</a></li>
-								<li><a class="dropdown-item" href="{% url 'Secondary' %}">Secondary School</a></li>
+								<li><a class="dropdown-item" href="{% url 'Dev' %}">{% translate "University" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'Secondary' %}">{% translate "Secondary School" %}</a></li>
 							</ul>
 						</li>
 
 						<!-- Contact Button -->
-						<li class="nav-item"><a class="nav-link" href="https://m.me/AL3wnPage" target="_blank">Contact</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://m.me/AL3wnPage" target="_blank">{% translate "Contact" %}</a></li>
 					</ul>
 
 					<!-- Join Us Button Begin -->
 					<form class="form-lg-inline my-2 my-md-4 ml-lg-4 text-center">
-						<a href="{% url 'Dev' %}" class="btn btn-solid-border btn-round-full">Join Us</a>
+						<a href="{% url 'Dev' %}" class="btn btn-solid-border btn-round-full">{% translate "Join Us" %}</a>
 					</form>
 					<!-- Join Us Button End -->
 				</div>
@@ -114,15 +114,14 @@
 					<div class="row justify-content-center align-items-center wow fadeIn" data-wow-duration="1s">
 						<!-- Contact Content Area Begin -->
 						<div class="col-lg-7">
-							<span class="text-color">Get in touch with us.</span>
-							<h2 class="mt-2 mb-4 mb-lg-0">After all what you saw in our world, if you want to ask any
-								questions you can contact with us. <br> Thank you.</h2>
+							<span class="text-color">{% translate "Get in touch with us." %}</span>
+							<h2 class="mt-2 mb-4 mb-lg-0">{% translate "After all what you saw in our world, if you want to ask any questions you can contact with us." %} <br> {% translate "Thank you." %}</h2>
 						</div>
 						<!-- Contact Content Area End -->
 
 						<!-- Contact Button Area Begin -->
 						<div class="col-lg-4">
-							<a href="https://m.me/AL3wnPage" target="_blank" class="btn btn-main btn-round-full float-lg-right ">Contact Us</a>
+							<a href="https://m.me/AL3wnPage" target="_blank" class="btn btn-main btn-round-full float-lg-right ">{% translate "Contact Us" %}</a>
 						</div>
 						<!-- Contact Button Area End -->
 					</div>
@@ -138,23 +137,23 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="widget">
-							<h4 class="text-capitalize mb-4">Al-Awn</h4>
+							<h4 class="text-capitalize mb-4">{% translate "Al3wn" %}</h4>
 							<ul class="list-unstyled footer-menu lh-35">
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="https://m.me/AL3wnPage" target="_blank">Support</a></li>
-								<li><a href="https://m.me/AL3wnPage" target="_blank">FAQ</a></li>
+								<li><a href="#">{% translate "Terms & Conditions" %}</a></li>
+								<li><a href="#">{% translate "Privacy Policy" %}</a></li>
+								<li><a href="https://m.me/AL3wnPage" target="_blank">{% translate "Support" %}</a></li>
+								<li><a href="https://m.me/AL3wnPage" target="_blank">{% translate "FAQ" %}</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="widget">
-							<h4 class="text-capitalize mb-4">Quick Links</h4>
+							<h4 class="text-capitalize mb-4">{% translate "Quick Links" %}</h4>
 							<ul class="list-unstyled footer-menu lh-35">
-								<li><a href="{% url 'About' %}">About</a></li>
-								<li><a href="{% url 'Price' %}">Price</a></li>
-								<li><a href="{% url 'Stage1' %}">Plan</a></li>
-								<li><a href="{% url 'Secondary' %}">Secondary School</a></li>
+								<li><a href="{% url 'About' %}">{% translate "About" %}</a></li>
+								<li><a href="{% url 'Price' %}">{% translate "Price" %}</a></li>
+								<li><a href="{% url 'Stage1' %}">{% translate "Plan" %}</a></li>
+								<li><a href="{% url 'Secondary' %}">{% translate "Secondary School" %}</a></li>
 								<!-- <li><a href="{% url 'Dev' %}">Speciality - University</a></li> -->
 							</ul>
 						</div>
@@ -164,7 +163,7 @@
 							<div class="logo mb-4">
 								<img src="{% static 'core/images/logo.png' %}" width="180px" alt="logo">
 							</div>
-							<h6><a href="mailto:al.3wn.6.0@gmail.com">Email <i class="fa fa-envelope-o" aria-hidden="true"></i> : al.3wn.6.0@gmail.com</a></h6>
+							<h6><a href="mailto:al.3wn.6.0@gmail.com">{% translate "Email" %} <i class="fa fa-envelope-o" aria-hidden="true"></i> : al.3wn.6.0@gmail.com</a></h6>
 							<h6>Mobile <i class="fa fa-phone" aria-hidden="true"></i> : <a href="tel:+201553057088">+20 155 305 7088</a></h6>
 							<h6>Whatsapp <i class="fa fa-whatsapp" aria-hidden="true"></i> : <a target="_blank" href="https://wa.me/201553057088">+20 155 305 7088</a></h6>
 							<h6>Vodafone Cash <i class="fa fa-credit-card" aria-hidden="true"></i> : +20 101 774 7223</h6>
@@ -183,9 +182,9 @@
 						</div>
 						<div class="col-lg-6 text-left text-lg-right">
 							<ul class="list-inline footer-socials">
-								<li class="list-inline-item"><a href="https://www.facebook.com/AL3wnPage/" target="_blank"><i class="fa fa-facebook mr-2"></i>Facebook</a>
+								<li class="list-inline-item"><a href="https://www.facebook.com/AL3wnPage/" target="_blank"><i class="fa fa-facebook mr-2"></i>{% translate "Facebook" %}</a>
 								</li>
-								<li class="list-inline-item"><a href="https://m.me/AL3wnPage" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i> Bot</a>
+								<li class="list-inline-item"><a href="https://m.me/AL3wnPage" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i> {% translate "Bot" %}</a>
 								</li>
 							</ul>
 						</div>
