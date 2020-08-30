@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fb_bot.apps.FbBotConfig',
+    'core.apps.CoreConfig',
+
 ]
 
 MIDDLEWARE = [
