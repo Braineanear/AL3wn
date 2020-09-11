@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fb_bot.apps.FbBotConfig',
     'core.apps.CoreConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
 
 ]
 
@@ -129,3 +131,9 @@ django_heroku.settings(locals())
 
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# User system
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# LOGIN_REDIRECT_URL = 'Home'
+
+AUTH_USER_MODEL = 'users.User'
