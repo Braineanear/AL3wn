@@ -276,8 +276,6 @@ msgid "Counselor/Co-Founder"
 msgstr "مؤسس - مستشار"
 
 #: .\templates\core\secondary.html:11
-#, fuzzy
-#| msgid "Secondary Schools"
 msgid "Secondary School Teachers"
 msgstr "مدرسين الثانوية"
 
@@ -304,8 +302,6 @@ msgid "First Year"
 msgstr "1 ث"
 
 #: .\templates\core\secondary.html:49
-#, fuzzy
-#| msgid "Secondary"
 msgid "Second Year"
 msgstr "2 ث"
 
