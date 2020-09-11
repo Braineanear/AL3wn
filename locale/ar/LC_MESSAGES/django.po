@@ -277,11 +277,11 @@ msgstr "مؤسس - مستشار"
 
 #: .\templates\core\secondary.html:11
 msgid "Secondary School Teachers"
-msgstr "مدرسين الثانوية"
+msgstr "مدرسون المرحلة الثانوية"
 
 #: .\templates\core\secondary.html:22
 msgid "Teachers"
-msgstr "المدرسين"
+msgstr "المدرسون"
 
 #: .\templates\core\secondary.html:39
 msgid "Deutsch Akademie"
