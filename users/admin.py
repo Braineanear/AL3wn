@@ -3,7 +3,9 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import ugettext_lazy as _
 
-
+# Removing Group
+from django.contrib.auth.models import Group
+admin.site.unregister(Group)
 
 User = get_user_model()
 
