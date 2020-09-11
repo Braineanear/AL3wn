@@ -1,4 +1,5 @@
 {% extends "core/base.html" %}
+{% load i18n %}
 {% load static %}
   {% block content %}
     <!-- Start Section Begin -->
@@ -6,8 +7,8 @@
       <div class="container pt-md-5">
         <div class="row pt-md-5">
           <div class="col-12 pt-md-5">
-            <h1 class="d-block mb-3 text-white text-capitalize">AL3WN</h1>
-            <p class="animated fadeInUp">Secondary School Teachers<br></p>
+            <h1 class="d-block mb-3 text-white text-capitalize">{% translate "AL3WN" %}</h1>
+            <p class="animated fadeInUp">{% translate "Secondary School Teachers" %}<br></p>
           </div>
         </div>
       </div>
@@ -18,7 +19,7 @@
     <section class="card-list row px-sm-5">
       <!-- Card List Head Begin -->
       <div class="col-12 text-center p-5 wow fadeIn" data-wow-duration="1s">
-        <h1>Teachers</h1>
+        <h1>{% translate "Teachers" %}</h1>
       </div>
       <!-- Card List Head End -->
 
@@ -28,33 +29,32 @@
           <!-- Image Area Begin -->
           <div class="card-img" style="background-image: url({% static 'core/images/teach.jpg' %});">
             <!-- Teacher Status -->
-            <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">Premium</span> </div>
+            <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">{% translate "silver" %}</span> </div>
           </div>
           <!-- Image Area End -->
 
           <!-- Content Area Begin -->
           <div class="card-content">
             <!-- Teacher Name -->
-            <h4 class="card-title">Teacher Name</h4>
+            <h4 class="card-title">{% translate "Deutsch Akademie" %}</h4>
             
             <!-- Teacher Location -->
-            <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> Benha , Qalubyia</p>
+            <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {% translate "Benha , Qalubyia" %}</p>
             
             <!-- Teacher Description -->
-            <p class="card-description">My object is to create and excellent learning environment and to help each
-              student to improve their English and French abilities.</p>
+            <p class="card-description">{% translate "My object is to create and excellent learning environment and to help each student to improve their German (Deutsch) abilities." %}</p>
             
               <!-- Start Button -->
-            <a href="#" class="join-teacher btn btn-solid-border btn-round-full">First Year</a>
-            <a href="#" class="join-teacher btn btn-solid-border btn-round-full">Second Year</a>
-            <a href="#" class="join-teacher btn btn-solid-border btn-round-full">Third Year</a>
+            <a href="#" class="join-teacher btn btn-solid-border btn-round-full">{% translate "First Year" %}</a>
+            <a href="#" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Second Year" %}</a>
+            <a href="#" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Third Year" %}</a>
           </div>
           <!-- Content Area End -->
         </div>
       </div>
       <!-- Card End -->
-
-      <!-- Pagination Begin -->
+<!-- 
+      Pagination Begin
       <div class="col-12 wow fadeIn" data-wow-duration="1s">
         <ul class="pagination justify-content-center">
           <li class="page-item">
@@ -68,7 +68,7 @@
           </li>
         </ul>
       </div>
-      <!-- Pagination End -->
+      Pagination End -->
     </section>
     <!-- Card List Section End -->
     {% endblock content %}

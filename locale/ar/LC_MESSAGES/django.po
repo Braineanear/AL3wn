@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-11 17:19+0200\n"
+"POT-Creation-Date: 2020-09-11 18:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,7 +134,7 @@ msgstr "فيس بوك"
 msgid "Bot"
 msgstr "بوت"
 
-#: .\templates\core\index.html:10
+#: .\templates\core\index.html:10 .\templates\core\secondary.html:10
 msgid "AL3WN"
 msgstr "العون"
 
@@ -162,7 +162,7 @@ msgstr "ماذا نقدم؟"
 msgid "We provide three packages contain our service and programs"
 msgstr "نقدم ثلاث مجموعات تحوى خدماتنا وبرامجنا"
 
-#: .\templates\core\index.html:40
+#: .\templates\core\index.html:40 .\templates\core\secondary.html:32
 msgid "silver"
 msgstr "فضى"
 
@@ -275,6 +275,44 @@ msgstr "عبد الرحمن محمد نبيل"
 msgid "Counselor/Co-Founder"
 msgstr "مؤسس - مستشار"
 
+#: .\templates\core\secondary.html:11
+#, fuzzy
+#| msgid "Secondary Schools"
+msgid "Secondary School Teachers"
+msgstr "مدرسين الثانوية"
+
+#: .\templates\core\secondary.html:22
+msgid "Teachers"
+msgstr "المدرسين"
+
+#: .\templates\core\secondary.html:39
+msgid "Deutsch Akademie"
+msgstr "الأكاديمية الألمانية"
+
+#: .\templates\core\secondary.html:42
+msgid "Benha , Qalubyia"
+msgstr "بنها , القليوبية"
+
+#: .\templates\core\secondary.html:45
+msgid ""
+"My object is to create and excellent learning environment and to help each "
+"student to improve their German (Deutsch) abilities."
+msgstr ".معانا هتبدأ من الاول كورس تأسيس للثانويه العامه اللحق الفرصه وابدأ من الاول"
+
+#: .\templates\core\secondary.html:48
+msgid "First Year"
+msgstr "1 ث"
+
+#: .\templates\core\secondary.html:49
+#, fuzzy
+#| msgid "Secondary"
+msgid "Second Year"
+msgstr "2 ث"
+
+#: .\templates\core\secondary.html:50
+msgid "Third Year"
+msgstr "3 ث"
+
 #: .\templates\users\register.html:14
 msgid "Sign Up"
 msgstr "الانضمام"
@@ -287,15 +325,15 @@ msgstr "انا املك حساب"
 msgid "Sign In"
 msgstr "تسجيل الدخول"
 
-#: .\users\admin.py:16 .\users\admin.py:27
+#: .\users\admin.py:18 .\users\admin.py:29
 msgid "Permissions"
 msgstr "الصلحيات"
 
-#: .\users\admin.py:21
+#: .\users\admin.py:23
 msgid "Info"
 msgstr "معلومات"
 
-#: .\users\admin.py:24
+#: .\users\admin.py:26
 msgid "Dates"
 msgstr "تواريخ"
 
