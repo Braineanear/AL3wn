@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-30 08:10+0200\n"
+"POT-Creation-Date: 2020-09-11 17:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,267 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\core\templates\core\base.html:12 .\core\templates\core\base.html:14
-#: .\core\templates\core\base.html:38
-msgid "Al3wn"
-msgstr "العون"
-
-#: .\core\templates\core\base.html:54 .\core\views.py:6
+#: .\core\views.py:6 .\templates\core\base.html:58
 msgid "Home"
 msgstr "الرئيسية"
-
-#: .\core\templates\core\base.html:59 .\core\templates\core\base.html:152
-msgid "About"
-msgstr "عنا"
-
-#: .\core\templates\core\base.html:64 .\core\templates\core\base.html:153
-msgid "Price"
-msgstr "السعر"
-
-#: .\core\templates\core\base.html:70 .\core\templates\core\base.html:154
-msgid "Plan"
-msgstr "الخطة"
-
-#: .\core\templates\core\base.html:72 .\core\views.py:29
-msgid "Stage 1"
-msgstr "المرحلة الأولى"
-
-#: .\core\templates\core\base.html:73 .\core\views.py:33
-msgid "Stage 2"
-msgstr "المرحلة الثانية"
-
-#: .\core\templates\core\base.html:80
-msgid "Speciality"
-msgstr "تخصص"
-
-#: .\core\templates\core\base.html:82
-msgid "University"
-msgstr "الجامعة"
-
-#: .\core\templates\core\base.html:83 .\core\templates\core\base.html:155
-msgid "Secondary School"
-msgstr "المدرسة الثانوية"
-
-#: .\core\templates\core\base.html:88
-msgid "Contact"
-msgstr "تواصل"
-
-#: .\core\templates\core\base.html:93
-msgid "Join Us"
-msgstr "انضم لنا"
-
-#: .\core\templates\core\base.html:116
-msgid "Get in touch with us."
-msgstr "تواصل معانا"
-
-#: .\core\templates\core\base.html:117
-msgid ""
-"After all what you saw in our world, if you want to ask any questions you "
-"can contact with us."
-msgstr "بعد كل ما رأيته هنا اذا اردت ان تسأل اى اسالة فمرحب بك ان تتواصل معنا"
-
-#: .\core\templates\core\base.html:117
-msgid "Thank you."
-msgstr "شكرا"
-
-#: .\core\templates\core\base.html:123
-msgid "Contact Us"
-msgstr "للتواصل معنا"
-
-#: .\core\templates\core\base.html:141
-msgid "Terms & Conditions"
-msgstr "الأحكام والشروط"
-
-#: .\core\templates\core\base.html:142
-msgid "Privacy Policy"
-msgstr "سياسة الخصوصية"
-
-#: .\core\templates\core\base.html:143
-msgid "Support"
-msgstr "الدعم"
-
-#: .\core\templates\core\base.html:144
-msgid "FAQ"
-msgstr "اسأله تتكرر"
-
-#: .\core\templates\core\base.html:150
-msgid "Quick Links"
-msgstr "لينكات سريعة"
-
-#: .\core\templates\core\base.html:165
-msgid "Email"
-msgstr "ايميل"
-
-#: .\core\templates\core\base.html:166
-msgid "Mobile"
-msgstr "رقم الهاتف"
-
-#: .\core\templates\core\base.html:167
-msgid "Whatsapp"
-msgstr "واتس"
-
-#: .\core\templates\core\base.html:168
-msgid "Vodafone Cash"
-msgstr "فودافون كاش"
-
-#: .\core\templates\core\base.html:179
-msgid "Copyright"
-msgstr "حقوق النشر"
-
-#: .\core\templates\core\base.html:179
-msgid "Reserved to"
-msgstr "محفوظه ل"
-
-#: .\core\templates\core\base.html:179
-msgid "Made By"
-msgstr "صنع مع"
-
-#: .\core\templates\core\base.html:184
-msgid "Facebook"
-msgstr "فيس بوك"
-
-#: .\core\templates\core\base.html:186
-msgid "Bot"
-msgstr "بوت"
-
-#: .\core\templates\core\index.html:10
-msgid "AL3WN"
-msgstr "العون"
-
-#: .\core\templates\core\index.html:11
-msgid "Invitation for all of us to learn."
-msgstr "دعوة لنا كلنا أن نتعلم"
-
-#: .\core\templates\core\index.html:11
-msgid "Learning with al-3wn is"
-msgstr "التعلم مع العون"
-
-#: .\core\templates\core\index.html:11
-msgid "simple,enjoyable,meet your needs."
-msgstr "سهل,ممتع,يوافق احتياجاتك."
-
-#: .\core\templates\core\index.html:14
-msgid "Join Now"
-msgstr "انضم الان"
-
-#: .\core\templates\core\index.html:28
-msgid "What we provide?"
-msgstr "ماذا نقدم؟"
-
-#: .\core\templates\core\index.html:29
-msgid "We provide three packages contain our service and programs"
-msgstr "نقدم ثلاث مجموعات تحوى خدماتنا وبرامجنا"
-
-#: .\core\templates\core\index.html:40
-msgid "silver"
-msgstr "فضى"
-
-#: .\core\templates\core\index.html:41
-msgid "Automate your exams instead of paper based we provide an online exams."
-msgstr "اجعل امتحانتك تصحح تلقائيا بدلا من الامتحانات الورقية فنحن نقدم امتحانات على النت"
-
-#: .\core\templates\core\index.html:50
-msgid "Gold"
-msgstr "ذهبى"
-
-#: .\core\templates\core\index.html:51
-msgid "Monitor your students degrees and have a Progress Chart for them."
-msgstr "تابع درجات تلاميذك مع توضيحها باشكال هندسية"
-
-#: .\core\templates\core\index.html:60
-msgid "Diamond"
-msgstr "ماسى"
-
-#: .\core\templates\core\index.html:61
-msgid "Keep in touch with the parents as they can see how their son is doing."
-msgstr "تواصل باستمرار مع اولياء الامور لمتابعة مستوى اولادهم"
-
-#: .\core\templates\core\index.html:77
-msgid "Secondary Schools"
-msgstr "المدارس الثانوية"
-
-#: .\core\templates\core\index.html:79
-msgid ""
-"If you are in the secondary school, this section could not help you more."
-msgstr "اذا كنت فى المرحلة الثانوية فهذا الجزء لك"
-
-#: .\core\templates\core\index.html:79
-msgid "With Al3wn we provide all the necessary assistance for you."
-msgstr "فى العون نقدم لك كل العون اللازم."
-
-#: .\core\templates\core\index.html:80 .\core\templates\core\index.html:110
-msgid "Learn More"
-msgstr "اعرف اكثر"
-
-#: .\core\templates\core\index.html:106
-msgid "What our plan?"
-msgstr "ماهى خططنا؟"
-
-#: .\core\templates\core\index.html:108
-msgid "The Plan"
-msgstr "الخطة"
-
-#: .\core\templates\core\index.html:109
-msgid ""
-"Our plan is a group of stages that shows the current stage and when it is "
-"completed the new stage appears."
-msgstr "خطتنا تنقسم الى مراحل موضحين المرحلة الحالية واكتمالها"
-
-#: .\core\templates\core\index.html:109
-msgid " if you are curious to know more about us, our team and our plan."
-msgstr "اذا كنت تريد ان تعرف اكثر عن فريق العمل وخططنا"
-
-#: .\core\templates\core\index.html:124
-msgid "Our Incredible Team"
-msgstr "فريق عملنا الرائع"
-
-#: .\core\templates\core\index.html:148
-msgid "Ahmed M. Abo 6"
-msgstr "أحمد أبو 6"
-
-#: .\core\templates\core\index.html:149
-msgid "Founder/Chairman/IT Head"
-msgstr "مؤسس - رئيس"
-
-#: .\core\templates\core\index.html:175
-msgid "Fatma Ahmed Hassan"
-msgstr "فاطمة أحمد حسن"
-
-#: .\core\templates\core\index.html:176
-msgid "HR Head"
-msgstr "رئيس قسم الموادر البشرية"
-
-#: .\core\templates\core\index.html:202
-msgid "Mohammed Ahmed Saber"
-msgstr "محمد أحمد صابر"
-
-#: .\core\templates\core\index.html:203
-msgid "Co-Founder / Marketing (MGD) Head"
-msgstr "مؤسس - رئيس قسم الدعايا"
-
-#: .\core\templates\core\index.html:228
-msgid "Asmaa Ragab"
-msgstr "أسماء رجب"
-
-#: .\core\templates\core\index.html:229
-msgid "TD Head (Treasury Department)"
-msgstr "رئيس قسم الخزينة"
-
-#: .\core\templates\core\index.html:256
-msgid "Mostafa Mohamed Marie"
-msgstr "مصطفى محمد مرعى"
-
-#: .\core\templates\core\index.html:257
-msgid "Co-Founder /Specialties Head"
-msgstr "مؤسس - رئيس قسم التخصصات"
-
-#: .\core\templates\core\index.html:281
-msgid "Abdelrahman M. Nabil"
-msgstr "عبد الرحمن محمد نبيل"
-
-#: .\core\templates\core\index.html:282
-msgid "Counselor/Co-Founder"
-msgstr "مؤسس - مستشار"
 
 #: .\core\views.py:10
 msgid "About Us"
@@ -296,3 +38,325 @@ msgstr "اللوحة الرئيسية"
 #: .\core\views.py:25
 msgid "Secondary"
 msgstr "الثانوية"
+
+#: .\core\views.py:29 .\templates\core\base.html:76
+msgid "Stage 1"
+msgstr "المرحلة الأولى"
+
+#: .\core\views.py:33 .\templates\core\base.html:77
+msgid "Stage 2"
+msgstr "المرحلة الثانية"
+
+#: .\templates\core\base.html:13 .\templates\core\base.html:15
+#: .\templates\core\base.html:42 .\templates\core\base.html:159
+msgid "Al3wn"
+msgstr "العون"
+
+#: .\templates\core\base.html:63 .\templates\core\base.html:172
+msgid "About"
+msgstr "عنا"
+
+#: .\templates\core\base.html:68 .\templates\core\base.html:173
+msgid "Price"
+msgstr "السعر"
+
+#: .\templates\core\base.html:74 .\templates\core\base.html:174
+msgid "Plan"
+msgstr "الخطة"
+
+#: .\templates\core\base.html:84
+msgid "Speciality"
+msgstr "تخصص"
+
+#: .\templates\core\base.html:86
+msgid "University"
+msgstr "الجامعة"
+
+#: .\templates\core\base.html:87 .\templates\core\base.html:175
+msgid "Secondary School"
+msgstr "المدرسة الثانوية"
+
+#: .\templates\core\base.html:92
+msgid "Contact"
+msgstr "تواصل"
+
+#: .\templates\core\base.html:97
+msgid "Join Us"
+msgstr "انضم لنا"
+
+#: .\templates\core\base.html:136
+msgid "Get in touch with us."
+msgstr "تواصل معانا"
+
+#: .\templates\core\base.html:137
+msgid ""
+"After all what you saw in our world, if you want to ask any questions you "
+"can contact with us."
+msgstr "بعد كل ما رأيته هنا اذا اردت ان تسأل اى اسالة فمرحب بك ان تتواصل معنا"
+
+#: .\templates\core\base.html:137
+msgid "Thank you."
+msgstr "شكرا"
+
+#: .\templates\core\base.html:143
+msgid "Contact Us"
+msgstr "للتواصل معنا"
+
+#: .\templates\core\base.html:161
+msgid "Terms & Conditions"
+msgstr "الأحكام والشروط"
+
+#: .\templates\core\base.html:162
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+#: .\templates\core\base.html:163
+msgid "Support"
+msgstr "الدعم"
+
+#: .\templates\core\base.html:164
+msgid "FAQ"
+msgstr "اسأله تتكرر"
+
+#: .\templates\core\base.html:170
+msgid "Quick Links"
+msgstr "لينكات سريعة"
+
+#: .\templates\core\base.html:185
+msgid "Email"
+msgstr "ايميل"
+
+#: .\templates\core\base.html:204
+msgid "Facebook"
+msgstr "فيس بوك"
+
+#: .\templates\core\base.html:206
+msgid "Bot"
+msgstr "بوت"
+
+#: .\templates\core\index.html:10
+msgid "AL3WN"
+msgstr "العون"
+
+#: .\templates\core\index.html:11
+msgid "Invitation for all of us to learn."
+msgstr "دعوة لنا كلنا أن نتعلم"
+
+#: .\templates\core\index.html:11
+msgid "Learning with al-3wn is"
+msgstr "التعلم مع العون"
+
+#: .\templates\core\index.html:11
+msgid "simple,enjoyable,meet your needs."
+msgstr "سهل,ممتع,يوافق احتياجاتك."
+
+#: .\templates\core\index.html:14 .\templates\users\register.html:12
+msgid "Join Now"
+msgstr "انضم الان"
+
+#: .\templates\core\index.html:28
+msgid "What we provide?"
+msgstr "ماذا نقدم؟"
+
+#: .\templates\core\index.html:29
+msgid "We provide three packages contain our service and programs"
+msgstr "نقدم ثلاث مجموعات تحوى خدماتنا وبرامجنا"
+
+#: .\templates\core\index.html:40
+msgid "silver"
+msgstr "فضى"
+
+#: .\templates\core\index.html:41
+msgid "Automate your exams instead of paper based we provide an online exams."
+msgstr ""
+"اجعل امتحانتك تصحح تلقائيا بدلا من الامتحانات الورقية فنحن نقدم امتحانات على "
+"النت"
+
+#: .\templates\core\index.html:50
+msgid "Gold"
+msgstr "ذهبى"
+
+#: .\templates\core\index.html:51
+msgid "Monitor your students degrees and have a Progress Chart for them."
+msgstr "تابع درجات تلاميذك مع توضيحها باشكال هندسية"
+
+#: .\templates\core\index.html:60
+msgid "Diamond"
+msgstr "الأفضل"
+
+#: .\templates\core\index.html:61
+msgid "Keep in touch with the parents as they can see how their son is doing."
+msgstr "تواصل باستمرار مع اولياء الامور لمتابعة مستوى اولادهم"
+
+#: .\templates\core\index.html:77
+msgid "Secondary Schools"
+msgstr "المدارس الثانوية"
+
+#: .\templates\core\index.html:79
+msgid ""
+"If you are in the secondary school, this section could not help you more."
+msgstr "اذا كنت فى المرحلة الثانوية فهذا الجزء لك"
+
+#: .\templates\core\index.html:79
+msgid "With Al3wn we provide all the necessary assistance for you."
+msgstr "فى العون نقدم لك كل العون اللازم."
+
+#: .\templates\core\index.html:80 .\templates\core\index.html:110
+msgid "Learn More"
+msgstr "اعرف اكثر"
+
+#: .\templates\core\index.html:106
+msgid "What our plan?"
+msgstr "ماهى خططنا؟"
+
+#: .\templates\core\index.html:108
+msgid "The Plan"
+msgstr "الخطة"
+
+#: .\templates\core\index.html:109
+msgid ""
+"Our plan is a group of stages that shows the current stage and when it is "
+"completed the new stage appears."
+msgstr "خطتنا تنقسم الى مراحل موضحين المرحلة الحالية واكتمالها"
+
+#: .\templates\core\index.html:109
+msgid " if you are curious to know more about us, our team and our plan."
+msgstr "اذا كنت تريد ان تعرف اكثر عن فريق العمل وخططنا"
+
+#: .\templates\core\index.html:124
+msgid "Our Incredible Team"
+msgstr "فريق عملنا الرائع"
+
+#: .\templates\core\index.html:148
+msgid "Ahmed M. Abo 6"
+msgstr "أحمد أبو 6"
+
+#: .\templates\core\index.html:149
+msgid "Founder/Chairman/IT Head"
+msgstr "مؤسس - رئيس"
+
+#: .\templates\core\index.html:175
+msgid "Fatma Ahmed Hassan"
+msgstr "فاطمة أحمد حسن"
+
+#: .\templates\core\index.html:176
+msgid "HR Head"
+msgstr "رئيس قسم الموادر البشرية"
+
+#: .\templates\core\index.html:202
+msgid "Mohammed Ahmed Saber"
+msgstr "محمد أحمد صابر"
+
+#: .\templates\core\index.html:203
+msgid "Co-Founder / Marketing (MGD) Head"
+msgstr "مؤسس - رئيس قسم الدعايا"
+
+#: .\templates\core\index.html:228
+msgid "Asmaa Ragab"
+msgstr "أسماء رجب"
+
+#: .\templates\core\index.html:229
+msgid "TD Head (Treasury Department)"
+msgstr "رئيس قسم الخزينة"
+
+#: .\templates\core\index.html:256
+msgid "Mostafa Mohamed Marie"
+msgstr "مصطفى محمد مرعى"
+
+#: .\templates\core\index.html:257
+msgid "Co-Founder /Specialties Head"
+msgstr "مؤسس - رئيس قسم التخصصات"
+
+#: .\templates\core\index.html:281
+msgid "Abdelrahman M. Nabil"
+msgstr "عبد الرحمن محمد نبيل"
+
+#: .\templates\core\index.html:282
+msgid "Counselor/Co-Founder"
+msgstr "مؤسس - مستشار"
+
+#: .\templates\users\register.html:14
+msgid "Sign Up"
+msgstr "الانضمام"
+
+#: .\templates\users\register.html:17
+msgid "Alerady have an Acoount?"
+msgstr "انا املك حساب"
+
+#: .\templates\users\register.html:17
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#: .\users\admin.py:16 .\users\admin.py:27
+msgid "Permissions"
+msgstr "الصلحيات"
+
+#: .\users\admin.py:21
+msgid "Info"
+msgstr "معلومات"
+
+#: .\users\admin.py:24
+msgid "Dates"
+msgstr "تواريخ"
+
+#: .\users\forms.py:7
+msgid "Male"
+msgstr "ذكر"
+
+#: .\users\forms.py:8
+msgid "Female"
+msgstr "انثى"
+
+#: .\users\forms.py:20 .\users\models.py:19
+msgid "region"
+msgstr "المنطقة"
+
+#: .\users\forms.py:21 .\users\models.py:18
+msgid "date_of_birth"
+msgstr "تاريخ الميلاد"
+
+#: .\users\forms.py:22 .\users\models.py:20
+msgid "phone_number"
+msgstr "رقم الهاتف"
+
+#: .\users\forms.py:23 .\users\models.py:21
+msgid "national_id"
+msgstr "الرقم القومى"
+
+#: .\users\forms.py:24 .\users\models.py:22
+msgid "gender"
+msgstr "النوع"
+
+#: .\users\forms.py:25 .\users\models.py:23
+msgid "year"
+msgstr "السنة"
+
+#: .\users\models.py:24
+msgid "is_student"
+msgstr "طالب"
+
+#: .\users\models.py:25
+msgid "is_publisher"
+msgstr "ناشر"
+
+#: .\users\views.py:18
+msgid "Register"
+msgstr "انضمام"
+
+#~ msgid "Mobile"
+#~ msgstr "رقم الهاتف"
+
+#~ msgid "Whatsapp"
+#~ msgstr "واتس"
+
+#~ msgid "Vodafone Cash"
+#~ msgstr "فودافون كاش"
+
+#~ msgid "Copyright"
+#~ msgstr "حقوق النشر"
+
+#~ msgid "Reserved to"
+#~ msgstr "محفوظه ل"
+
+#~ msgid "Made By"
+#~ msgstr "صنع مع"
