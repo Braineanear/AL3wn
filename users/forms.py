@@ -18,9 +18,14 @@ User = get_user_model()
 
 class UserResgiterForm(UserCreationForm):
 	region = forms.CharField(label=_('region'))
-	date_of_birth = forms.DateField(label=_('date_of_birth'))
-	phone_number = forms.FloatField(label=_('phone_number'))
-	national_id = forms.FloatField(label=_('national_id'))
+	date_of_birth = forms.DateField(label=_('date_of_birth'),
+		 widget=forms.TextInput(attrs={'type': 'date'}))       
+	phone_number = forms.FloatField(label=_('phone_number'),
+	widget=forms.TextInput(attrs={'placeholder':'01553057088'}),
+	max_value=1599999999, min_value=101111111)
+	national_id = forms.FloatField(label=_('national_id'),
+	widget=forms.TextInput(attrs={'placeholder':'30001011801881'}),
+	max_value=99999999999999, min_value=10000000000000)
 	gender = forms.ChoiceField(label=_('gender'), choices=GENDER_CHOICE)
 	year = forms.ChoiceField(label=_('year'), choices=SCHOOL_YEAR)
 
