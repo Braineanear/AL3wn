@@ -10,9 +10,9 @@
 	<meta name="description" content="">
 
 	{% if title%}
-		<title> {% translate "Al3wn" %} || {{ title }}</title>
+		<title>{{ title }} || {% translate "Al3wn" %}</title>
 	{% else %}
-		<title> {% translate "Al3wn" %} </title>
+		<title>{% translate "Al3wn" %}</title>
 	{% endif %}
 
 	<link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
@@ -94,7 +94,7 @@
 
 					<!-- Join Us Button Begin -->
 					<form class="form-lg-inline my-2 my-md-4 ml-lg-4 text-center">
-						<a href="{% url 'Dev' %}" class="btn btn-solid-border btn-round-full">{% translate "Join Us" %}</a>
+						<a href="{% url 'Register' %}" class="btn btn-solid-border btn-round-full">{% translate "Join Us" %}</a>
 					</form>
 					<!-- Join Us Button End -->
 				</div>
@@ -107,6 +107,22 @@
 
 	<!-- Main Wrapper Begin -->
 	<div class="main-wrapper">
+		
+		<!-- messages Begin -->
+		{% if messages %}
+		<br><br><br><br><br>
+		<section>
+        	{% for message in messages %}
+        		<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          			{{ message }}
+          			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            			<span aria-hidden="true">&times;</span>
+          			</button>
+        		</div>
+        	{% endfor %}
+        </section>
+    	{% endif %}
+    	<!-- messages End -->
 
 		{% block content %}
 		{% endblock content %}
