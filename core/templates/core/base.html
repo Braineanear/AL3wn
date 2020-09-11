@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 
 	{% if title%}
-		<title> {% translate "Al3wn" %} | {{ title }}</title>
+		<title> {% translate "Al3wn" %} || {{ title }}</title>
 	{% else %}
 		<title> {% translate "Al3wn" %} </title>
 	{% endif %}
@@ -60,12 +60,12 @@
 
 						<!-- About Button -->
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'About' %}">{% translate "About" %}</a>
+							<a class="nav-link" href="{% url 'Dev' %}">{% translate "About" %}</a>
 						</li>
 
 						<!-- Price Button -->
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'Price' %}">{% translate "Price" %}</a>
+							<a class="nav-link" href="{% url 'Dev' %}">{% translate "Price" %}</a>
 						</li>
 
 						<!-- Plan Dropdown -->
@@ -73,8 +73,8 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">{% translate "Plan" %}</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown03">
-								<li><a class="dropdown-item" href="{% url 'Stage1' %}">{% translate "Stage 1" %}</a></li>
-								<li><a class="dropdown-item" href="{% url 'Stage2' %}">{% translate "Stage 2" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'Dev' %}">{% translate "Stage 1" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'Dev' %}">{% translate "Stage 2" %}</a></li>
 							</ul>
 						</li>
 
@@ -142,8 +142,8 @@
 						<div class="widget">
 							<h4 class="text-capitalize mb-4">{% translate "Al3wn" %}</h4>
 							<ul class="list-unstyled footer-menu lh-35">
-								<li><a href="#">{% translate "Terms & Conditions" %}</a></li>
-								<li><a href="#">{% translate "Privacy Policy" %}</a></li>
+								<li><a href="{% url 'Dev' %}">{% translate "Terms & Conditions" %}</a></li>
+								<li><a href="{% url 'Dev' %}">{% translate "Privacy Policy" %}</a></li>
 								<li><a href="https://m.me/AL3wnPage" target="_blank">{% translate "Support" %}</a></li>
 								<li><a href="https://m.me/AL3wnPage" target="_blank">{% translate "FAQ" %}</a></li>
 							</ul>
@@ -153,9 +153,9 @@
 						<div class="widget">
 							<h4 class="text-capitalize mb-4">{% translate "Quick Links" %}</h4>
 							<ul class="list-unstyled footer-menu lh-35">
-								<li><a href="{% url 'About' %}">{% translate "About" %}</a></li>
-								<li><a href="{% url 'Price' %}">{% translate "Price" %}</a></li>
-								<li><a href="{% url 'Stage1' %}">{% translate "Plan" %}</a></li>
+								<li><a href="{% url 'Dev' %}">{% translate "About" %}</a></li>
+								<li><a href="{% url 'Dev' %}">{% translate "Price" %}</a></li>
+								<li><a href="{% url 'Dev' %}">{% translate "Plan" %}</a></li>
 								<li><a href="{% url 'Secondary' %}">{% translate "Secondary School" %}</a></li>
 								<!-- <li><a href="{% url 'Dev' %}">Speciality - University</a></li> -->
 							</ul>
