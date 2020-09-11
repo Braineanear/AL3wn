@@ -1,1 +1,1 @@
-web:gunicorn al3wn.wsgi
+web: gunicorn al3wn.wsgi
