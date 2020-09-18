@@ -34,7 +34,7 @@ class UserAdmin(UserAdmin):
     list_display = ['username', 'gender', 'year', 'is_student', 'is_publisher']
     search_fields = ('username',)
     ordering = ('username',)
-    list_filter = ('year', 'region',)
+    list_filter = ('gender', 'year', 'region',)
 
 
 admin.site.register(User, UserAdmin)
