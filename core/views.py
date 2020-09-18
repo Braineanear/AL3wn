@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
 
 
@@ -32,3 +33,19 @@ def stage1(request):
 def stage2(request):
 	context = {'title' : _('Stage 2')}
 	return render (request, 'core/stage2.html', context)
+
+# Deutsch Akademie
+@login_required
+def first_shady(request):
+	context = {'title' : _('First Grade')}
+	return render(request, 'deutsch_akademie/first.html', context)
+
+@login_required
+def second_shady(request):
+	context = {'title' : _('Second Grade')}
+	return render(request, 'deutsch_akademie/second.html', context)
+
+@login_required
+def third_shady(request):
+	context = {'title' : _('third Grade')}
+	return render(request, 'deutsch_akademie/third.html', context)

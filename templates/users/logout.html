@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<section class="intro">
+	<div class="container">
+      <section class="mb-4">
+        <div class="row wow fadeIn">
+          <div class='col-6 offset-3'>
+            <br>
+            <h1>{% trans "Sign Out" %}</h1>
+
+            <p>{% trans 'You have signed out' %}</p>
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <br>
+</section>
+{% endblock content %}
