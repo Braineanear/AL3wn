@@ -31,7 +31,7 @@ class UserAdmin(UserAdmin):
         })
 
     )
-    list_display = ['username', 'gender', 'year', 'is_student', 'is_publisher']
+    list_display = ['username', 'gender', 'year', 'national_id']
     search_fields = ('username','first_name', 'last_name',)
     ordering = ('username',)
     list_filter = ('gender', 'year', 'region',)
