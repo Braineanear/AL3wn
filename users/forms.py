@@ -17,17 +17,17 @@ SCHOOL_YEAR = (
 User = get_user_model()
 
 class UserResgiterForm(UserCreationForm):
-	region = forms.CharField(label=_('region'))
-	date_of_birth = forms.DateField(label=_('date_of_birth'),
+	region = forms.CharField(label=_('Region'))
+	date_of_birth = forms.DateField(label=_('Date of Birth'),
 		 widget=forms.TextInput(attrs={'type': 'date'}))       
-	phone_number = forms.FloatField(label=_('phone_number'),
+	phone_number = forms.FloatField(label=_('Phone Number'),
 	widget=forms.TextInput(attrs={'placeholder':'ex: 01553057088'}),
 	max_value=1599999999, min_value=101111111)
-	national_id = forms.FloatField(label=_('national_id'),
+	national_id = forms.FloatField(label=_('National ID'),
 	widget=forms.TextInput(attrs={'placeholder':'ex: 30001011801881'}),
 	max_value=99999999999999, min_value=10000000000000)
-	gender = forms.ChoiceField(label=_('gender'), choices=GENDER_CHOICE)
-	year = forms.ChoiceField(label=_('year'), choices=SCHOOL_YEAR)
+	gender = forms.ChoiceField(label=_('Gender'), choices=GENDER_CHOICE)
+	year = forms.ChoiceField(label=_('Grade'), choices=SCHOOL_YEAR)
 
 	class Meta:
 		model = User
