@@ -12,6 +12,9 @@
 				<legend class="border-bottom mb-4">{% translate "Log In" %}</legend>
 				{{ form|crispy }}
 				<button class="btn btn-outline-info" type="submit">{% translate "Log In" %}</button>
+				<small class='text-muted ml-2'>
+					<a href="{% url 'Password Reset' %}">{% translate "Forget Password" %}?</a>
+				</small>
 			</fieldset>
 			<div class="border-top pt-3">
 				<small class="text-muted">{% translate "Do Not have an Acoount?" %} <a class="ml-2" href="{% url 'Register' %}">{% translate "Sign Up" %}</a></small>

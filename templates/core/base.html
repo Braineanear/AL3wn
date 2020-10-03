@@ -95,6 +95,7 @@
 					<!-- Buttons Begin -->
 					<form class="form-lg-inline my-2 my-md-4 ml-lg-4 text-center">
 						{% if user.is_authenticated %}
+							<a href="{% url 'Profile' %}" class="btn btn-solid-border btn-round-full">{% translate "Profile" %}</a>
 							<a href="{% url 'Logout' %}" class="btn btn-solid-border btn-round-full">{% translate "logout" %}</a>
 						{% else %}
 							<a href="{% url 'Login' %}" class="btn btn-solid-border btn-round-full">{% translate "login" %}</a>

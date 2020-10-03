@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import ugettext_lazy as _
 
+from .models import Profile
 # Removing Group
 from django.contrib.auth.models import Group
 admin.site.unregister(Group)
@@ -38,3 +39,4 @@ class UserAdmin(UserAdmin):
 
 
 admin.site.register(User, UserAdmin)
+admin.site.register(Profile)
