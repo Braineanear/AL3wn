@@ -30,11 +30,13 @@ class UserResgiterForm(UserCreationForm):
 	max_value=99999999999999, min_value=10000000000000)
 	gender = forms.ChoiceField(label=_('Gender'), choices=GENDER_CHOICE)
 	year = forms.ChoiceField(label=_('Grade'), choices=SCHOOL_YEAR)
-	email = forms.EmailField()
+	email = forms.EmailField(label=_('E-mail'))
+	last_name = forms.CharField(label=_('Last Name'))
+	first_name = forms.CharField(label=_('First Name'))
 
 	class Meta:
 		model = User
-		fields = ['username', 'region', 'email', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'year', 'password1', 'password2']
+		fields = ['first_name', 'last_name' ,'username', 'region', 'email', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'year', 'password1', 'password2']
 
 
 
@@ -49,10 +51,12 @@ class UserUpdateForm(forms.ModelForm):
 	gender = forms.ChoiceField(label=_('Gender'), choices=GENDER_CHOICE)
 	year = forms.ChoiceField(label=_('Grade'), choices=SCHOOL_YEAR)
 	email = forms.EmailField()
+	last_name = forms.CharField(label=_('Last Name'))
+	first_name = forms.CharField(label=_('First Name'))
 
 	class Meta:
 		model = User
-		fields = ['username', 'region', 'email', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'year']
+		fields = ['first_name', 'last_name' ,'username', 'region', 'email', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'year']
 
 
 
