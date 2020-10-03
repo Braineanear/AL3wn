@@ -18,7 +18,7 @@ class User(AbstractUser):
 	date_of_birth = models.DateField(_('date_of_birth'), blank=True, null=True)
 	region = models.CharField(_('region'), blank=True, null=True, max_length=255)
 	phone_number = models.FloatField(_('phone_number'))
-	national_id = models.FloatField(_('national_id')) #,unique=True
+	national_id = models.FloatField(_('national_id'), unique=True) 
 	gender = models.CharField(_('gender'), choices=GENDER_CHOICE, max_length=255)
 	year = models.CharField(_('year'), choices=SCHOOL_YEAR, max_length=255)
 	is_student = models.BooleanField(_('is_student'), default=True)
