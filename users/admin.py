@@ -14,7 +14,7 @@ User = get_user_model()
 class UserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
-            'fields': ('username', 'first_name', 'last_name', 'region', 'year', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'password1', 'password2')
+            'fields': ('username', 'first_name', 'last_name','email', 'region', 'year', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'password1', 'password2')
         }),
         (_('Permissions'), {
             'fields': ('is_superuser', 'is_staff', 'is_student', 'is_publisher')
@@ -22,7 +22,7 @@ class UserAdmin(UserAdmin):
     )
     fieldsets = (
         (_("Info"), {
-            'fields': ('username', 'first_name', 'last_name', 'region', 'year', 'phone_number', 'gender', 'national_id', 'password')
+            'fields': ('username', 'first_name', 'last_name','email', 'region', 'year', 'phone_number', 'gender', 'national_id', 'password')
         }),
         (_('Dates'), {
             'fields': ('date_of_birth' , 'date_joined', 'last_login')
@@ -33,7 +33,7 @@ class UserAdmin(UserAdmin):
 
     )
     list_display = ['username', 'first_name', 'phone_number', 'year', 'national_id']
-    search_fields = ('username','first_name', 'last_name',)
+    search_fields = ('username','first_name', 'last_name','national_id',)
     ordering = ('username',)
     list_filter = ('gender', 'year', 'region',)
 
