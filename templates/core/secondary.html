@@ -54,23 +54,88 @@
       </div>
       <!-- Card End -->
 
+      <!-- Card Begin -->
+      <div class="card-box col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s">
+        <div class="card">
+          <!-- Image Area Begin -->
+          <div class="card-img" style="background-image: url(https://images.pexels.com/photos/714698/pexels-photo-714698.jpeg?cs=srgb&dl=pexels-jeshootscom-714698.jpg&fm=jpg);">
+            <!-- Teacher Status -->
+            <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">{% translate "silver" %}</span> </div>
+          </div>
+          <!-- Image Area End -->
 
-<!-- 
-      Pagination Begin
+          <!-- Content Area Begin -->
+          <div class="card-content">
+            <!-- Teacher Name -->
+            <h4 class="card-title">{% translate "ADE" %}</h4>
+            
+            <!-- Teacher Location -->
+            <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {% translate "Benha , Qalubyia" %}</p>
+            
+            <!-- Teacher Description -->
+            <p class="card-description">{% translate "My object is to create and excellent learning environment and to help each student to improve their Physics abilities." %}</p>
+            
+              <!-- Start Button -->
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "First Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Second Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Third Year" %}</a>
+          </div>
+          <!-- Content Area End -->
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Card Begin -->
+      <div class="card-box col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s">
+        <div class="card">
+          <!-- Image Area Begin -->
+          <div class="card-img" style="background-image: url(https://images.pexels.com/photos/1438252/pexels-photo-1438252.jpeg?cs=srgb&dl=pexels-abene-sebei-1438252.jpg&fm=jpg);">
+            <!-- Teacher Status -->
+            <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">{% translate "Gold" %}</span> </div>
+          </div>
+          <!-- Image Area End -->
+
+          <!-- Content Area Begin -->
+          <div class="card-content">
+            <!-- Teacher Name -->
+            <h4 class="card-title">{% translate "AA" %}</h4>
+            
+            <!-- Teacher Location -->
+            <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {% translate "Benha , Qalubyia" %}</p>
+            
+            <!-- Teacher Description -->
+            <p class="card-description">{% translate "My object is to create and excellent learning environment and to help each student to improve their Arabic abilities." %}</p>
+            
+              <!-- Start Button -->
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Prep First Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Prep Second Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Prep Third Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Sec First Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Sec Second Year" %}</a>
+            <a href="{% url 'Login' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Sec Third Year" %}</a>
+          </div>
+          <!-- Content Area End -->
+        </div>
+      </div>
+      <!-- Card End -->
+
+
+
+      <!-- Pagination Begin -->
       <div class="col-12 wow fadeIn" data-wow-duration="1s">
         <ul class="pagination justify-content-center">
-          <li class="page-item">
+          <!-- <li class="page-item">
             <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
+          </li> -->
           <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
+          <!-- <li class="page-item"><a class="page-link" href="#">2</a></li> -->
+          <!-- <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+          <!-- <li class="page-item">
             <a class="page-link" href="#">Next</a>
-          </li>
+          </li> -->
         </ul>
       </div>
-      Pagination End -->
+      <!-- Pagination End -->
     </section>
     <!-- Card List Section End -->
     {% endblock content %}
