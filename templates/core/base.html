@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 
-	{% if title%}
+	{% if title %}
 		<title>{{ title }} || {% translate "Al3wn" %}</title>
 	{% else %}
 		<title>{% translate "Al3wn" %}</title>
@@ -58,25 +58,24 @@
 							<a class="nav-link" href="{% url 'Home' %}">{% translate "Home" %}</a>
 						</li>
 
-						<!-- About Button
+						<!-- About Button -->
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'Dev' %}">{% translate "About" %}</a>
+							<a class="nav-link" href="{% url 'About' %}">{% translate "About" %}</a>
 						</li>
 
-						Price Button
+						<!-- Price Button -->
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'Dev' %}">{% translate "Price" %}</a>
 						</li>
 
-						Plan Dropdown
+						<!-- Plan Dropdown -->
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">{% translate "Plan" %}</a>
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% translate "Plan" %}</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown03">
-								<li><a class="dropdown-item" href="{% url 'Dev' %}">{% translate "Stage 1" %}</a></li>
-								<li><a class="dropdown-item" href="{% url 'Dev' %}">{% translate "Stage 2" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'Stage1' %}">{% translate "Stage 1" %}</a></li>
+								<!-- <li><a class="dropdown-item" href="{% url 'Dev' %}">{% translate "Stage 2" %}</a></li> -->
 							</ul>
-						</li> -->
+						</li>
 
 						<!-- Speciality Dropdown -->
 						<li class="nav-item dropdown">
@@ -175,9 +174,9 @@
 						<div class="widget">
 							<h4 class="text-capitalize mb-4">{% translate "Quick Links" %}</h4>
 							<ul class="list-unstyled footer-menu lh-35">
-								<li><a href="{% url 'Dev' %}">{% translate "About" %}</a></li>
+								<li><a href="{% url 'About' %}">{% translate "About" %}</a></li>
 								<li><a href="{% url 'Dev' %}">{% translate "Price" %}</a></li>
-								<li><a href="{% url 'Dev' %}">{% translate "Plan" %}</a></li>
+								<li><a href="{% url 'Stage1' %}">{% translate "Plan" %}</a></li>
 								<li><a href="{% url 'Secondary' %}">{% translate "Secondary School" %}</a></li>
 								<!-- <li><a href="{% url 'Dev' %}">Speciality - University</a></li> -->
 							</ul>
