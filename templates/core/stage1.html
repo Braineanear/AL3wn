@@ -1,4 +1,5 @@
 {% extends "core/base.html" %}
+{% load i18n %}
 {% load static %}
 	{% block content %}
 		<!-- Start Section Begin -->
@@ -6,7 +7,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h1 class="d-block mb-3 text-white text-capitalize">Plan - Stage 1</h1>
+						<h1 class="d-block mb-3 text-white text-capitalize">{% translate "First Stage" %}✔</h1>
 					</div>
 				</div>
 			</div>
@@ -21,13 +22,11 @@
 					<div class="col-12 col-lg-6 p-5 p-lg-0">
 						<div class="stage-item wow fadeIn" data-wow-duration="1s">
 
-							<span class="h1 text-color">Lorem, ipsum dolor.</span>
+							<span class="h1 text-color">{% translate "Our Approach" %}</span>
 							<div class="stage-content">
-								<h4 class="mb-3 position-relative">ipsum dolor</h4>
-								<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis
-									dolorum earum fugiat, fuga dolor nisi. Quidem, distinctio voluptates? Ea ad quia
-									laudantium modi deleniti excepturi praesentium incidunt quod quis.</p>
-								<a href="#" class="btn btn-main btn-round-full">Learn More</a>
+								<h4 class="mb-3 position-relative">{% translate "Benha Team" %}</h4>
+								<p class="mb-5">{% translate "A youth organization its goal to facilitate the educational process in Egypt by keeping up with modern technology to reach assistance to all students with the least capabilities and The fastest and simplified methods.Let us all learn in the right way" %}.</p>
+								<a href="{% url 'Dev' %}" class="btn btn-main btn-round-full">{% translate "Learn More" %}</a>
 							</div>
 						</div>
 					</div>
@@ -46,7 +45,7 @@
 			<div class="container">
 				<!-- Timeline Header Begin -->
 				<div class="timeline-head w-100 text-center py-5 wow fadeIn" data-wow-duration="1s">
-					<h3 class="card-title">Timeline</h3>
+					<h3 class="card-title">{% translate "Timeline" %}</h3>
 				</div>
 				<!-- Timeline Header End -->
 
@@ -60,16 +59,15 @@
 								<span class="timeline-icon"></span>
 
 								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
+								<span class="year">{% translate "April 06, 2020" %}</span>
 
 								<!-- Block Content Begin -->
 								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
+									<h3 class="title">{% translate "Website" %}</h3>
 									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
+										{% translate "The Full Completion of al3wn website" %}.
 									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
+									<h6 class="thank">{% translate "Thanks to : AM6 & Brainean" %}</h6>
 								</div>
 								<!-- Block Content End -->
 							</div>
@@ -81,16 +79,15 @@
 								<span class="timeline-icon"></span>
 
 								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
+								<span class="year">{% translate "Feb 13, 2020" %}</span>
 
 								<!-- Block Content Begin -->
 								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
+									<h3 class="title">{% translate "FB" %}</h3>
 									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
+										{% translate "Making the facebook page for al3wn at the name of" %} AL3wnPage.
 									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
+									<h6 class="thank">{% translate "Thanks to : AM6" %}</h6>
 								</div>
 								<!-- Block Content End -->
 							</div>
@@ -102,16 +99,15 @@
 								<span class="timeline-icon"></span>
 
 								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
+								<span class="year">{% translate "On It" %}</span>
 
 								<!-- Block Content Begin -->
 								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
+									<h3 class="title">{% translate "Marketing" %}</h3>
 									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
+										{% translate "Marketing for al3wn." %}
 									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
+									<!-- <h6 class="thank">Thanks to : lorem</h6> -->
 								</div>
 								<!-- Block Content End -->
 							</div>
@@ -123,41 +119,20 @@
 								<span class="timeline-icon"></span>
 
 								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
+								<span class="year">{% translate "Not yet" %}</span>
 
 								<!-- Block Content Begin -->
 								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
+									<h3 class="title">{% translate "Reviews" %}</h3>
 									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
+										{% translate "Collecting Reviews and feedbacks" %}
 									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
+									<!-- <h6 class="thank">Thanks to : lorem</h6> -->
 								</div>
 								<!-- Block Content End -->
 							</div>
 							<!-- Block End -->
 
-							<!-- Block Begin -->
-							<div class="timeline wow fadeIn" data-wow-duration="1s">
-								<!-- Block Icon -->
-								<span class="timeline-icon"></span>
-
-								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
-
-								<!-- Block Content Begin -->
-								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
-									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
-									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
-								</div>
-								<!-- Block Content End -->
-							</div>
-							<!-- Block End -->
 						</div>
 						<!-- Timeline End -->
 					</div>
