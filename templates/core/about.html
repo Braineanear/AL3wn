@@ -1,4 +1,5 @@
 {% extends "core/base.html" %}
+{% load i18n %}
 {% load static %}
 	{% block content %}
 		<!-- Start Section Begin -->
@@ -6,7 +7,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h1 class="d-block mb-3 text-white text-capitalize">About</h1>
+						<h1 class="d-block mb-3 text-white text-capitalize">{% translate "About Us" %}💖</h1>
 					</div>
 				</div>
 			</div>
@@ -21,16 +22,19 @@
 					<div class="col-12 col-lg-6 p-5 p-lg-0">
 						<div class="about-item wow fadeIn" data-wow-duration="1s">
 							<!-- About Title Begin -->
-							<span class="h1 text-color">Lorem, ipsum dolor.</span>
+							<span class="h1 text-color">{% translate "Mission & Vision" %}</span>
 							<!-- About Title End -->
 
 							<!-- About Content Begin -->
 							<div class="about-content">
-								<h4 class="mb-3 position-relative">ipsum dolor</h4>
-								<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis
-									dolorum earum fugiat, fuga dolor nisi. Quidem, distinctio voluptates? Ea ad quia
-									laudantium modi deleniti excepturi praesentium incidunt quod quis.</p>
-								<a href="#" class="btn btn-main btn-round-full">Learn More</a>
+								<!-- <h4 class="mb-3 position-relative">Benha Team</h4> -->
+								<p class="mb-5">{% blocktrans %}
+								Whoever you are, whoever you think you are, believe also your name is Mohammed. You're a Smart Student. You are smarter than most of your Class. You want to finish up school early to be free but you can't. Still stuck in School for years before getting your degree. With Al3wn we can Speed this proess up.
+								Our Mission to be the first and last resort for student to learn by providing the full courses of the enitre learning years with the exams every course provide and in the end getting the degree not in a specfic time. But in the time of your completion of the course.
+								Long story short, with Al3wn you will be able to finish a 4,5 or 7 years of Schools in much lower time.
+								{% endblocktrans %}
+								</p>
+								<a href="#" class="btn btn-main btn-round-full">{% translate "Learn More" %}</a>
 							</div>
 							<!-- About Content End -->
 						</div>
@@ -45,136 +49,11 @@
 		</section>
 		<!-- About Intro Section End -->
 
-		<!-- About Timeline Begin -->
-		<section class="TimeLine">
-			<div class="container">
-				<!-- Timeline Header Begin -->
-				<div class="timeline-head w-100 text-center py-5">
-					<h3 class="card-title wow fadeIn" data-wow-duration="1s">Timeline</h3>
-				</div>
-				<!-- Timeline Header End -->
-
-				<div class="row">
-					<div class="col-md-12">
-						<!-- Timeline Begin -->
-						<div class="main-timeline">
-							<!-- Block Begin -->
-							<div class="timeline wow fadeIn" data-wow-duration="1s">
-								<!-- Block Icon -->
-								<span class="timeline-icon"></span>
-
-								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
-
-								<!-- Block Content Begin -->
-								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
-									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
-									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
-								</div>
-								<!-- Block Content End -->
-							</div>
-							<!-- Block End -->
-
-							<!-- Block Begin -->
-							<div class="timeline wow fadeIn" data-wow-duration="1s">
-								<!-- Block Icon -->
-								<span class="timeline-icon"></span>
-
-								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
-
-								<!-- Block Content Begin -->
-								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
-									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
-									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
-								</div>
-								<!-- Block Content End -->
-							</div>
-							<!-- Block End -->
-
-							<!-- Block Begin -->
-							<div class="timeline wow fadeIn" data-wow-duration="1s">
-								<!-- Block Icon -->
-								<span class="timeline-icon"></span>
-
-								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
-
-								<!-- Block Content Begin -->
-								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
-									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
-									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
-								</div>
-								<!-- Block Content End -->
-							</div>
-							<!-- Block End -->
-
-							<!-- Block Begin -->
-							<div class="timeline wow fadeIn" data-wow-duration="1s">
-								<!-- Block Icon -->
-								<span class="timeline-icon"></span>
-
-								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
-
-								<!-- Block Content Begin -->
-								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
-									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
-									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
-								</div>
-								<!-- Block Content End -->
-							</div>
-							<!-- Block End -->
-
-							<!-- Block Begin -->
-							<div class="timeline wow fadeIn" data-wow-duration="1s">
-								<!-- Block Icon -->
-								<span class="timeline-icon"></span>
-
-								<!-- Block Year -->
-								<span class="year">March 20, 2020</span>
-
-								<!-- Block Content Begin -->
-								<div class="timeline-content">
-									<h3 class="title">Title of section 1</h3>
-									<p class="description">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id
-										pulvinar suscipit.
-									</p>
-									<h6 class="thank">Thanks to : lorem</h6>
-								</div>
-								<!-- Block Content End -->
-							</div>
-							<!-- Block End -->
-						</div>
-						<!-- Timeline End -->
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- About Timeline End -->
-
 		<!-- Team Section Begin -->
 		<section class="team about-team wow fadeIn" data-wow-duration="1s">
 			<div class="container">
 				<div class="team-header w-100 text-center py-5">
-					<h1 class="text-uppercase font-weight-bold">Our Incredible Team</h1>
+					<h1 class="text-uppercase font-weight-bold">{% translate "Our Incredible Team" %}💪</h1>
 				</div>
 				<!-- Team Slider Begin -->
 				<div class="team-slider row wow fadeIn" data-wow-duration="1s">
@@ -198,8 +77,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Ahmed M. Abo 6</h3>
-								<span class="post">Founder/Chairman/IT Head</span>
+								<h3 class="title">{% translate "Ahmed M. Abo 6" %}</h3>
+								<span class="post">{% translate "Founder/Chairman/IT Head" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -212,6 +91,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/2.jpeg' %}">
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 
 								<!-- Member Social Media -->
 								<ul class="social">
@@ -225,8 +105,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Fatma Ahmed Hassan</h3>
-								<span class="post">HR Head</span>
+								<h3 class="title">{% translate "Fatma Ahmed Hassan" %}</h3>
+								<span class="post">{% translate "HR Head" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -239,7 +119,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/3.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/mahamed.ahmed.5095"><i
@@ -252,8 +132,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Mohammed Ahmed Saber</h3>
-								<span class="post">Co-Founder / Marketing (MGD) Head</span>
+								<h3 class="title">{% translate "Mohammed Ahmed Saber" %}</h3>
+								<span class="post">{% translate "Co-Founder / Marketing (MGD) Head" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -266,7 +146,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/6.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/asmaa.ragab.52206"><i
@@ -278,8 +158,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Asmaa Ragab</h3>
-								<span class="post">TD Head (Treasury Department)</span>
+								<h3 class="title">{% translate "Asmaa Ragab" %}</h3>
+								<span class="post">{% translate "TD Head (Treasury Department)" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -292,7 +172,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/4.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/profile.php?id=100002177917115"><i
@@ -306,8 +186,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Mostafa Mohamed Marie</h3>
-								<span class="post">Co-Founder /Specialties Head</span>
+								<h3 class="title">{% translate "Mostafa Mohamed Marie" %}</h3>
+								<span class="post">{% translate "Co-Founder /Specialties Head" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -320,7 +200,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/5.jpg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -331,8 +211,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Abdelrahman M. Nabil </h3>
-								<span class="post">Counselor/Co-Founder</span>
+								<h3 class="title">{% translate "Abdelrahman M. Nabil" %}</h3>
+								<span class="post">{% translate "Counselor/Co-Founder" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -345,7 +225,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/7.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/nogahassan110"><i
@@ -358,8 +238,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Nagwa Ibrahim</h3>
-								<span class="post">Marketing</span>
+								<h3 class="title">{% translate "Nagwa Ibrahim" %}</h3>
+								<span class="post">{% translate "Marketing" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -372,7 +252,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/8.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/mohmmed.rfaat123"><i
@@ -385,8 +265,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Mohamed Refaat</h3>
-								<span class="post">PR</span>
+								<h3 class="title">{% translate "Mohamed Refaat" %}</h3>
+								<span class="post">{% translate "PR" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -399,7 +279,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/9.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/nayra.wael"><i class="fa fa-facebook"></i></a>
@@ -412,8 +292,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Nayra Wael</h3>
-								<span class="post">PR</span>
+								<h3 class="title">{% translate "Nayra Wael" %}</h3>
+								<span class="post">{% translate "PR" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -426,7 +306,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/10.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/profile.php?id=100009711669926"><i
@@ -438,8 +318,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Ashraf Atef</h3>
-								<span class="post">IT</span>
+								<h3 class="title">{% translate "Ashraf Atef" %}</h3>
+								<span class="post">{% translate "IT" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -452,7 +332,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/11.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/maryam.wahba.92"><i
@@ -465,8 +345,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Maryam Mahmoud</h3>
-								<span class="post">IT</span>
+								<h3 class="title">{% translate "Maryam Mahmoud" %}</h3>
+								<span class="post">{% translate "IT" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -479,7 +359,7 @@
 							<div class="team_img">
 								<!-- Member Image -->
 								<img src="{% static 'core/images/12.jpeg' %}">
-
+								<div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">ex</span> </div>
 								<!-- Member Social Media -->
 								<ul class="social">
 									<li><a href="https://www.facebook.com/mostafa.mokhtar.946"><i
@@ -492,8 +372,8 @@
 
 							<!-- Member Details Begin -->
 							<div class="team-content">
-								<h3 class="title">Mostafa Mokhtar</h3>
-								<span class="post">HR</span>
+								<h3 class="title">{% translate "Mostafa Mokhtar" %}</h3>
+								<span class="post">{% translate "HR" %}</span>
 							</div>
 							<!-- Member Details End -->
 						</div>
@@ -509,12 +389,15 @@
 		<section class="partners wow fadeIn" data-wow-duration="1s">
 			<div class="container">
 				<!-- Partners Section Head -->
-				<h2 class="py-5">Our Partners</h2>
+				<h2 class="py-5">{% translate "Our Partners" %}</h2>
 
 				<!-- Partners -->
 				<section class="customer-logos slider">
 					<div class="slide">
 						<a href="https://www.facebook.com/Brainean"><img src="{% static 'core/images/BRAINEAN.png' %}"></a>
+					</div>
+					<div class="slide">
+						<a href="https://www.facebook.com/doctor.zahran"><img src="https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/38405437_297689560780746_8151087203200532480_n.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=pJakAtKR5A8AX-FkKrf&_nc_ht=scontent-hbe1-1.xx&oh=af74acc1c166433c5c3f15103b8454ac&oe=5FAAD91C"></a>
 					</div>
 
 					
