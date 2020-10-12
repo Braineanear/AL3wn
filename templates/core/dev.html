@@ -1,28 +1,29 @@
 {% extends "core/base.html" %}
+{% load i18n %}
 {% load static %}
 	{% block content %}
         <!-- Coming Soon Section Begin -->
         <section class="soon position-relative mt-5 p-5">
             <div class="container d-flex flex-column justify-content-center align-items-center p-5 mt-5">
                 <img src="{% static 'core/images/Startup_PNG.png' %}" alt="coming soon image" width="300" class="mt-5">
-                <h1 class="my-5">Under Development</h1>
+                <h1 class="my-5">{% translate "Under Development" %}</h1>
 				
 				<ul id="countdown" class="my-5">
                     <li id="days">
                       <div class="number">00</div>
-                      <div class="label">Days</div>
+                      <div class="label">{% translate "Days" %}</div>
                     </li>
                     <li id="hours">
                       <div class="number">00</div>
-                      <div class="label">Hours</div>
+                      <div class="label">{% translate "Hours" %}</div>
                     </li>
                     <li id="minutes">
                       <div class="number">00</div>
-                      <div class="label">Minutes</div>
+                      <div class="label">{% translate "Minutes" %}</div>
                     </li>
                     <li id="seconds">
                       <div class="number">00</div>
-                      <div class="label">Seconds</div>
+                      <div class="label">{% translate "Seconds" %}</div>
                     </li>
                   </ul>
             </div>
