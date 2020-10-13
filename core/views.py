@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
+
+User = get_user_model()
 
 
 def home(request):
@@ -8,7 +11,8 @@ def home(request):
 	return render (request, 'core/index.html', context)
 
 def about(request):
-	context = {'title' : _('About Us')}
+	usernumb = User.objects.all().count()
+	context = {'usernumb' : usernumb,'title' : _('About Us')}
 	return render (request, 'core/about.html', context)
 
 def dev(request):

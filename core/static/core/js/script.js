@@ -2,8 +2,6 @@
 
 	'use strict';
 
-	var countDownDate = new Date("October 6, 2021 00:00:00").getTime();
-
 	var x = setInterval(function () {
 		var now = new Date().getTime();
 		var distance = countDownDate - now;
@@ -265,5 +263,17 @@
 			y: r.top + o.y
 		};
 	};
+
+	$('.counter_num').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
 
 })(jQuery);
