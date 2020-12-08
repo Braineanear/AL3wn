@@ -4,9 +4,6 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import ugettext_lazy as _
 
 from .models import Profile
-# Removing Group
-from django.contrib.auth.models import Group
-admin.site.unregister(Group)
 
 User = get_user_model()
 
@@ -38,5 +35,9 @@ class UserAdmin(UserAdmin):
     list_filter = ('gender', 'year', 'region',)
 
 
+class ProfileAdmin(admin.ModelAdmin):
+    fields = ['user', 'image', 'image_tag']
+    readonly_fields = ['user', 'image', 'image_tag']
+
 admin.site.register(User, UserAdmin)
-admin.site.register(Profile)
+admin.site.register(Profile, ProfileAdmin)

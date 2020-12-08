@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import AbstractUser
 
@@ -33,3 +34,8 @@ class Profile(models.Model):
 
 	def __str__(self):
 		return f'{self.user.username} Profile'
+
+	def image_tag(self):
+		return mark_safe('<img src="%s" width="150" height="150" />' % (self.image.url))
+
+	image_tag.short_description = 'Image'
