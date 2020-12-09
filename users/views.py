@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
 
 
-from .forms import UserResgiterForm, UserUpdateForm, ProfileUpdateForm
+from .forms import UserResgiterForm, UserUpdateForm, ProfileUpdateForm, ApplicantForm
 
 def register(request):
 	if request.method == "POST":
@@ -39,3 +39,15 @@ def profile(request):
 		'profile_form': profile_form
 	}
 	return render(request, 'users/profile.html', context)
+
+
+def career(request):
+	if request.method == "POST":
+		form = ApplicantForm(request.POST, request.FILES)
+		if form.is_valid():
+			form.save()
+			messages.success(request, f'Your data have been submitted😍! We will contact you💖')
+			return redirect('Home')
+	else:
+		form = ApplicantForm()
+	return render(request, 'users/career.html', {'form' : form, 'title' : _('Careers')})
