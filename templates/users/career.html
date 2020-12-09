@@ -9,7 +9,7 @@
 		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">{% translate "Join Now" %}</legend>
+				<legend class="border-bottom mb-4">{% translate "Join Now" %} <small class="text-muted">{% translate "(This will take no more than 4 minute to fill out💪✅🔥)" %}</small></legend>
 				{{ form|crispy }}
 				<button class="btn btn-outline-info" type="submit">{% translate "Send" %}</button>
 			</fieldset>

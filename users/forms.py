@@ -67,6 +67,8 @@ class ProfileUpdateForm(forms.ModelForm):
 
 
 class ApplicantForm(forms.ModelForm):
+	date_of_birth = forms.DateField(label=_('Date of Birth'),
+		 widget=forms.TextInput(attrs={'type': 'date'}))
 	class Meta:
 		model = Applicant
 		fields = ['full_name', 'email', 'date_of_birth',
