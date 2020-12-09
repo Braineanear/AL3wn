@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-11 18:44+0200\n"
+"POT-Creation-Date: 2020-12-09 04:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,120 +19,314 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\core\views.py:6 .\templates\core\base.html:58
+#: .\core\views.py:10 .\templates\core\base.html:58
 msgid "Home"
 msgstr "الرئيسية"
 
-#: .\core\views.py:10
+#: .\core\views.py:15 .\templates\core\about.html:10
 msgid "About Us"
 msgstr "عنا"
 
-#: .\core\views.py:17
+#: .\core\views.py:22
 msgid "Pricing"
 msgstr "الاسعار"
 
-#: .\core\views.py:21
+#: .\core\views.py:26
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
 
-#: .\core\views.py:25
+#: .\core\views.py:30
 msgid "Secondary"
 msgstr "الثانوية"
 
-#: .\core\views.py:29 .\templates\core\base.html:76
+#: .\core\views.py:34 .\templates\core\base.html:75
 msgid "Stage 1"
 msgstr "المرحلة الأولى"
 
-#: .\core\views.py:33 .\templates\core\base.html:77
+#: .\core\views.py:38 .\templates\core\base.html:76
 msgid "Stage 2"
 msgstr "المرحلة الثانية"
 
+#: .\core\views.py:44
+#, fuzzy
+#| msgid "First Year"
+msgid "First Grade"
+msgstr "1 ث"
+
+#: .\core\views.py:49
+#, fuzzy
+#| msgid "Second Year"
+msgid "Second Grade"
+msgstr "2 ث"
+
+#: .\core\views.py:54
+msgid "third Grade"
+msgstr "3 ث"
+
+#: .\templates\core\about.html:25
+msgid "Mission & Vision"
+msgstr "المهمة والرؤية"
+
+#: .\templates\core\about.html:31
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\tWhoever you are, whoever you think you are, believe also "
+"your name is Mohammed. You're a Smart Student. You are smarter than most of "
+"your Class. You want to finish up school early to be free but you can't. "
+"Still stuck in School for years before getting your degree. With Al3wn we "
+"can Speed this proess up.\n"
+"\t\t\t\t\t\t\t\tOur Mission to be the first and last resort for student to "
+"learn by providing the full courses of the enitre learning years with the "
+"exams every course provide and in the end getting the degree not in a "
+"specfic time. But in the time of your completion of the course.\n"
+"\t\t\t\t\t\t\t\tLong story short, with Al3wn you will be able to finish a "
+"4,5 or 7 years of Schools in much lower time.\n"
+"\t\t\t\t\t\t\t\t"
+msgstr ""
+
+#: .\templates\core\about.html:37 .\templates\core\index.html:14
+#: .\templates\users\career.html:12 .\templates\users\register.html:12
+msgid "Join Now"
+msgstr "انضم الان"
+
+#: .\templates\core\about.html:62
+msgid "Total Courses"
+msgstr "الكورسات"
+
+#: .\templates\core\about.html:71
+#, fuzzy
+#| msgid "is_student"
+msgid "Students"
+msgstr "طالب"
+
+#: .\templates\core\about.html:80
+#, fuzzy
+#| msgid "is_publisher"
+msgid "Publishers"
+msgstr "ناشر"
+
+#: .\templates\core\about.html:89
+msgid "Team Members"
+msgstr "أفراد العمل"
+
+#: .\templates\core\about.html:104 .\templates\core\index.html:124
+msgid "Our Incredible Team"
+msgstr "فريق عملنا الرائع"
+
+#: .\templates\core\about.html:128 .\templates\core\index.html:148
+msgid "Ahmed M. Abo 6"
+msgstr "أحمد أبو 6"
+
+#: .\templates\core\about.html:129 .\templates\core\index.html:149
+msgid "Founder/Chairman/IT Head"
+msgstr "مؤسس - رئيس"
+
+#: .\templates\core\about.html:156 .\templates\core\index.html:175
+msgid "Fatma Ahmed Hassan"
+msgstr "فاطمة أحمد حسن"
+
+#: .\templates\core\about.html:157 .\templates\core\index.html:176
+msgid "HR Head"
+msgstr "رئيس قسم الموادر البشرية"
+
+#: .\templates\core\about.html:183 .\templates\core\index.html:202
+msgid "Mohammed Ahmed Saber"
+msgstr "محمد أحمد صابر"
+
+#: .\templates\core\about.html:184 .\templates\core\index.html:203
+msgid "Co-Founder / Marketing (MGD) Head"
+msgstr "مؤسس - رئيس قسم الدعايا"
+
+#: .\templates\core\about.html:209 .\templates\core\index.html:228
+msgid "Asmaa Ragab"
+msgstr "أسماء رجب"
+
+#: .\templates\core\about.html:210 .\templates\core\index.html:229
+msgid "TD Head (Treasury Department)"
+msgstr "رئيس قسم الخزينة"
+
+#: .\templates\core\about.html:237 .\templates\core\index.html:256
+msgid "Mostafa Mohamed Marie"
+msgstr "مصطفى محمد مرعى"
+
+#: .\templates\core\about.html:238 .\templates\core\index.html:257
+msgid "Co-Founder /Specialties Head"
+msgstr "مؤسس - رئيس قسم التخصصات"
+
+#: .\templates\core\about.html:262 .\templates\core\index.html:281
+msgid "Abdelrahman M. Nabil"
+msgstr "عبد الرحمن محمد نبيل"
+
+#: .\templates\core\about.html:263 .\templates\core\index.html:282
+msgid "Counselor/Co-Founder"
+msgstr "مؤسس - مستشار"
+
+#: .\templates\core\about.html:289
+msgid "Nagwa Ibrahim"
+msgstr "نجوى ابراهيم"
+
+#: .\templates\core\about.html:290 .\templates\core\stage1.html:106
+msgid "Marketing"
+msgstr "تسويق"
+
+#: .\templates\core\about.html:316
+msgid "Mohamed Refaat"
+msgstr "محمد رفعت"
+
+#: .\templates\core\about.html:317 .\templates\core\about.html:344
+msgid "PR"
+msgstr "علاقات عامة"
+
+#: .\templates\core\about.html:343
+msgid "Nayra Wael"
+msgstr "نيرة وائل"
+
+#: .\templates\core\about.html:369
+msgid "Ashraf Atef"
+msgstr "أشرف عاطف"
+
+#: .\templates\core\about.html:370 .\templates\core\about.html:397
+msgid "IT"
+msgstr "مهندس"
+
+#: .\templates\core\about.html:396
+msgid "Maryam Mahmoud"
+msgstr "مريم محمود"
+
+#: .\templates\core\about.html:423
+#, fuzzy
+#| msgid "Mostafa Mohamed Marie"
+msgid "Mostafa Mokhtar"
+msgstr "مصطفى محمد مرعى"
+
+#: .\templates\core\about.html:424
+msgid "HR"
+msgstr "موارد بشرية"
+
+#: .\templates\core\about.html:440
+msgid "Our Partners"
+msgstr "شركائنا"
+
 #: .\templates\core\base.html:13 .\templates\core\base.html:15
-#: .\templates\core\base.html:42 .\templates\core\base.html:159
+#: .\templates\core\base.html:42 .\templates\core\base.html:164
 msgid "Al3wn"
 msgstr "العون"
 
-#: .\templates\core\base.html:63 .\templates\core\base.html:172
+#: .\templates\core\base.html:63 .\templates\core\base.html:177
 msgid "About"
 msgstr "عنا"
 
-#: .\templates\core\base.html:68 .\templates\core\base.html:173
+#: .\templates\core\base.html:68 .\templates\core\base.html:178
 msgid "Price"
 msgstr "السعر"
 
-#: .\templates\core\base.html:74 .\templates\core\base.html:174
+#: .\templates\core\base.html:73 .\templates\core\base.html:179
 msgid "Plan"
 msgstr "الخطة"
 
-#: .\templates\core\base.html:84
+#: .\templates\core\base.html:83
 msgid "Speciality"
 msgstr "تخصص"
 
-#: .\templates\core\base.html:86
+#: .\templates\core\base.html:85
 msgid "University"
 msgstr "الجامعة"
 
-#: .\templates\core\base.html:87 .\templates\core\base.html:175
+#: .\templates\core\base.html:86 .\templates\core\base.html:180
 msgid "Secondary School"
 msgstr "المدرسة الثانوية"
 
-#: .\templates\core\base.html:92
+#: .\templates\core\base.html:91
 msgid "Contact"
 msgstr "تواصل"
 
 #: .\templates\core\base.html:97
+msgid "Profile"
+msgstr "الحساب"
+
+#: .\templates\core\base.html:98
+msgid "logout"
+msgstr "تسجيل خروج"
+
+#: .\templates\core\base.html:100
+msgid "login"
+msgstr "تسجيل دخول"
+
+#: .\templates\core\base.html:101
 msgid "Join Us"
 msgstr "انضم لنا"
 
-#: .\templates\core\base.html:136
+#: .\templates\core\base.html:141
 msgid "Get in touch with us."
 msgstr "تواصل معانا"
 
-#: .\templates\core\base.html:137
+#: .\templates\core\base.html:142
 msgid ""
 "After all what you saw in our world, if you want to ask any questions you "
 "can contact with us."
 msgstr "بعد كل ما رأيته هنا اذا اردت ان تسأل اى اسالة فمرحب بك ان تتواصل معنا"
 
-#: .\templates\core\base.html:137
+#: .\templates\core\base.html:142
 msgid "Thank you."
 msgstr "شكرا"
 
-#: .\templates\core\base.html:143
+#: .\templates\core\base.html:148
 msgid "Contact Us"
 msgstr "للتواصل معنا"
 
-#: .\templates\core\base.html:161
+#: .\templates\core\base.html:166
 msgid "Terms & Conditions"
 msgstr "الأحكام والشروط"
 
-#: .\templates\core\base.html:162
+#: .\templates\core\base.html:167
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
 
-#: .\templates\core\base.html:163
+#: .\templates\core\base.html:168
 msgid "Support"
 msgstr "الدعم"
 
-#: .\templates\core\base.html:164
+#: .\templates\core\base.html:168 .\templates\core\base.html:169
 msgid "FAQ"
 msgstr "اسأله تتكرر"
 
-#: .\templates\core\base.html:170
+#: .\templates\core\base.html:175
 msgid "Quick Links"
 msgstr "لينكات سريعة"
 
-#: .\templates\core\base.html:185
+#: .\templates\core\base.html:190
 msgid "Email"
 msgstr "ايميل"
 
-#: .\templates\core\base.html:204
+#: .\templates\core\base.html:209
 msgid "Facebook"
 msgstr "فيس بوك"
 
-#: .\templates\core\base.html:206
+#: .\templates\core\base.html:211
 msgid "Bot"
 msgstr "بوت"
+
+#: .\templates\core\dev.html:9
+msgid "Under Development"
+msgstr "تحت التطوير"
+
+#: .\templates\core\dev.html:14
+msgid "Days"
+msgstr "أيام"
+
+#: .\templates\core\dev.html:18
+msgid "Hours"
+msgstr "ساعات"
+
+#: .\templates\core\dev.html:22
+msgid "Minutes"
+msgstr "دقائق"
+
+#: .\templates\core\dev.html:26
+#, fuzzy
+#| msgid "Secondary"
+msgid "Seconds"
+msgstr "الثانوية"
 
 #: .\templates\core\index.html:10 .\templates\core\secondary.html:10
 msgid "AL3WN"
@@ -150,10 +344,6 @@ msgstr "التعلم مع العون"
 msgid "simple,enjoyable,meet your needs."
 msgstr "سهل,ممتع,يوافق احتياجاتك."
 
-#: .\templates\core\index.html:14 .\templates\users\register.html:12
-msgid "Join Now"
-msgstr "انضم الان"
-
 #: .\templates\core\index.html:28
 msgid "What we provide?"
 msgstr "ماذا نقدم؟"
@@ -163,6 +353,7 @@ msgid "We provide three packages contain our service and programs"
 msgstr "نقدم ثلاث مجموعات تحوى خدماتنا وبرامجنا"
 
 #: .\templates\core\index.html:40 .\templates\core\secondary.html:32
+#: .\templates\core\secondary.html:63 .\templates\users\profile.html:45
 msgid "silver"
 msgstr "فضى"
 
@@ -172,7 +363,8 @@ msgstr ""
 "اجعل امتحانتك تصحح تلقائيا بدلا من الامتحانات الورقية فنحن نقدم امتحانات على "
 "النت"
 
-#: .\templates\core\index.html:50
+#: .\templates\core\index.html:50 .\templates\core\price.html:111
+#: .\templates\core\secondary.html:94
 msgid "Gold"
 msgstr "ذهبى"
 
@@ -180,7 +372,7 @@ msgstr "ذهبى"
 msgid "Monitor your students degrees and have a Progress Chart for them."
 msgstr "تابع درجات تلاميذك مع توضيحها باشكال هندسية"
 
-#: .\templates\core\index.html:60
+#: .\templates\core\index.html:60 .\templates\core\price.html:219
 msgid "Diamond"
 msgstr "الأفضل"
 
@@ -202,6 +394,7 @@ msgid "With Al3wn we provide all the necessary assistance for you."
 msgstr "فى العون نقدم لك كل العون اللازم."
 
 #: .\templates\core\index.html:80 .\templates\core\index.html:110
+#: .\templates\core\stage1.html:29
 msgid "Learn More"
 msgstr "اعرف اكثر"
 
@@ -223,57 +416,193 @@ msgstr "خطتنا تنقسم الى مراحل موضحين المرحلة ال
 msgid " if you are curious to know more about us, our team and our plan."
 msgstr "اذا كنت تريد ان تعرف اكثر عن فريق العمل وخططنا"
 
-#: .\templates\core\index.html:124
-msgid "Our Incredible Team"
-msgstr "فريق عملنا الرائع"
+#: .\templates\core\price.html:10
+#, fuzzy
+#| msgid "Price"
+msgid "Prices"
+msgstr "السعر"
 
-#: .\templates\core\index.html:148
-msgid "Ahmed M. Abo 6"
-msgstr "أحمد أبو 6"
+#: .\templates\core\price.html:21
+msgid "Our Prices per student"
+msgstr "أسعارنا لكل طالب"
 
-#: .\templates\core\index.html:149
-msgid "Founder/Chairman/IT Head"
-msgstr "مؤسس - رئيس"
+#: .\templates\core\price.html:22
+msgid "Our System divides into 2 main categories"
+msgstr "نظامنا ينقسم الى تقسيمتين اساسيتين"
 
-#: .\templates\core\index.html:175
-msgid "Fatma Ahmed Hassan"
-msgstr "فاطمة أحمد حسن"
+#: .\templates\core\price.html:22
+msgid "bundles and indvidals"
+msgstr "باقات وفردى"
 
-#: .\templates\core\index.html:176
-msgid "HR Head"
-msgstr "رئيس قسم الموادر البشرية"
+#: .\templates\core\price.html:22
+msgid ""
+" Often bundles contain the indvidal services but with lower cost the "
+"indvidal services are paid separately and this is some bundles/packages that "
+"include our services to give the teacher options to select from."
+msgstr ""
+"غالبًا ما تحتوي الحزم على الخدمات الفردية ولكن بتكلفة أقل يتم دفع الخدمات "
+"الفردية بشكل منفصل وهذه بعض الحزم / الحزم التي تتضمن خدماتنا لمنح المعلم "
+"خيارات للاختيار من بينها."
 
-#: .\templates\core\index.html:202
-msgid "Mohammed Ahmed Saber"
-msgstr "محمد أحمد صابر"
+#: .\templates\core\price.html:23
+msgid "The first week is FREE + 15%% discount for every month paid in advance"
+msgstr "أول اسبوع مجانى + 15% خصم لكل شهر يتم دفعه مقدما"
 
-#: .\templates\core\index.html:203
-msgid "Co-Founder / Marketing (MGD) Head"
-msgstr "مؤسس - رئيس قسم الدعايا"
+#: .\templates\core\price.html:52 .\templates\core\price.html:102
+#: .\templates\core\price.html:155 .\templates\core\price.html:210
+msgid "saving"
+msgstr "موفرا"
 
-#: .\templates\core\index.html:228
-msgid "Asmaa Ragab"
-msgstr "أسماء رجب"
+#: .\templates\core\price.html:57 .\templates\core\price.html:107
+#: .\templates\core\price.html:160 .\templates\core\price.html:215
+msgid "mo"
+msgstr "شهر"
 
-#: .\templates\core\index.html:229
-msgid "TD Head (Treasury Department)"
-msgstr "رئيس قسم الخزينة"
+#: .\templates\core\price.html:61
+#, fuzzy
+#| msgid "silver"
+msgid "Silver"
+msgstr "فضى"
 
-#: .\templates\core\index.html:256
-msgid "Mostafa Mohamed Marie"
-msgstr "مصطفى محمد مرعى"
+#: .\templates\core\price.html:67 .\templates\core\price.html:117
+#: .\templates\core\price.html:170 .\templates\core\price.html:225
+msgid "Students joining Al3wn"
+msgstr "طلبة تنضمن للمنصة"
 
-#: .\templates\core\index.html:257
-msgid "Co-Founder /Specialties Head"
-msgstr "مؤسس - رئيس قسم التخصصات"
+#: .\templates\core\price.html:68 .\templates\core\price.html:118
+#: .\templates\core\price.html:171 .\templates\core\price.html:226
+msgid "Students follow up"
+msgstr "متابعة الطلبة"
 
-#: .\templates\core\index.html:281
-msgid "Abdelrahman M. Nabil"
-msgstr "عبد الرحمن محمد نبيل"
+#: .\templates\core\price.html:69 .\templates\core\price.html:120
+#: .\templates\core\price.html:174 .\templates\core\price.html:229
+msgid "Customar Service"
+msgstr "خدمة العملاء"
 
-#: .\templates\core\index.html:282
-msgid "Counselor/Co-Founder"
-msgstr "مؤسس - مستشار"
+#: .\templates\core\price.html:70 .\templates\core\price.html:122
+#: .\templates\core\price.html:177
+msgid "Recording & Editing classes"
+msgstr "تسجيل وتعديل الحصص"
+
+#: .\templates\core\price.html:75 .\templates\core\price.html:127
+#: .\templates\core\price.html:182 .\templates\core\price.html:237
+msgid "Subscribe Now"
+msgstr "اشترك الان"
+
+#: .\templates\core\price.html:119 .\templates\core\price.html:172
+#: .\templates\core\price.html:227
+#, fuzzy
+#| msgid "Teachers"
+msgid "Teacher report"
+msgstr "المدرسون"
+
+#: .\templates\core\price.html:121
+msgid "1 medium exam"
+msgstr "1 امتحان متوسط"
+
+#: .\templates\core\price.html:164
+msgid "Platinum"
+msgstr ""
+
+#: .\templates\core\price.html:173 .\templates\core\price.html:228
+msgid "Parents report"
+msgstr "تقرير لولى الامر"
+
+#: .\templates\core\price.html:175
+msgid "1 full exam"
+msgstr "1 امتحان كامل"
+
+#: .\templates\core\price.html:176
+msgid "2 small exams (Recites)"
+msgstr "2 تسميع"
+
+#: .\templates\core\price.html:230
+msgid "2 full exam"
+msgstr "2 امتحان كامل"
+
+#: .\templates\core\price.html:231
+msgid "5 small exams (Recites)"
+msgstr "5 تسميعات"
+
+#: .\templates\core\price.html:247
+msgid "Videography + Individual"
+msgstr "التصوير + نظام الاسئلة الواحده"
+
+#: .\templates\core\price.html:258
+msgid "Individual Questions"
+msgstr "السؤال الواحد"
+
+#: .\templates\core\price.html:261
+msgid "Question Type"
+msgstr "نوع السؤال"
+
+#: .\templates\core\price.html:262
+msgid "Question Price"
+msgstr "سعر السؤال"
+
+#: .\templates\core\price.html:267
+msgid "MCQ (Mult-Choise Question)"
+msgstr "الاختيار من متعدد"
+
+#: .\templates\core\price.html:271
+msgid "One word answer (Recite)"
+msgstr "اجابة بكلمة واحده"
+
+#: .\templates\core\price.html:276
+msgid "One sentence answer/match"
+msgstr "اجابة بسطر"
+
+#: .\templates\core\price.html:281
+msgid "10 sentence or less answer"
+msgstr "الاجابة ب 10 سطور او اقل"
+
+#: .\templates\core\price.html:285
+msgid "Paragraph (11 sentence or more)"
+msgstr "قطعة"
+
+#: .\templates\core\price.html:296
+msgid "Videography"
+msgstr "التصوير"
+
+#: .\templates\core\price.html:299
+msgid "Service Name"
+msgstr "نوع الخدمة"
+
+#: .\templates\core\price.html:300
+msgid "Service Price"
+msgstr "سعر الخدمة"
+
+#: .\templates\core\price.html:305
+msgid "In-person recording"
+msgstr "التصوير بوجود شخص"
+
+#: .\templates\core\price.html:309
+msgid "simple video editing"
+msgstr "نعديل بسيط للفيديو"
+
+#: .\templates\core\price.html:314
+msgid "The best video editing"
+msgstr "أفضل مونتاج"
+
+#: .\templates\core\price.html:319
+msgid "Both recording and editing"
+msgstr "كلا من التصوير والمونتاج"
+
+#: .\templates\core\price.html:323
+msgid "Both recording and editing using a camera"
+msgstr "كلا من التصوير والمونتاج باستعمال كاميرا خاصة"
+
+#: .\templates\core\price.html:333
+msgid "25%% discount for every exam paid in advance"
+msgstr "25% خصم لكل امتحان يدفع مقدما"
+
+#: .\templates\core\price.html:334
+msgid ""
+"The exam and recording of the class stands alone ex: if the exam has 100 MCQ "
+"qustions it will cost 100*1 (MCQ price) = 100EGP ...."
+msgstr ""
+"يقف امتحان الفصل وتسجيله بمفرده على سبيل المثال: إذا كان الاختبار يحتوي على "
+"100 سؤال MCQ ، فسيتكلف 100 * 1 (سعر MCQ) = 100 جنيه ..."
 
 #: .\templates\core\secondary.html:11
 msgid "Secondary School Teachers"
@@ -287,95 +616,415 @@ msgstr "المدرسون"
 msgid "Deutsch Akademie"
 msgstr "الأكاديمية الألمانية"
 
-#: .\templates\core\secondary.html:42
+#: .\templates\core\secondary.html:42 .\templates\core\secondary.html:73
+#: .\templates\core\secondary.html:104
 msgid "Benha , Qalubyia"
 msgstr "بنها , القليوبية"
 
 #: .\templates\core\secondary.html:45
+#: .\templates\deutsch_akademie\first.html:37
+#: .\templates\deutsch_akademie\second.html:37
+#: .\templates\deutsch_akademie\third.html:37
 msgid ""
 "My object is to create and excellent learning environment and to help each "
 "student to improve their German (Deutsch) abilities."
-msgstr ".معانا هتبدأ من الاول كورس تأسيس للثانويه العامه اللحق الفرصه وابدأ من الاول"
+msgstr ""
+".معانا هتبدأ من الاول كورس تأسيس للثانويه العامه اللحق الفرصه وابدأ من الاول"
 
-#: .\templates\core\secondary.html:48
+#: .\templates\core\secondary.html:48 .\templates\core\secondary.html:79
+#: .\templates\users\profile.html:66
 msgid "First Year"
 msgstr "1 ث"
 
-#: .\templates\core\secondary.html:49
+#: .\templates\core\secondary.html:49 .\templates\core\secondary.html:80
 msgid "Second Year"
 msgstr "2 ث"
 
-#: .\templates\core\secondary.html:50
+#: .\templates\core\secondary.html:50 .\templates\core\secondary.html:81
 msgid "Third Year"
 msgstr "3 ث"
 
-#: .\templates\users\register.html:14
+#: .\templates\core\secondary.html:70
+msgid "ADE"
+msgstr ""
+
+#: .\templates\core\secondary.html:76
+#, fuzzy
+#| msgid ""
+#| "My object is to create and excellent learning environment and to help "
+#| "each student to improve their German (Deutsch) abilities."
+msgid ""
+"My object is to create and excellent learning environment and to help each "
+"student to improve their Physics abilities."
+msgstr ""
+".معانا هتبدأ من الاول كورس تأسيس للثانويه العامه اللحق الفرصه وابدأ من الاول"
+
+#: .\templates\core\secondary.html:101
+msgid "AA"
+msgstr ""
+
+#: .\templates\core\secondary.html:107
+#, fuzzy
+#| msgid ""
+#| "My object is to create and excellent learning environment and to help "
+#| "each student to improve their German (Deutsch) abilities."
+msgid ""
+"My object is to create and excellent learning environment and to help each "
+"student to improve their Arabic abilities."
+msgstr ""
+".معانا هتبدأ من الاول كورس تأسيس للثانويه العامه اللحق الفرصه وابدأ من الاول"
+
+#: .\templates\core\secondary.html:110
+#, fuzzy
+#| msgid "First Year"
+msgid "Prep First Year"
+msgstr "1 ث"
+
+#: .\templates\core\secondary.html:111
+#, fuzzy
+#| msgid "Second Year"
+msgid "Prep Second Year"
+msgstr "2 ث"
+
+#: .\templates\core\secondary.html:112
+#, fuzzy
+#| msgid "Third Year"
+msgid "Prep Third Year"
+msgstr "3 ث"
+
+#: .\templates\core\secondary.html:113
+#, fuzzy
+#| msgid "First Year"
+msgid "Sec First Year"
+msgstr "1 ث"
+
+#: .\templates\core\secondary.html:114
+#, fuzzy
+#| msgid "Second Year"
+msgid "Sec Second Year"
+msgstr "2 ث"
+
+#: .\templates\core\secondary.html:115
+#, fuzzy
+#| msgid "Third Year"
+msgid "Sec Third Year"
+msgstr "3 ث"
+
+#: .\templates\core\stage1.html:10
+#, fuzzy
+#| msgid "First Year"
+msgid "First Stage"
+msgstr "1 ث"
+
+#: .\templates\core\stage1.html:25
+msgid "Our Approach"
+msgstr "طريقنا"
+
+#: .\templates\core\stage1.html:27
+msgid "Benha Team"
+msgstr "فرع بنها"
+
+#: .\templates\core\stage1.html:28
+msgid ""
+"A youth organization its goal to facilitate the educational process in Egypt "
+"by keeping up with modern technology to reach assistance to all students "
+"with the least capabilities and The fastest and simplified methods.Let us "
+"all learn in the right way"
+msgstr ""
+"منظمة شبابية هدفها تسهيل العملية التعليمية في مصر من خلال مواكبة التكنولوجيا "
+"الحديثة للوصول إلى المساعدة لجميع الطلاب ذوي القدرات الأقل والأساليب الأسرع "
+"والمبسطة لنتعلم جميعًا بالطريقة الصحيحة"
+
+#: .\templates\core\stage1.html:48
+msgid "Timeline"
+msgstr "الجدول الزمني"
+
+#: .\templates\core\stage1.html:62
+msgid "April 06, 2020"
+msgstr ""
+
+#: .\templates\core\stage1.html:66
+msgid "Website"
+msgstr "المنصة"
+
+#: .\templates\core\stage1.html:68
+msgid "The Full Completion of al3wn website"
+msgstr "اكتمال منصة العون"
+
+#: .\templates\core\stage1.html:70
+msgid "Thanks to : AM6 & Brainean"
+msgstr "بفضل : AM6 & Brainean"
+
+#: .\templates\core\stage1.html:82
+msgid "Feb 13, 2020"
+msgstr ""
+
+#: .\templates\core\stage1.html:86
+msgid "FB"
+msgstr "فيس بوك"
+
+#: .\templates\core\stage1.html:88
+msgid "Making the facebook page for al3wn at the name of"
+msgstr "عمل صفحة فيس للعون باسم"
+
+#: .\templates\core\stage1.html:90
+msgid "Thanks to : AM6"
+msgstr "بفضل : AM6"
+
+#: .\templates\core\stage1.html:102
+msgid "On It"
+msgstr "يتم العمل عليها"
+
+#: .\templates\core\stage1.html:108
+msgid "Marketing for al3wn."
+msgstr "التسويق للعون"
+
+#: .\templates\core\stage1.html:122
+msgid "Not yet"
+msgstr "ليس بعد"
+
+#: .\templates\core\stage1.html:126
+msgid "Reviews"
+msgstr "الاراء"
+
+#: .\templates\core\stage1.html:128
+msgid "Collecting Reviews and feedbacks"
+msgstr "تجميع الاراء"
+
+#: .\templates\users\career.html:12
+msgid "(This will take no more than 4 minute to fill out💪✅🔥)"
+msgstr "(هذا لن يكلفك اكثر من 4 دقائق 💪✅🔥)"
+
+#: .\templates\users\career.html:14
+msgid "Send"
+msgstr "أبعت"
+
+#: .\templates\users\login.html:12 .\templates\users\login.html:14
+msgid "Log In"
+msgstr "تسجيل دخول"
+
+#: .\templates\users\login.html:16
+msgid "Forget Password"
+msgstr "نسيت الباسورد"
+
+#: .\templates\users\login.html:20
+#, fuzzy
+#| msgid "Alerady have an Acoount?"
+msgid "Do Not have an Acoount?"
+msgstr "انا املك حساب"
+
+#: .\templates\users\login.html:20 .\templates\users\register.html:14
 msgid "Sign Up"
 msgstr "الانضمام"
+
+#: .\templates\users\logout.html:12
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign Out"
+msgstr "الانضمام"
+
+#: .\templates\users\logout.html:14
+msgid "You have signed out"
+msgstr "سجلت خروج"
+
+#: .\templates\users\logout.html:16
+#: .\templates\users\password_reset_complete.html:14
+#: .\templates\users\register.html:17
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#: .\templates\users\password_reset.html:12
+#: .\templates\users\password_reset_confirm.html:12
+#: .\templates\users\password_reset_confirm.html:14
+msgid "Reset Password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: .\templates\users\password_reset.html:14
+msgid "Request Password Reset"
+msgstr "طلب إعادة تعيين كلمة المرور"
+
+#: .\templates\users\password_reset_complete.html:12
+msgid "Your Password has been set"
+msgstr "تم إعادة تعيين كلمة المرور"
+
+#: .\templates\users\password_reset_done.html:11
+msgid "An email has been sent with instructions to reset your password"
+msgstr "تم ارسال رسالة الكترونيه (ايميل) مع التعليمات لإعادة تعيين كلمة المرور"
+
+#: .\templates\users\profile.html:35 .\users\admin.py:21 .\users\admin.py:56
+msgid "Info"
+msgstr "معلومات"
+
+#: .\templates\users\profile.html:76
+msgid "Update Info"
+msgstr "تحديث بالبيانات"
+
+#: .\templates\users\profile.html:79
+msgid "Update"
+msgstr "تحديث"
 
 #: .\templates\users\register.html:17
 msgid "Alerady have an Acoount?"
 msgstr "انا املك حساب"
 
-#: .\templates\users\register.html:17
-msgid "Sign In"
-msgstr "تسجيل الدخول"
-
-#: .\users\admin.py:18 .\users\admin.py:29
+#: .\users\admin.py:16 .\users\admin.py:27
 msgid "Permissions"
 msgstr "الصلحيات"
 
-#: .\users\admin.py:23
-msgid "Info"
-msgstr "معلومات"
-
-#: .\users\admin.py:26
+#: .\users\admin.py:24 .\users\admin.py:62
 msgid "Dates"
 msgstr "تواريخ"
 
-#: .\users\forms.py:7
+#: .\users\admin.py:53
+#, fuzzy
+#| msgid "Price"
+msgid "Pic"
+msgstr "السعر"
+
+#: .\users\forms.py:9
 msgid "Male"
 msgstr "ذكر"
 
-#: .\users\forms.py:8
+#: .\users\forms.py:10
 msgid "Female"
 msgstr "انثى"
 
-#: .\users\forms.py:20 .\users\models.py:19
-msgid "region"
+#: .\users\forms.py:22 .\users\forms.py:44
+#, fuzzy
+#| msgid "region"
+msgid "Region"
 msgstr "المنطقة"
 
-#: .\users\forms.py:21 .\users\models.py:18
+#: .\users\forms.py:23 .\users\forms.py:45 .\users\forms.py:70
+#: .\users\models.py:50
+#, fuzzy
+#| msgid "date_of_birth"
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#: .\users\forms.py:25 .\users\forms.py:47 .\users\models.py:52
+#, fuzzy
+#| msgid "phone_number"
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: .\users\forms.py:28 .\users\forms.py:49
+#, fuzzy
+#| msgid "national_id"
+msgid "National ID"
+msgstr "الرقم القومى"
+
+#: .\users\forms.py:31 .\users\forms.py:51 .\users\models.py:58
+#, fuzzy
+#| msgid "gender"
+msgid "Gender"
+msgstr "النوع"
+
+#: .\users\forms.py:32 .\users\forms.py:52
+msgid "Grade"
+msgstr "السنة"
+
+#: .\users\forms.py:33
+#, fuzzy
+#| msgid "Email"
+msgid "E-mail"
+msgstr "ايميل"
+
+#: .\users\forms.py:34 .\users\forms.py:54
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: .\users\forms.py:35 .\users\forms.py:55
+#, fuzzy
+#| msgid "First Year"
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#: .\users\models.py:21
 msgid "date_of_birth"
 msgstr "تاريخ الميلاد"
 
-#: .\users\forms.py:22 .\users\models.py:20
+#: .\users\models.py:22
+msgid "region"
+msgstr "المنطقة"
+
+#: .\users\models.py:23
 msgid "phone_number"
 msgstr "رقم الهاتف"
 
-#: .\users\forms.py:23 .\users\models.py:21
+#: .\users\models.py:24
 msgid "national_id"
 msgstr "الرقم القومى"
 
-#: .\users\forms.py:24 .\users\models.py:22
+#: .\users\models.py:25
 msgid "gender"
 msgstr "النوع"
 
-#: .\users\forms.py:25 .\users\models.py:23
+#: .\users\models.py:26
 msgid "year"
 msgstr "السنة"
 
-#: .\users\models.py:24
+#: .\users\models.py:27
 msgid "is_student"
 msgstr "طالب"
 
-#: .\users\models.py:25
+#: .\users\models.py:28
 msgid "is_publisher"
 msgstr "ناشر"
 
-#: .\users\views.py:18
+#: .\users\models.py:48
+msgid "Full Name"
+msgstr "الاسم كاملا"
+
+#: .\users\models.py:51
+msgid "Address"
+msgstr "العنوان"
+
+#: .\users\models.py:53
+msgid "Phone Number (optional)"
+msgstr "رقم الهاتف اضافى"
+
+#: .\users\models.py:54
+#, fuzzy
+#| msgid "national_id"
+msgid "National Id"
+msgstr "الرقم القومى"
+
+#: .\users\models.py:55
+msgid "Available for video interview"
+msgstr "هل انت متاح لمقابلة عبر الانترنت"
+
+#: .\users\models.py:56
+msgid "College"
+msgstr "الكلية"
+
+#: .\users\models.py:57
+msgid "Academic Year"
+msgstr "السنة الدراسية"
+
+#: .\users\models.py:59
+msgid "Why Do you want to join us?"
+msgstr "لماذا تريد ان تنضم لنا؟"
+
+#: .\users\models.py:60
+msgid "How did you know about us"
+msgstr "كيف عرفت عنا؟"
+
+#: .\users\models.py:61
+msgid "What Skills do you have besides PR skills?"
+msgstr "ما هى مهاراتك غير القدرة على الكلام والاقناع"
+
+#: .\users\models.py:62
+msgid "Position"
+msgstr "المنصب"
+
+#: .\users\views.py:19
 msgid "Register"
 msgstr "انضمام"
+
+#: .\users\views.py:53
+msgid "Careers"
+msgstr "وظائف"
 
 #~ msgid "Mobile"
 #~ msgstr "رقم الهاتف"
