@@ -69,6 +69,18 @@ class ProfileUpdateForm(forms.ModelForm):
 class ApplicantForm(forms.ModelForm):
 	date_of_birth = forms.DateField(label=_('Date of Birth'),
 		 widget=forms.TextInput(attrs={'type': 'date'}))
+	phone_number = forms.FloatField(label=_('Phone Number'),
+	max_value=1599999999, min_value=101111111)
+	national_id = forms.FloatField(label=_('National ID'),
+	max_value=99999999999999, min_value=10000000000000)
+	year = forms.FloatField(label=_('Academic Year'),
+	max_value=10)
+	how = forms.CharField(label=_("How did you know about us"),
+		widget=forms.Textarea, min_length=20)
+	what = forms.CharField(label=_('What Skills do you have besides PR skills?'),
+		widget=forms.Textarea, min_length=20)
+	why = forms.CharField(label=_('Why Do you want to join us?'),
+		widget=forms.Textarea, min_length=20)
 	class Meta:
 		model = Applicant
 		fields = ['full_name', 'email', 'date_of_birth',
