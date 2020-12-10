@@ -46,7 +46,7 @@ class Profile(models.Model):
 
 class Applicant(models.Model):
 	full_name = models.CharField(_('Full Name'), max_length=255)
-	personal_image = models.ImageField(default='default.jpg', upload_to='applicant_pics')
+	personal_image = models.ImageField(upload_to='applicant_pics')
 	date_of_birth = models.DateField(_('Date of Birth'))
 	address = models.CharField(_('Address'), max_length=512)
 	phone_number = models.FloatField(_('Phone Number'))
