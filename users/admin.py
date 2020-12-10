@@ -14,7 +14,7 @@ class UserAdmin(UserAdmin):
             'fields': ('username', 'first_name', 'last_name','email', 'region', 'year', 'phone_number', 'date_of_birth', 'gender', 'national_id', 'password1', 'password2')
         }),
         (_('Permissions'), {
-            'fields': ('is_superuser', 'is_staff', 'is_student', 'is_publisher')
+            'fields': ('groups', 'is_superuser', 'is_staff', 'is_student', 'is_publisher')
         })
     )
     fieldsets = (
@@ -25,14 +25,14 @@ class UserAdmin(UserAdmin):
             'fields': ('date_of_birth' , 'date_joined', 'last_login')
         }),
         (_('Permissions'), {
-            'fields': ('is_superuser', 'is_staff', 'is_student', 'is_publisher')
+            'fields': ('groups', 'is_superuser', 'is_staff', 'is_student', 'is_publisher')
         })
 
     )
     list_display = ['username', 'first_name', 'phone_number', 'year', 'national_id']
     search_fields = ('username','first_name', 'last_name','national_id', 'phone_number',)
     ordering = ('username',)
-    list_filter = ('gender', 'year', 'region',)
+    list_filter = ('gender', 'year','groups', 'region',)
 
 
 class ProfileAdmin(admin.ModelAdmin):
