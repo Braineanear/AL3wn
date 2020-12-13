@@ -1,7 +1,11 @@
+from django import forms
 from django.contrib import admin
+from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.admin import GroupAdmin as originalGroupAdmin
+
 
 from .models import Profile, Applicant
 
@@ -40,6 +44,44 @@ class ProfileAdmin(admin.ModelAdmin):
     readonly_fields = ['image_tag']
 
 
+class GroupAdminForm(forms.ModelForm):
+    """
+    ModelForm that adds an additional multiple select field for managing
+    the users in the group.
+    """
+    users = forms.ModelMultipleChoiceField(
+        User.objects.all(),
+        widget=admin.widgets.FilteredSelectMultiple('Users', False),
+        required=False,
+        )
+
+
+    def __init__(self, *args, **kwargs):
+        super(GroupAdminForm, self).__init__(*args, **kwargs)
+        if self.instance.pk:
+            initial_users = self.instance.user_set.values_list('pk', flat=True)
+            self.initial['users'] = initial_users
+
+
+    def save(self, *args, **kwargs):
+        kwargs['commit'] = True
+        return super(GroupAdminForm, self).save(*args, **kwargs)
+
+
+    def save_m2m(self):
+        self.instance.user_set.clear()
+        self.instance.user_set.add(*self.cleaned_data['users'])
+
+
+class GroupAdmin(originalGroupAdmin):
+    """
+    Customized GroupAdmin class that uses the customized form to allow
+    management of users within a group.
+    """
+    form = GroupAdminForm
+    list_display = ["name", "pk"]
+
+
 class ApplicantAdmin(admin.ModelAdmin):
     add_fieldsets = (
         (None, {
@@ -75,3 +117,7 @@ class ApplicantAdmin(admin.ModelAdmin):
 admin.site.register(User, UserAdmin)
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Applicant, ApplicantAdmin)
+
+# Register the modified GroupAdmin with the admin site
+admin.site.unregister(Group)
+admin.site.register(Group, GroupAdmin)
