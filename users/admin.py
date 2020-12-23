@@ -103,15 +103,18 @@ class ApplicantAdmin(admin.ModelAdmin):
         }),
         (_('Dates'), {
             'fields': ('date_of_birth' , 'timestamp')
+        }),
+        (_('Interview'), {
+            'fields': ('notes1', 'rating1', 'notes2', 'rating2', 'accepted')
         })
 
     )
 
     readonly_fields = ['image_tag', 'timestamp']
-    list_display = ['full_name', 'phone_number', 'year', 'national_id']
+    list_display = ['full_name', 'accepted', 'year', 'national_id']
     search_fields = ('full_name','national_id','phone_number','a_phone_number', 'email',)
-    ordering = ('full_name',)
-    list_filter = ('gender', 'position', 'available', 'year', 'college',)
+    ordering = ('timestamp',)
+    list_filter = ('gender', 'position', 'available', 'year', 'address',)
 
 
 admin.site.register(User, UserAdmin)

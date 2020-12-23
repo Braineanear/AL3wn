@@ -63,6 +63,13 @@ class Applicant(models.Model):
 	 max_length=255, default='PR')
 	timestamp = models.DateTimeField(auto_now_add=True)
 	email = models.EmailField()
+	# Interview Stuff
+	notes1 = models.TextField(_('The first interviewer notes'), blank=True, null=True)
+	rating1 = models.IntegerField(_('The first interviewer notes (/10)'), blank=True, null=True)
+	notes2 = models.TextField(_('The second interviewer notes'), blank=True, null=True)
+	rating2 = models.IntegerField(_('The second interviewer notes (/10)'), blank=True, null=True)
+	accepted = models.BooleanField(_('Accepted'), default=False)
+
 
 	def __str__(self):
 		return self.full_name
