@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 from django.utils.translation import gettext as _
 
 User = get_user_model()
@@ -40,16 +41,19 @@ def stage2(request):
 
 # Deutsch Akademie
 @login_required
+@user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_shady(request):
 	context = {'title' : _('First Grade')}
 	return render(request, 'deutsch_akademie/first.html', context)
 
 @login_required
+@user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_shady(request):
 	context = {'title' : _('Second Grade')}
 	return render(request, 'deutsch_akademie/second.html', context)
 
 @login_required
+@user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_shady(request):
 	context = {'title' : _('third Grade')}
 	return render(request, 'deutsch_akademie/third.html', context)
