@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.translation import gettext as _
 
+from users.models import Applicant
+
 User = get_user_model()
 
 
@@ -12,7 +14,7 @@ def home(request):
 	return render (request, 'core/index.html', context)
 
 def about(request):
-	usernumb = User.objects.all().count()
+	usernumb = User.objects.all().count() + Applicant.objects.all().count()
 	context = {'usernumb' : usernumb,'title' : _('About Us')}
 	return render (request, 'core/about.html', context)
 
