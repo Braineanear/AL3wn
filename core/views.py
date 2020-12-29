@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from django.template import RequestContext
+from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
@@ -36,10 +37,13 @@ def sec(request):
 
 def youtube(request):
 	# return redirect('https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw')
-	res = HttpResponse('', status=302)
-	res['Location'] = 'https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw'
-	return res
-
+	response = HttpResponse('', status=302)
+	response['Location'] = 'https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw'
+	return response
+'''
+def not_found(request, exception):
+	return HttpResponseNotFound(request, '404.html')
+'''
 def stage1(request):
 	context = {'title' : _('Stage 1')}
 	return render (request, 'core/stage1.html', context)
