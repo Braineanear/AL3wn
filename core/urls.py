@@ -8,6 +8,7 @@ urlpatterns  =  [
     path('pricing/', views.price, name='Price'),
     path('dashboard/', views.dashboard, name='Dashboard'),
     path('sec/', views.sec, name='Secondary'),
+    path('youtube/', views.youtube),
     path('stage1/', views.stage1, name="Stage1"),
     path('stage2/', views.stage2, name="Stage2"),
     # Deutsch Akademie

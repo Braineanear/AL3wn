@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
@@ -32,6 +32,9 @@ def dashboard(request):
 def sec(request):
 	context = {'title' : _('Secondary')}
 	return render (request, 'core/secondary.html', context)
+
+def youtube(request):
+	return redirect('https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw')
 
 def stage1(request):
 	context = {'title' : _('Stage 1')}
