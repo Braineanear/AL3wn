@@ -38,7 +38,9 @@ def sec(request):
 def youtube(request):
 	# return redirect('https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw')
 	response = HttpResponse('', status=302)
-	response['Location'] = 'https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw'
+	# AL3wn youtube
+	response['Location'] = 'https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw?app=desktop&sub_confirmation=1'
+	# AM6 'https://www.youtube.com/channel/UC19awzqdNbZmDHb6mXrTrFQ?app=desktop&sub_confirmation=1'
 	return response
 '''
 def not_found(request, exception):
