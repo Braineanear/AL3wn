@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
@@ -34,7 +35,10 @@ def sec(request):
 	return render (request, 'core/secondary.html', context)
 
 def youtube(request):
-	return redirect('https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw')
+	# return redirect('https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw')
+	res = HttpResponse('', status=302)
+	res['Location'] = 'https://www.youtube.com/channel/UCWAITmc04Vcv9eaKt94Ujyw'
+	return res
 
 def stage1(request):
 	context = {'title' : _('Stage 1')}
