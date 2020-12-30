@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
 
@@ -36,7 +36,8 @@ def profile(request):
 
 	context = {
 		'user_form': user_form,
-		'profile_form': profile_form
+		'profile_form': profile_form,
+		'title' : request.user.username
 	}
 	return render(request, 'users/profile.html', context)
 
