@@ -40,6 +40,10 @@ class Profile(models.Model):
 	def image_tag(self):
 		return mark_safe('<img src="%s" width="150" height="150" />' % (self.image.url))
 
+	def thumb(self):
+		return mark_safe('<img src="%s" style="width: 45px; height:45px;" />' % self.image.url)
+
+
 	image_tag.short_description = 'Image'
 
 
@@ -76,6 +80,9 @@ class Applicant(models.Model):
 
 	def image_tag(self):
 		return mark_safe('<img src="%s" width="150" height="150" />' % (self.personal_image.url))
+
+	def thumb(self):
+		return mark_safe('<img src="%s" style="width: 45px; height:45px;" />' % self.personal_image.url)
 
 	image_tag.short_description = 'Image'
 
