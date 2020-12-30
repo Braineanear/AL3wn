@@ -70,3 +70,11 @@ def second_shady(request):
 def third_shady(request):
 	context = {'title' : _('third Grade')}
 	return render(request, 'deutsch_akademie/third.html', context)
+
+
+# halem
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+def third_halem(request):
+	context = {'title' : _('third Grade')}
+	return render(request, 'halem/third.html', context)

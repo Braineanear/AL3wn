@@ -20,5 +20,7 @@ urlpatterns  =  [
     path('HerrShady/1/', views.first_shady, name="HerrShady1"),
     path('HerrShady/2/', views.second_shady, name="HerrShady2"),
     path('HerrShady/3/', views.third_shady, name="HerrShady3"),
+    # halem
+    path('Halem/3/', views.third_halem, name="Halem3")
 
 ]
