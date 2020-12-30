@@ -11,7 +11,10 @@
 						<p class="animated fadeInUp mb-5">{% translate "Invitation for all of us to learn." %}<br>{% translate "Learning with al-3wn is" %} <span class="typer" data-words="{% translate 'simple,enjoyable,meet your needs.' %}" data-delay="120" data-deleteDelay="2000" data-loop="true"></span>
 							<span class="cursor" data-owner="main"></span>
 						</p>
-						<a href="{% url 'Register' %}" target="_blank" class="btn btn-main animated fadeInUp btn-round-full">{% translate "Join Now" %} </a>
+						{% if user.is_authenticated %}
+							<a href="{% url 'Profile' %}" class="btn btn-main animated fadeInUp btn-round-full">{% translate "Profile" %}</a>
+						{% else %}
+							<a href="{% url 'Register' %}" target="_blank" class="btn btn-main animated fadeInUp btn-round-full">{% translate "Join Now" %} </a>
 					</div>
 				</div>
 			</div>
