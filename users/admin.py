@@ -38,11 +38,31 @@ class UserAdmin(UserAdmin):
     ordering = ('username',)
     list_filter = ('gender', 'year','groups', 'region',)
 
+class ImageVertifyListFilter(admin.SimpleListFilter):
+    title = _('Image Vertify')
+
+    parameter_name = 'image'
+
+    def lookups(self, request, model_admin):
+        return (
+            ('Yes', _('Yes')),
+            ('No', _('No')),
+        )
+
+    def queryset(self, request, queryset):
+
+        if self.value() == "No":
+            return queryset.filter(image="default.jpg")
+        
+        if self.value() == "Yes":
+        	return queryset.exclude(image="default.jpg")
+        
 
 class ProfileAdmin(admin.ModelAdmin):
     # list_per_page = 50
     list_display = ['user', 'image_vertify']
     fields = ['user', 'image', 'image_tag']
+    list_filter = (ImageVertifyListFilter, 'user__gender',)
     readonly_fields = ['image_tag']
 
 
