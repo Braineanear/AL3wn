@@ -1,0 +1,28 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('AM6 site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('AM6 administration') }}</a></h1>
+{% endblock %}
+
+{% block extrastyle %}
+
+<style>
+
+.module h2, .module caption, .inline-group h2,#header
+{   
+    background-color: #800606;
+}
+.selector-chosen h2 {
+	background: #800606;
+}
+div.breadcrumbs {
+    background: #d26e6e;
+}
+</style>
+
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}
