@@ -40,8 +40,8 @@ class UserAdmin(UserAdmin):
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_per_page = 50
-    list_display = ['user', 'thumb']
+    # list_per_page = 50
+    list_display = ['user', 'image_vertify']
     fields = ['user', 'image', 'image_tag']
     readonly_fields = ['image_tag']
 

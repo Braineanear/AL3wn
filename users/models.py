@@ -37,6 +37,12 @@ class Profile(models.Model):
 	def __str__(self):
 		return f'{self.user.username} Profile'
 
+	def image_vertify(self):
+		if self.image == "default.jpg":
+			return "No"
+		else:
+			return "Yes"
+
 	def image_tag(self):
 		return mark_safe('<img src="%s" width="150" height="150" />' % (self.image.url))
 
