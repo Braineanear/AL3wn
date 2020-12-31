@@ -40,6 +40,7 @@ class UserAdmin(UserAdmin):
 
 
 class ProfileAdmin(admin.ModelAdmin):
+    list_per_page = 50
     list_display = ['user', 'thumb']
     fields = ['user', 'image', 'image_tag']
     readonly_fields = ['image_tag']
@@ -112,6 +113,7 @@ class ApplicantAdmin(admin.ModelAdmin):
     )
 
     readonly_fields = ['image_tag', 'timestamp']
+    list_per_page = 40
     list_display = ['thumb', 'full_name', 'year']
     search_fields = ('full_name','national_id','phone_number','a_phone_number', 'email',)
     ordering = ('timestamp',)
