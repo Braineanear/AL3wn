@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from django.utils.html import mark_safe
 from django.utils.translation import ugettext_lazy as _
@@ -30,9 +31,13 @@ class User(AbstractUser):
 	def __str__(self):
 		return self.username
 
+def get_upload_path(instance, filename):
+    return os.path.join(
+      'profile_pics', instance.user.gender, filename)
+
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+	image = models.ImageField(default='default.jpg', upload_to=get_upload_path)
 
 	def __str__(self):
 		return f'{self.user.username} Profile'
@@ -88,7 +93,7 @@ class Applicant(models.Model):
 		return mark_safe('<img src="%s" width="150" height="150" />' % (self.personal_image.url))
 
 	def thumb(self):
-		return mark_safe('<img src="%s" style="width: 45px; height:45px;" />' % self.personal_image.url)
+		return mark_safe('<img src="%s" style="width: 20px; height:20px;" />' % self.personal_image.url)
 
 	image_tag.short_description = 'Image'
 
