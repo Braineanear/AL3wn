@@ -53,6 +53,10 @@ def stage2(request):
 	return render (request, 'core/stage2.html', context)
 
 # Deutsch Akademie
+def herr_shady(request):
+	context = {'title' : _('Herr Shady')}
+	return render(request, 'deutsch_akademie/shady.html', context)
+
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_shady(request):

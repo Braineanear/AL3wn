@@ -17,6 +17,7 @@ urlpatterns  =  [
     path('stage1/', views.stage1, name="Stage1"),
     path('stage2/', views.stage2, name="Stage2"),
     # Deutsch Akademie
+    path('HerrShady/', views.herr_shady, name="HerrShady"),
     path('HerrShady/1/', views.first_shady, name="HerrShady1"),
     path('HerrShady/2/', views.second_shady, name="HerrShady2"),
     path('HerrShady/3/', views.third_shady, name="HerrShady3"),
