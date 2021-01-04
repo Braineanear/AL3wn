@@ -21,6 +21,11 @@ urlpatterns  =  [
     path('HerrShady/1/', views.first_shady, name="HerrShady1"),
     path('HerrShady/2/', views.second_shady, name="HerrShady2"),
     path('HerrShady/3/', views.third_shady, name="HerrShady3"),
+    # AliRashed
+    path('HerrAliRashed/', views.herr_ali ,name='HerrAli'),
+    path('HerrAliRashed/1/', views.first_ali ,name='HerrAli1'),
+    path('HerrAliRashed/2/', views.second_ali ,name='HerrAli2'),
+    path('HerrAliRashed/3/', views.third_ali ,name='HerrAli3'),
     # halem
     path('Halem/3/', views.third_halem, name="Halem3")
 

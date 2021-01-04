@@ -87,6 +87,37 @@
       <div class="card-box col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s">
         <div class="card">
           <!-- Image Area Begin -->
+          <div class="card-img" style="background-image: url({% static 'core/images/AliRashed.jpeg' %});">
+            <!-- Teacher Status -->
+            <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">{% translate "silver" %}</span> </div>
+          </div>
+          <!-- Image Area End -->
+
+          <!-- Content Area Begin -->
+          <div class="card-content">
+            <!-- Teacher Name -->
+            <h4 class="card-title">{% translate "Herr Ali Rashed" %}</h4>
+            
+            <!-- Teacher Location -->
+            <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {% translate "Benha , Qalubyia" %}</p>
+            
+            <!-- Teacher Description -->
+            <p class="card-description">{% translate "My object is to create an excellent learning environment and to help each student to improve their German (Deutsch) abilities." %}</p>
+            
+              <!-- Start Button -->
+            <a href="{% url 'HerrAli1' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "First Year" %}</a>
+            <a href="{% url 'HerrAli2' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Second Year" %}</a>
+            <a href="{% url 'HerrAli3' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Third Year" %}</a>
+          </div>
+          <!-- Content Area End -->
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Card Begin -->
+      <div class="card-box col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s">
+        <div class="card">
+          <!-- Image Area Begin -->
           <div class="card-img" style="background-image: url(https://images.pexels.com/photos/714698/pexels-photo-714698.jpeg?cs=srgb&dl=pexels-jeshootscom-714698.jpg&fm=jpg);">
             <!-- Teacher Status -->
             <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">{% translate "silver" %}</span> </div>

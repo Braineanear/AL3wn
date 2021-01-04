@@ -75,6 +75,29 @@ def third_shady(request):
 	context = {'title' : _('third Grade')}
 	return render(request, 'deutsch_akademie/third.html', context)
 
+# HerrAliRashed
+def herr_ali(request):
+	context = {'title' : _('Herr Ali')}
+	return render(request, 'AliRashed/ali.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
+def first_ali(request):
+	context = {'title' : _('First Grade')}
+	return render(request, 'AliRashed/first.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+def second_ali(request):
+	context = {'title' : _('Second Grade')}
+	return render(request, 'AliRashed/second.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+def third_ali(request):
+	context = {'title' : _('third Grade')}
+	return render(request, 'AliRashed/third.html', context)
+
 
 # halem
 @login_required
