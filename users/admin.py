@@ -11,6 +11,43 @@ from .models import Profile, Applicant
 
 User = get_user_model()
 
+class ImageVertifyListFilter(admin.SimpleListFilter):
+    title = _('Image Vertify')
+
+    parameter_name = 'image'
+
+    def lookups(self, request, model_admin):
+        return (
+            ('Yes', _('Yes')),
+            ('No', _('No')),
+        )
+
+    def queryset(self, request, queryset):
+
+        if self.value() == "No":
+            return queryset.filter(image="default.jpg")
+        
+        if self.value() == "Yes":
+            return queryset.exclude(image="default.jpg")
+
+class VertifyListFilter(admin.SimpleListFilter):
+    title = _('Image Vertify')
+
+    parameter_name = 'image'
+
+    def lookups(self, request, model_admin):
+        return (
+            ('Yes', _('Yes')),
+            ('No', _('No')),
+        )
+
+    def queryset(self, request, queryset):
+
+        if self.value() == "No":
+            return queryset.filter(profile__image="default.jpg")
+        
+        if self.value() == "Yes":
+            return queryset.exclude(profile__image="default.jpg")
 
 class UserAdmin(UserAdmin):
     add_fieldsets = (
@@ -33,35 +70,17 @@ class UserAdmin(UserAdmin):
         })
 
     )
-    list_display = ['username', 'first_name', 'phone_number', 'year', 'national_id']
-    search_fields = ('username','first_name', 'last_name','national_id', 'phone_number',)
-    ordering = ('username',)
-    list_filter = ('gender', 'year','groups', 'region',)
-
-class ImageVertifyListFilter(admin.SimpleListFilter):
-    title = _('Image Vertify')
-
-    parameter_name = 'image'
-
-    def lookups(self, request, model_admin):
-        return (
-            ('Yes', _('Yes')),
-            ('No', _('No')),
-        )
-
-    def queryset(self, request, queryset):
-
-        if self.value() == "No":
-            return queryset.filter(image="default.jpg")
-        
-        if self.value() == "Yes":
-        	return queryset.exclude(image="default.jpg")
+    list_display = ['username', 'first_name', 'image_verification', 'phone_number', 'year', 'national_id']
+    search_fields = ('username','first_name', 'last_name','national_id', 'phone_number','email',)
+    ordering = ('username','date_joined',)
+    list_filter = ('gender', 'year', VertifyListFilter, 'groups',)
         
 
 class ProfileAdmin(admin.ModelAdmin):
     # list_per_page = 50
     list_display = ['user', 'image_vertify']
     fields = ['user', 'image', 'image_tag']
+    search_fields = ('username','first_name', 'last_name','national_id', 'phone_number','email',)
     list_filter = (ImageVertifyListFilter, 'user__gender',)
     readonly_fields = ['image_tag']
 

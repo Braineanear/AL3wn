@@ -31,6 +31,12 @@ class User(AbstractUser):
 	def __str__(self):
 		return self.username
 
+	def image_verification(self):
+		if self.profile.image == "default.jpg":
+			return "No"
+		else:
+			return "Yes"
+
 def get_upload_path(instance, filename):
     return os.path.join(
       'profile_pics', instance.user.gender, filename)
