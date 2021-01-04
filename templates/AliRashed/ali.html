@@ -8,7 +8,7 @@ window.onload=function(){
  document.getElementById("button").style.display='none';
 }
 function textCheck(){
-    if (document.getElementById("inputPassword2").value == "deutsch010") {
+    if (document.getElementById("inputPassword2").value == "0") {
         document.getElementById("button").style.display='block';
     }
 }
@@ -46,14 +46,14 @@ function textCheck(){
           <!-- Content Area Begin -->
           <div class="card-content">
             <!-- Teacher Name -->
-            <h4 class="card-title">{% translate "Deutsch Akademie" %}</h4>
+            <h4 class="card-title">{% translate "Herr Ali Rashed" %}</h4>
             <br><br>
             <!-- Teacher Location -->
             <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {% translate "Benha , Qalubyia" %}</p>
             <br><br>
             <input type="password" class="form-control" id="inputPassword2" placeholder="Password" onchange="textCheck()"/>
             <br><br>
-            <a href="https://meet.google.com/jeo-apvt-wyr" id="button" class="btn btn-main btn-round-full float-lg-left">Lesson</a>
+            <a href="#" id="button" class="btn btn-main btn-round-full float-lg-left">Lesson</a>
             <br><br><br><br><br>
           </div>
       </div>
