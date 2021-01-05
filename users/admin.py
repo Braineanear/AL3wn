@@ -66,7 +66,7 @@ class UserAdmin(UserAdmin):
             'fields': ('date_of_birth' , 'date_joined', 'last_login')
         }),
         (_('Permissions'), {
-            'fields': ('groups', 'is_superuser', 'is_staff', 'is_student', 'is_publisher')
+            'fields': ('user_permissions', 'groups', 'is_superuser', 'is_staff', 'is_student', 'is_publisher')
         })
 
     )
@@ -80,7 +80,7 @@ class ProfileAdmin(admin.ModelAdmin):
     # list_per_page = 50
     list_display = ['user', 'image_vertify']
     fields = ['user', 'image', 'image_tag']
-    search_fields = ('username','first_name', 'last_name','national_id', 'phone_number','email',)
+    search_fields = ('user__username','user__first_name', 'user__last_name','user__national_id', 'user__phone_number','user__email',)
     list_filter = (ImageVertifyListFilter, 'user__gender',)
     readonly_fields = ['image_tag']
 
