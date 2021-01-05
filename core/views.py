@@ -105,3 +105,11 @@ def third_ali(request):
 def third_halem(request):
 	context = {'title' : _('third Grade')}
 	return render(request, 'halem/third.html', context)
+
+
+@login_required
+def halem_lesson(request):
+	response = HttpResponse('', status=302)
+	# Zoom Link
+	response['Location'] = ''
+	return response

@@ -27,6 +27,7 @@ urlpatterns  =  [
     path('HerrAliRashed/2/', views.second_ali ,name='HerrAli2'),
     path('HerrAliRashed/3/', views.third_ali ,name='HerrAli3'),
     # halem
-    path('Halem/3/', views.third_halem, name="Halem3")
+    path('Halem/3/', views.third_halem, name="Halem3"),
+    path('Halem/3/Lesson/', views.halem_lesson, name="HalemLesson")
 
 ]
