@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.translation import gettext as _
 
+# from .models import HalemURL
+
 from users.models import Applicant
 
 User = get_user_model()
@@ -111,5 +113,13 @@ def third_halem(request):
 def halem_lesson(request):
 	response = HttpResponse('', status=302)
 	# Zoom Link
-	response['Location'] = 'https://us02web.zoom.us/j/87311325798?pwd=Q3FqVkJDdU9mUXZDM0RhN01HTWVVdz09'
+	response['Location'] = 'https://us02web.zoom.us/j/88094980233?pwd=ckpGMWM3aW0zUlJrTGtJYnlycGl5UT09'
 	return response
+
+'''
+def halem_lesson(request):
+	response = HttpResponse('', status=302)
+	# Zoom Link
+	response['Location'] = HalemURL.link
+	return response
+'''
