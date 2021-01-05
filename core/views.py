@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.translation import gettext as _
 
-from .models import HalemURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL
 
 from users.models import Applicant
 
@@ -56,48 +56,56 @@ def stage2(request):
 
 # Deutsch Akademie
 def herr_shady(request):
-	context = {'title' : _('Herr Shady')}
+	link = HerrShadyURL.objects.all()[0].link
+	context = {'title' : _('Herr Shady'), 'link': link}
 	return render(request, 'deutsch_akademie/shady.html', context)
 
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_shady(request):
-	context = {'title' : _('First Grade')}
+	link = HerrShadyURL.objects.all()[0].link
+	context = {'title' : _('First Grade'), 'link': link}
 	return render(request, 'deutsch_akademie/first.html', context)
 
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_shady(request):
-	context = {'title' : _('Second Grade')}
+	link = HerrShadyURL.objects.all()[0].link
+	context = {'title' : _('Second Grade'), 'link': link}
 	return render(request, 'deutsch_akademie/second.html', context)
 
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_shady(request):
-	context = {'title' : _('third Grade')}
+	link = HerrShadyURL.objects.all()[0].link
+	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'deutsch_akademie/third.html', context)
 
 # HerrAliRashed
 def herr_ali(request):
-	context = {'title' : _('Herr Ali')}
+	link = HerrAliURL.objects.all()[0].link
+	context = {'title' : _('Herr Ali'), 'link': link}
 	return render(request, 'AliRashed/ali.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_ali(request):
-	context = {'title' : _('First Grade')}
+	link = HerrAliURL.objects.all()[0].link
+	context = {'title' : _('First Grade'), 'link': link}
 	return render(request, 'AliRashed/first.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_ali(request):
-	context = {'title' : _('Second Grade')}
+	link = HerrAliURL.objects.all()[0].link
+	context = {'title' : _('Second Grade'), 'link': link}
 	return render(request, 'AliRashed/second.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_ali(request):
-	context = {'title' : _('third Grade')}
+	link = HerrAliURL.objects.all()[0].link
+	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'AliRashed/third.html', context)
 
 
