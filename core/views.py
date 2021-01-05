@@ -111,5 +111,5 @@ def third_halem(request):
 def halem_lesson(request):
 	response = HttpResponse('', status=302)
 	# Zoom Link
-	response['Location'] = ''
+	response['Location'] = 'https://us02web.zoom.us/j/87311325798?pwd=Q3FqVkJDdU9mUXZDM0RhN01HTWVVdz09'
 	return response
