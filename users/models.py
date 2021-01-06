@@ -39,7 +39,7 @@ class User(AbstractUser):
 
 def get_upload_path(instance, filename):
     return os.path.join(
-      'profile_pics', instance.user.gender, filename)
+      'profile_pics', instance.user.gender, instance.user.username, filename)
 
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -64,6 +64,9 @@ class Profile(models.Model):
 	image_tag.short_description = 'Image'
 
 
+def personal_image_upload_path(instance, filename):
+    return os.path.join(
+      'applicant_pics', instance.gender, instance.full_name, filename)
 
 class Applicant(models.Model):
 	full_name = models.CharField(_('Full Name'), max_length=255)
