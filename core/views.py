@@ -60,6 +60,12 @@ def herr_shady(request):
 	context = {'title' : _('Herr Shady'), 'link': link}
 	return render(request, 'deutsch_akademie/shady.html', context)
 
+def shady_lesson(request):
+	response = HttpResponse('', status=302)
+	# Zoom Link
+	response['Location'] = HerrShadyURL.objects.all()[0].link
+	return response
+
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_shady(request):
