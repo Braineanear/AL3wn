@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.translation import gettext as _
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL
 
 from users.models import Applicant
 
@@ -133,20 +133,20 @@ def halem_lesson(request):
 
 # Ehab El Shafey
 def ehab_elshafey(request):
-	link = 'http://al3wn.com/'
+	link = MrEhabURL.objects.all()[0].link
 	context = {'title' : _('Ehab El Shafey'), 'link': link}
 	return render(request, 'ehab/ehab.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_ehab(request):
-	link = 'http://al3wn.com/'
+	link = MrEhabURL.objects.all()[0].link
 	context = {'title' : _('Second Grade'), 'link': link}
 	return render(request, 'ehab/second.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_ehab(request):
-	link = 'http://al3wn.com/'
+	link = MrEhabURL.objects.all()[0].link
 	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'ehab/third.html', context)
