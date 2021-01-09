@@ -6,9 +6,6 @@ class HalemURL(models.Model):
 	def __str__(self):
 		return "Halem Zoom URL"
 
-	def get_absolute_url(self):
-		return self.link
-
 
 class HerrShadyURL(models.Model):
 	title = models.CharField(max_length=255)
@@ -24,6 +21,14 @@ class HerrAliURL(models.Model):
 
 	def __str__(self):
 		return "Herr Ali URL"
+
+
+class HerrMURL(models.Model):
+	title = models.CharField(max_length=255)
+	link = models.URLField(default='http://al3wn.com/', max_length=512)
+
+	def __str__(self):
+		return "Herr Mohammed Abdel Atty URL"
 
 
 class MrEhabURL(models.Model):
