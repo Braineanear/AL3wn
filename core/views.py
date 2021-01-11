@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.translation import gettext as _
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL
 
 from users.models import Applicant
 
@@ -114,7 +114,7 @@ def third_ali(request):
 	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'AliRashed/third.html', context)
 
-# HerrAliRashed
+# Herr Mohammed Abdel Atty
 def herr_m(request):
 	link = HerrMURL.objects.all()[0].link
 	context = {'title' : _('Herr M. Abdel Atty'), 'link': link}
@@ -157,6 +157,44 @@ def halem_lesson(request):
 	response['Location'] = HalemURL.objects.all()[0].link
 	return response
 
+# bassem
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
+def first_bassem(request):
+	link = BassemURL.objects.all()[0].link
+	context = {'title' : _('First Grade'), 'link': link}
+	return render(request, 'bassem/first.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+def second_bassem(request):
+	link = BassemURL.objects.all()[1].link
+	context = {'title' : _('Second Grade'), 'link': link}
+	return render(request, 'bassem/second.html', context)
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+def third_bassem(request):
+	link = BassemURL.objects.all()[2].link
+	context = {'title' : _('third Grade'), 'link': link}
+	return render(request, 'bassem/third.html', context)
+
+def bassem_up(request):
+	response = HttpResponse('', status=302)
+	# Zoom Link
+	response['Location'] = BassemURL.objects.all()[3].link
+	return response
+
+def bassem_perfect(request):
+	response = HttpResponse('', status=302)
+	# Zoom Link
+	response['Location'] = BassemURL.objects.all()[4].link
+	return response
+
+def bassem_youtube(request):
+	response = HttpResponse('', status=302)
+	# AL3wn youtube
+	response['Location'] = 'https://m.youtube.com/channel/UCRElkYWugZwq5kgIFFfsTMg?sub_confirmation=1'
+	return response
 
 # Ehab El Shafey
 def ehab_elshafey(request):
