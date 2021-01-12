@@ -118,7 +118,7 @@ def third_ali(request):
 def herr_m(request):
 	link = HerrMURL.objects.all()[0].link
 	context = {'title' : _('Herr M. Abdel Atty'), 'link': link}
-	return render(request, 'HerrAbdelAtty/ali.html', context)
+	return render(request, 'HerrAbdelAtty/M.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
