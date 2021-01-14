@@ -1,0 +1,110 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load static %}
+    {% block content %}
+        <!-- Start Section Begin -->
+        <section class="start wow fadeIn" data-wow-duration="1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="d-block mb-3 text-white text-capitalize">أتقن</h1>
+                        <p class="animated fadeInUp mb-5">Welcome, {{ user.first_name|capfirst }}😘!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start Section End -->
+
+        <section class="profile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 py-5">
+                                    <div class="exams-head py-5 text-center">
+                                        <h1>Exams</h1>
+                                    </div>
+                                    {% for i in link %}
+                                    <!-- Card Begin -->
+                                    <div class="card-box col-12 m-0 p-0 wow fadeIn" data-wow-duration="1s">
+                                        <div class="card">
+                                            <!-- Content Area Begin -->
+                                            <div class="card-content p-4">
+                                                <!-- Exam Name -->
+                                                <h4 class="card-title">{{ i.title }}</h4><br>
+
+                                                <!-- Start Button -->
+                                                <a href="{{ i.link }}"  class="join-teacher btn btn-solid-border btn-round-full">Start</a>
+                                            </div>
+                                            <!-- Content Area End -->
+                                        </div>
+                                    </div>
+                                    <!-- Card End -->
+                                    {% endfor %}
+
+                                    {% if is_paginated %}
+                                    <!-- Pagination Begin -->
+                                    <div class="col-12 wow fadeIn" data-wow-duration="1s">
+                                        <ul class="pagination justify-content-center">
+                                            {% if page_obj.has_previous %}
+                                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% for num in page_obj.paginator.page_range %}
+                                                {% if page_obj.number == num %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if page_obj.has_next %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                    <!-- Pagination End -->
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <hr>
+<!-- 
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="grade-head text-center py-5">
+                                        <h1>Grades</h1>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">First</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Not yet</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+ -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+    {% endblock content %}

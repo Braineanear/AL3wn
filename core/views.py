@@ -4,9 +4,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.translation import gettext as _
+from django.views.generic import ListView
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, Bassem01URL, Bassem02URL, Bassem03URL, BassemYouTubeURL, BassemUpURL, BassemPerfectURL
 
 from users.models import Applicant
 
@@ -158,37 +160,78 @@ def halem_lesson(request):
 	return response
 
 # bassem
-@login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
-def first_bassem(request):
-	link = BassemURL.objects.all()[0].link
-	context = {'title' : _('First Grade'), 'link': link}
-	return render(request, 'bassem/first.html', context)
+class FirstBassem(LoginRequiredMixin, ListView):
+	model = Bassem01URL
+	template_name = 'bassem/first.html'
+	context_object_name = 'link'
+	ordering = ['-date_posted']
+	paginate_by = 6
 
-@login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
-def second_bassem(request):
-	link = BassemURL.objects.all()[1].link
-	context = {'title' : _('Second Grade'), 'link': link}
-	return render(request, 'bassem/second.html', context)
-@login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
-def third_bassem(request):
-	link = BassemURL.objects.all()[2].link
-	context = {'title' : _('third Grade'), 'link': link}
-	return render(request, 'bassem/third.html', context)
+	def get_context_data(self, *args, **kwargs):
+		context = super(FirstBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "First Grade"
+		return context
 
-def bassem_up(request):
-	response = HttpResponse('', status=302)
-	# Zoom Link
-	response['Location'] = BassemURL.objects.all()[3].link
-	return response
+class SecondBassem(LoginRequiredMixin, ListView):
+	model = Bassem02URL
+	template_name = 'bassem/second.html'
+	context_object_name = 'link'
+	ordering = ['-date_posted']
+	paginate_by = 6
 
-def bassem_perfect(request):
-	response = HttpResponse('', status=302)
-	# Zoom Link
-	response['Location'] = BassemURL.objects.all()[4].link
-	return response
+	def get_context_data(self, *args, **kwargs):
+		context = super(SecondBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Second Grade"
+		return context
+
+class ThirdBassem(LoginRequiredMixin, ListView):
+	model = Bassem03URL
+	template_name = 'bassem/third.html'
+	context_object_name = 'link'
+	ordering = ['-date_posted']
+	paginate_by = 6
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(ThirdBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Third Grade"
+		return context
+
+class UpBassem(ListView):
+	model = BassemUpURL
+	template_name = 'bassem/up.html'
+	context_object_name = 'link'
+	ordering = ['-date_posted']
+	paginate_by = 6
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(UpBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Up"
+		return context
+
+class PerfectBassem(ListView):
+	model = BassemPerfectURL
+	template_name = 'bassem/perfect.html'
+	context_object_name = 'link'
+	ordering = ['-date_posted']
+	paginate_by = 6
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(PerfectBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Perfect"
+		return context
+
+class VideosBassem(ListView):
+	model = BassemYouTubeURL
+	template_name = 'bassem/videos.html'
+	context_object_name = 'link'
+	ordering = ['-date_posted']
+	paginate_by = 6
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(VideosBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Videos"
+		return context
+
 
 def bassem_youtube(request):
 	response = HttpResponse('', status=302)

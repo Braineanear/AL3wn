@@ -18,56 +18,62 @@
         <section class="profile">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12 py-5">
                                     <div class="exams-head py-5 text-center">
                                         <h1>Exams</h1>
                                     </div>
+                                    {% for i in link %}
                                     <!-- Card Begin -->
                                     <div class="card-box col-12 m-0 p-0 wow fadeIn" data-wow-duration="1s">
                                         <div class="card">
                                             <!-- Content Area Begin -->
                                             <div class="card-content p-4">
                                                 <!-- Exam Name -->
-                                                <h4 class="card-title">Exam 01</h4><br>
-                                                
-                                                <!-- Teacher Name -->
-                                                <h6>Bassem</h6>
-                                                
-                                                <!-- Exam Description -->
-                                                <p class="card-description py-3">Online</p>
-
-                                                <!-- Exam Status -->
-                                                <h6>Status : Online</h6>
-                                                
-                                                <!-- Exam Time -->
-                                                <!-- <p class="card-description py-3">03/01/2021 (20 mins) </p> -->
+                                                <h4 class="card-title">{{ i.title }}</h4><br>
 
                                                 <!-- Start Button -->
-                                                <a href="#"  class="join-teacher btn btn-solid-border btn-round-full">Start</a>
+                                                <a href="{{ i.link }}"  class="join-teacher btn btn-solid-border btn-round-full">Start</a>
                                             </div>
                                             <!-- Content Area End -->
                                         </div>
                                     </div>
                                     <!-- Card End -->
+                                    {% endfor %}
 
-                                  <!--   Pagination Begin
+                                    {% if is_paginated %}
+                                    <!-- Pagination Begin -->
                                     <div class="col-12 wow fadeIn" data-wow-duration="1s">
                                         <ul class="pagination justify-content-center">
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">Next</a>
-                                            </li>
+                                            {% if page_obj.has_previous %}
+                                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% for num in page_obj.paginator.page_range %}
+                                                {% if page_obj.number == num %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if page_obj.has_next %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                                                </li>
+                                            {% endif %}
                                         </ul>
                                     </div>
-                                    Pagination End -->
+                                    <!-- Pagination End -->
+                                    {% endif %}
                                 </div>
                             </div>
 
@@ -96,52 +102,6 @@
                             </div>
  -->
                         </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 py-5">
-                        <div class="lessons-head text-center p-5">
-                            <h1>Lessons</h1>
-                        </div>
-                        <!-- Card Begin -->
-                        <div class="card-box col-12 wow fadeIn" data-wow-duration="1s">
-                            <div class="card">
-                                <!-- Content Area Begin -->
-                                <div class="card-content p-4">
-                                    <!-- Lesson Name -->
-                                    <h4 class="card-title">First Lesson</h4><br>
-                                    
-                                    <!-- Teacher Name -->
-                                    <h6>Bassem</h6>
-                                    
-                                    <!-- Lesson Description -->
-                                    <p class="card-description py-3">{% translate "My object is to create an excellent learning environment and to help each student to improve their Arabic abilities." %}</p>
-                                    
-                                    <!-- Lesson Status -->
-                                    <h6>Status : Not yet</h6>
-                                    
-                                    <!-- Start Button -->
-                                    <a href="{{ link }}" onclick="alert('يارب تكون بدايه سنه سعيده عليك 😊🤍');" class="join-teacher btn btn-solid-border btn-round-full">Let's Start</a>
-                                </div>
-                                <!-- Content Area End -->
-                            </div>
-                        </div>
-                        <!-- Card End -->
-
-  <!--                       Pagination Begin
-                        <div class="col-12 wow fadeIn" data-wow-duration="1s">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </div>
-                        Pagination End -->
                     </div>
                 </div>
             </div>

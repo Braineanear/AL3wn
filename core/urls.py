@@ -36,11 +36,12 @@ urlpatterns  =  [
     path('Halem/3/', views.third_halem, name="Halem3"),
     path('Halem/3/Lesson/', views.halem_lesson, name="HalemLesson"),
     # Bassem
-    path('Bassem/1/', views.first_bassem ,name='Bassem1'),
-    path('Bassem/2/', views.second_bassem ,name='Bassem2'),
-    path('Bassem/3/', views.third_bassem ,name='Bassem3'),
-    path('Bassem/up/', views.bassem_up ,name='BassemUp'),
-    path('Bassem/perfect/', views.bassem_perfect ,name='BassemPerfect'),
+    path('Bassem/1/', views.FirstBassem.as_view(),name='Bassem1'),
+    path('Bassem/2/', views.SecondBassem.as_view() ,name='Bassem2'),
+    path('Bassem/3/', views.ThirdBassem.as_view() ,name='Bassem3'),
+    path('Bassem/up/', views.UpBassem.as_view(),name='BassemUp'),
+    path('Bassem/perfect/', views.PerfectBassem.as_view(),name='BassemPerfect'),
+    path("Bassem/videos/", views.VideosBassem.as_view(), name='BassemVideos'),
     path("Bassem/youtube/", views.bassem_youtube, name='BassemYoutube'),
     # Ehab
     path('EhabElShafey/', views.ehab_elshafey ,name='Ehab'),
