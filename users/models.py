@@ -31,7 +31,7 @@ class User(AbstractUser):
 	def __str__(self):
 		return self.username
 
-	def image_verification(self):
+	def pic(self):
 		if self.profile.image == "default.jpg":
 			return "No"
 		else:

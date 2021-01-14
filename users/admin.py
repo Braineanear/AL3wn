@@ -70,7 +70,7 @@ class UserAdmin(UserAdmin):
         })
 
     )
-    list_display = ['username', 'first_name', 'image_verification', 'phone_number', 'year', 'national_id']
+    list_display = ['username', 'first_name', 'pic', 'phone_number', 'year', 'national_id']
     search_fields = ('username','first_name', 'last_name','national_id', 'phone_number','email',)
     ordering = ('username','date_joined',)
     list_filter = ('gender', 'year', VertifyListFilter, 'groups',)
