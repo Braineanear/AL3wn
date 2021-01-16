@@ -1,7 +1,7 @@
 (function ($) {
 
 	'use strict';
-
+	var countDownDate = new Date("April 15, 2020 00:00:00").getTime();
 	var x = setInterval(function () {
 		var now = new Date().getTime();
 		var distance = countDownDate - now;
