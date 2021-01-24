@@ -1,9 +1,10 @@
 from django.contrib import admin
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, Bassem01URL, Bassem02URL, Bassem03URL, BassemYouTubeURL, BassemUpURL, BassemPerfectURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, Bassem01URL, Bassem02URL, Bassem03URL, BassemYouTubeURL, BassemUpURL, BassemPerfectURL
 
 admin.site.register(HalemURL)
 admin.site.register(HerrMURL)
+admin.site.register(BassemURL)
 admin.site.register(Bassem01URL)
 admin.site.register(Bassem02URL)
 admin.site.register(Bassem03URL)

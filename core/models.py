@@ -1,11 +1,29 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import ugettext_lazy as _
+
+Bassem_TYPES = (
+	('1', '1'),
+	('2', '2'),
+	('3', '3'),
+	('up', 'up'),
+	('perfect', 'perfect')
+	)
 
 class HalemURL(models.Model):
 	link = models.URLField(default='http://al3wn.com/', max_length=512)
 
 	def __str__(self):
 		return "Halem Zoom URL"
+
+class BassemURL(models.Model):
+	title = models.CharField(max_length=255)
+	kind = models.CharField(_('Kind'), choices=Bassem_TYPES, max_length=255)
+	link = models.URLField(default='http://al3wn.com/', max_length=512)
+	date_posted = models.DateTimeField(default=timezone.now)
+
+	def __str__(self):
+		return "Bassem Exams URL"
 
 class Bassem01URL(models.Model):
 	title = models.CharField(max_length=255)
