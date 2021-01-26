@@ -23,7 +23,7 @@ class BassemURL(models.Model):
 	date_posted = models.DateTimeField(default=timezone.now)
 
 	def __str__(self):
-		return "Bassem Exams URL"
+		return self.title
 
 class Bassem01URL(models.Model):
 	title = models.CharField(max_length=255)
