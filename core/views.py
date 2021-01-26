@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.translation import gettext as _
 from django.views.generic import ListView
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, Bassem01URL, Bassem02URL, Bassem03URL, BassemYouTubeURL, BassemUpURL, BassemPerfectURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, BassemYouTubeURL
 
 from users.models import Applicant
 
@@ -161,11 +161,12 @@ def halem_lesson(request):
 
 # bassem
 class FirstBassem(LoginRequiredMixin, ListView):
-	model = Bassem01URL
 	template_name = 'bassem/first.html'
 	context_object_name = 'link'
-	ordering = ['-date_posted']
 	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='1').order_by('-date_posted')
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(FirstBassem, self).get_context_data(*args, **kwargs)
@@ -173,11 +174,12 @@ class FirstBassem(LoginRequiredMixin, ListView):
 		return context
 
 class SecondBassem(LoginRequiredMixin, ListView):
-	model = Bassem02URL
 	template_name = 'bassem/second.html'
 	context_object_name = 'link'
-	ordering = ['-date_posted']
 	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='2').order_by('-date_posted')
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(SecondBassem, self).get_context_data(*args, **kwargs)
@@ -185,11 +187,12 @@ class SecondBassem(LoginRequiredMixin, ListView):
 		return context
 
 class ThirdBassem(LoginRequiredMixin, ListView):
-	model = Bassem03URL
 	template_name = 'bassem/third.html'
 	context_object_name = 'link'
-	ordering = ['-date_posted']
 	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='3').order_by('-date_posted')
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(ThirdBassem, self).get_context_data(*args, **kwargs)
@@ -197,11 +200,13 @@ class ThirdBassem(LoginRequiredMixin, ListView):
 		return context
 
 class UpBassem(ListView):
-	model = BassemUpURL
 	template_name = 'bassem/up.html'
 	context_object_name = 'link'
-	ordering = ['-date_posted']
 	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='up').order_by('-date_posted')
+
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(UpBassem, self).get_context_data(*args, **kwargs)
@@ -209,11 +214,12 @@ class UpBassem(ListView):
 		return context
 
 class PerfectBassem(ListView):
-	model = BassemPerfectURL
 	template_name = 'bassem/perfect.html'
 	context_object_name = 'link'
-	ordering = ['-date_posted']
 	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='perfect').order_by('-date_posted')
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(PerfectBassem, self).get_context_data(*args, **kwargs)
