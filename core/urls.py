@@ -44,6 +44,7 @@ urlpatterns  =  [
     path("Bassem/videos/", views.VideosBassem.as_view(), name='BassemVideos'),
     path("Bassem/youtube/", views.bassem_youtube, name='BassemYoutube'),
     # Ehab
+    path('Ehab/translation/', views.ehab_trans ,name='EhabTranslation'),
     path('EhabElShafey/', views.ehab_elshafey ,name='Ehab'),
     path('Ehab/2/', views.second_ehab ,name='Ehab2'),
     path('Ehab/3/', views.third_ehab ,name='Ehab3')

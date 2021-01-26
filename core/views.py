@@ -258,3 +258,9 @@ def third_ehab(request):
 	link = MrEhabURL.objects.all()[0].link
 	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'ehab/third.html', context)
+
+def ehab_trans(request):
+	response = HttpResponse('', status=302)
+	# Zoom Link
+	response['Location'] = 'https://docs.google.com/forms/d/e/1FAIpQLScHdyI0KbWSiRQRitDH8i3yrqqY5xyzgids3kaQgDNx1PUv7g/viewform?usp=sf_link'
+	return response
