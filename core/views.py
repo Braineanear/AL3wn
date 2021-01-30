@@ -147,7 +147,7 @@ def third_m(request):
 def herr_bakheet(request):
 	link = 'https://meet.google.com/'
 	context = {'title' : _('Herr Khaled Bakheet'), 'link': link}
-	return render(request, 'bakheet/Khaled.html', context)
+	return render(request, 'bakheet/khaled.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
