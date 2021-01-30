@@ -32,6 +32,11 @@ urlpatterns  =  [
     path('HerrM/1/', views.first_m ,name='HerrM1'),
     path('HerrM/2/', views.second_m ,name='HerrM2'),
     path('HerrM/3/', views.third_m ,name='HerrM3'),
+    # Herr Khaled Bakheet
+    path('HerrBakheet/', views.herr_bakheet ,name='HerrBakheet'),
+    path('HerrBakheet/1/', views.first_bakheet ,name='HerrBakheet1'),
+    path('HerrBakheet/2/', views.second_bakheet ,name='HerrBakheet2'),
+    path('HerrBakheet/3/', views.third_bakheet ,name='HerrBakheet3'),
     # halem
     path('Halem/3/', views.third_halem, name="Halem3"),
     path('Halem/3/Lesson/', views.halem_lesson, name="HalemLesson"),

@@ -143,6 +143,32 @@ def third_m(request):
 	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'HerrAbdelAtty/third.html', context)
 
+# Herr Khaled Bakheet
+def herr_bakheet(request):
+	link = 'https://meet.google.com/'
+	context = {'title' : _('Herr Khaled Bakheet'), 'link': link}
+	return render(request, 'bakheet/Khaled.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
+def first_bakheet(request):
+	link = 'https://meet.google.com/'
+	context = {'title' : _('First Grade'), 'link': link}
+	return render(request, 'bakheet/first.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+def second_bakheet(request):
+	link = 'https://meet.google.com/'
+	context = {'title' : _('Second Grade'), 'link': link}
+	return render(request, 'bakheet/second.html', context)
+
+@login_required
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+def third_bakheet(request):
+	link = 'https://meet.google.com/'
+	context = {'title' : _('third Grade'), 'link': link}
+	return render(request, 'bakheet/third.html', context)
 
 # halem
 @login_required
