@@ -174,7 +174,8 @@ def third_bakheet(request):
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_halem(request):
-	context = {'title' : _('third Grade')}
+	link = HalemURL.objects.all()[0].link
+	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'halem/third.html', context)
 
 
