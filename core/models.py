@@ -50,7 +50,7 @@ class HalemURL(models.Model):
 	link = models.URLField(default='http://al3wn.com/', max_length=512)
 
 	def __str__(self):
-		return "Halem Zoom URL"
+		return "Halem URL"
 
 class BassemURL(models.Model):
 	title = models.CharField(max_length=255)
