@@ -2019,6 +2019,13 @@ main {
 #time:last-child {
   padding-bottom: 100px;
 }
+.subjects .nav-item .active{
+  border-radius: 0;
+}
+.subjects .sub .active{
+  background-color: #28A745;
+  border-radius: 0;
+}
 
 @-webkit-keyframes pulse {
   0% {
