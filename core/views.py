@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.translation import gettext as _
 from django.views.generic import ListView
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, BassemYouTubeURL
+from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, BassemYouTubeURL, HerrKhaledURL
 
 from users.models import Applicant
 
@@ -145,28 +145,28 @@ def third_m(request):
 
 # Herr Khaled Bakheet
 def herr_bakheet(request):
-	link = 'https://meet.google.com/'
+	link = HerrKhaledURL.objects.all()[0].link
 	context = {'title' : _('Herr Khaled Bakheet'), 'link': link}
 	return render(request, 'bakheet/khaled.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_bakheet(request):
-	link = 'https://meet.google.com/'
+	link = HerrKhaledURL.objects.all()[0].link
 	context = {'title' : _('First Grade'), 'link': link}
 	return render(request, 'bakheet/first.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_bakheet(request):
-	link = 'https://meet.google.com/'
+	link = HerrKhaledURL.objects.all()[0].link
 	context = {'title' : _('Second Grade'), 'link': link}
 	return render(request, 'bakheet/second.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_bakheet(request):
-	link = 'https://meet.google.com/'
+	link = HerrKhaledURL.objects.all()[0].link
 	context = {'title' : _('third Grade'), 'link': link}
 	return render(request, 'bakheet/third.html', context)
 
