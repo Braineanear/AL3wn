@@ -253,6 +253,19 @@ class PerfectBassem(ListView):
 		context['title'] = "Perfect"
 		return context
 
+class InnovateBassem(ListView):
+	template_name = 'bassem/perfect.html'
+	context_object_name = 'link'
+	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='innovate').order_by('-date_posted')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(InnovateBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Innovate"
+		return context
+
 class VideosBassem(ListView):
 	model = BassemYouTubeURL
 	template_name = 'core/subjects.html'

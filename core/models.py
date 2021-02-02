@@ -7,7 +7,8 @@ Bassem_TYPES = (
 	('2', '2'),
 	('3', '3'),
 	('up', 'up'),
-	('perfect', 'perfect')
+	('perfect', 'perfect'),
+	('innovate','innovate')
 	)
 
 PUBLISHERS = (
@@ -15,7 +16,8 @@ PUBLISHERS = (
 	('GA', 'Herr Ali Rashed'),
 	('GM', 'Herr Mohammed Abdel Atty'),
 	('AH', 'Mohammed Abdel Halem'),
-	('GS', 'Herr Shady')
+	('GS', 'Herr Shady'),
+	("GK", "Herr Khaled Bakheet")
 	)
 
 WRITERS = (
