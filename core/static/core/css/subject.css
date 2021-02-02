@@ -3,7 +3,7 @@ figure {
     padding: 0
 }
 
-h2 {
+article h2 {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.25;
@@ -17,7 +17,7 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-    h2 {
+    article h2 {
         font-size: 15px
     }
 }
