@@ -2,6 +2,7 @@ from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -21,7 +22,9 @@ def home(request):
 
 def about(request):
 	usernumb = User.objects.all().count() + Applicant.objects.all().count()
-	context = {'usernumb' : usernumb,'title' : _('About Us')}
+	courses = Group.objects.all().count()
+	staff = User.objects.all().filter(is_staff=True).count()
+	context = {'usernumb' : usernumb, 'courses': courses, 'staff':staff ,'title' : _('About Us')}
 	return render (request, 'core/about.html', context)
 
 def dev(request):
