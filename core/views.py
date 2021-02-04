@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.translation import gettext as _
 from django.views.generic import ListView
 
-from .models import HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, BassemYouTubeURL, HerrKhaledURL
+from .models import OuterExam, HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, BassemYouTubeURL, HerrKhaledURL
 
 from users.models import Applicant
 
@@ -155,23 +155,29 @@ def herr_bakheet(request):
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_bakheet(request):
+	publisher = 'Herr Khaled Bakheet'
 	link = HerrKhaledURL.objects.all()[0].link
-	context = {'title' : _('First Grade'), 'link': link}
-	return render(request, 'bakheet/first.html', context)
+	exams = OuterExam.objects.all().filter(year='1', publisher='GK').order_by('-date_posted')
+	context = {'title' : _('First Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_bakheet(request):
+	publisher = 'Herr Khaled Bakheet'
 	link = HerrKhaledURL.objects.all()[0].link
-	context = {'title' : _('Second Grade'), 'link': link}
-	return render(request, 'bakheet/second.html', context)
+	exams = OuterExam.objects.all().filter(year='2', publisher='GK').order_by('-date_posted')
+	context = {'title' : _('Second Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_bakheet(request):
+	publisher = 'Herr Khaled Bakheet'
 	link = HerrKhaledURL.objects.all()[0].link
-	context = {'title' : _('third Grade'), 'link': link}
-	return render(request, 'bakheet/third.html', context)
+	exams = OuterExam.objects.all().filter(year='3', publisher='GK').order_by('-date_posted')
+	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 # halem
 @login_required

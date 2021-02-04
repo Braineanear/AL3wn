@@ -1,0 +1,136 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load static %}
+    {% block content %}
+        <!-- Start Section Begin -->
+        <section class="start wow fadeIn" data-wow-duration="1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="d-block mb-3 text-white text-capitalize">Dashboard</h1>
+                        <p class="animated fadeInUp mb-5">Welcome, {{ user.first_name|capfirst }}😘!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start Section End -->
+
+        <section class="profile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 py-5">
+                                    <div class="exams-head py-5 text-center">
+                                        <h1>Exams</h1>
+                                    </div>
+                                    {% for exam in exams %}
+                                    <!-- Card Begin -->
+                                    <div class="card-box col-12 m-0 p-0 wow fadeIn" data-wow-duration="1s">
+                                        <div class="card">
+                                            <!-- Content Area Begin -->
+                                            <div class="card-content p-4">
+                                                <!-- Exam Name -->
+                                                <h4 class="card-title">{{ exam.title }}</h4><br>
+                                                
+                                                <!-- Teacher Name -->
+                                                <h6>{{ exam.publisher }}</h6>
+                                                
+                                                <!-- Exam Description -->
+                                                <p class="card-description py-3">Online</p>
+
+                                                <!-- Exam Status -->
+                                                <h6>Done : {{ exam.done }}</h6>
+                                                
+                                                <!-- Exam Time -->
+                                                <p class="card-description py-3">{{ exam.exam_day }} ({{ exam.minutes_of_exam }} minutes) </p>
+
+                                                <!-- Start Button -->
+                                                <a href="{{ exam.link }}"  class="join-teacher btn btn-solid-border btn-round-full">Start</a>
+                                            </div>
+                                            <!-- Content Area End -->
+                                        </div>
+                                    </div>
+                                    <!-- Card End -->
+                                    {% endfor %}
+
+                                  <!--   Pagination Begin
+                                    <div class="col-12 wow fadeIn" data-wow-duration="1s">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    Pagination End -->
+                                </div>
+                            </div>
+
+                            <hr>
+<!-- 
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="grade-head text-center py-5">
+                                        <h1>Grades</h1>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">First</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Not yet</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+ -->
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 py-5">
+                        <div class="lessons-head text-center p-5">
+                            <h1>Lessons</h1>
+                        </div>
+                        <!-- Card Begin -->
+                        <div class="card-box col-12 wow fadeIn" data-wow-duration="1s">
+                            <div class="card">
+                                <!-- Content Area Begin -->
+                                <div class="card-content p-4">
+                                    <!-- Lesson Name -->
+                                    <h4 class="card-title">Lesson</h4><br>
+                                    
+                                    <!-- Teacher Name -->
+                                    <h6>{{ publisher }}</h6>
+                                    
+                                    <!-- Lesson Description -->
+                                    <!-- <p class="card-description py-3">{% translate "My object is to create an excellent learning environment and to help each student to improve their German (Deutsch) abilities." %}</p>
+ -->                                    
+                                    <!-- Lesson Status -->
+                                    <h6>Status : Not yet</h6>
+                                    
+                                    <!-- Start Button -->
+                                    <a href="{{ link }}" class="join-teacher btn btn-solid-border btn-round-full">Let's Start</a>
+                                </div>
+                                <!-- Content Area End -->
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+    {% endblock content %}
