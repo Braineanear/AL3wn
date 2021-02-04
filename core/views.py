@@ -153,7 +153,7 @@ def herr_bakheet(request):
 	return render(request, 'bakheet/khaled.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr Bakheet Sec.1').exists())
 def first_bakheet(request):
 	publisher = 'Herr Khaled Bakheet'
 	link = HerrKhaledURL.objects.all()[0].link
@@ -162,7 +162,7 @@ def first_bakheet(request):
 	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr Bakheet Sec.2').exists())
 def second_bakheet(request):
 	publisher = 'Herr Khaled Bakheet'
 	link = HerrKhaledURL.objects.all()[0].link
@@ -171,7 +171,7 @@ def second_bakheet(request):
 	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr Bakheet Sec.3').exists())
 def third_bakheet(request):
 	publisher = 'Herr Khaled Bakheet'
 	link = HerrKhaledURL.objects.all()[0].link
