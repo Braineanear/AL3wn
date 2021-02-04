@@ -47,7 +47,9 @@
                                                 <p class="card-description py-3">{{ exam.exam_day }} ({{ exam.minutes_of_exam }} minutes) </p>
 
                                                 <!-- Start Button -->
-                                                <a href="{{ exam.link }}"  class="join-teacher btn btn-solid-border btn-round-full">Start</a>
+                                                {% if not exam.done %}
+                                                    <a href="{{ exam.link }}"  class="join-teacher btn btn-solid-border btn-round-full">Start</a>
+                                                {% endif %}
                                             </div>
                                             <!-- Content Area End -->
                                         </div>
