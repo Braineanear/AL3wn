@@ -2,11 +2,38 @@
 {% load i18n %}
 {% load static %}
 	{% block content %}
-  <br><br><br><br><br><br><br>
-    <legend class="border-bottom text-center mb-4">{{ tday }}</legend>
-        <ol>
-          {% for i in date %}
-            <li><img src="{{ i.profile.image.url }}" width="50" height="50" />  <span style="color: green">{{ i.gender }}</span> Username: {{ i.username }} | Name: {{i.get_full_name}} | Year:{{ i.date_of_birth.year }} || <a style="color: red" href="https://wa.me/20{{ i.phone_number|floatformat:'-0' }}">WhatsApp Link</a> | ID:{{ i.national_id|floatformat:'-0' }} </li>
-          {% endfor %}
-        </ol>
+  <section id="birth">
+            
+            <div class="card-birth">
+                <img src="https://raw.githubusercontent.com/DenverCoder1/Responsive-Birthday-Card/main/birthday.svg"
+                    alt="birthday" class="birthday">
+                <h1>Happy Birthday! ({{ tday }})</h1>
+            </div>
+            <div class="cards">
+                {% for i in date %}
+                <div class="card">
+                    <!-- Image Area Begin -->
+                    <div class="card-img" style="background-image: url({{ i.profile.image.url }});"></div>
+                    <!-- Image Area End -->
+
+                    <!-- Content Area Begin -->
+                    <div class="card-content">
+                        <!-- Teacher Name -->
+                        <h4 class="card-username">Username: {{ i.username }}</h4>
+
+                        <h4 class="card-name">Name: {{i.get_full_name}}</h4>
+                        
+                        <h4 class="card-gender">Gender: {{ i.gender }}</h4>
+
+                        <h4 class="card-year">Birth Year: {{ i.date_of_birth.year }}</h4>
+
+                        <h4 class="card-ID">National ID: {{ i.national_id|floatformat:'-0' }}</h4>
+
+                        <a href="https://wa.me/20{{ i.phone_number|floatformat:'-0' }}" class="whatsapp btn btn-solid-border btn-round-full">WhatsApp</a>
+                    </div>
+                    <!-- Content Area End -->
+                </div>
+                {% endfor %}
+            </div>
+        </section>
     {% endblock content %}
