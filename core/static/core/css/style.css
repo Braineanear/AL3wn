@@ -2179,6 +2179,53 @@ main {
   margin-left: 15px;
 }
 
+#birth .card-birth{
+  padding-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+#birth .card-birth img{
+  width: 50%;
+}
+
+#birth .cards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3%;
+}
+
+#birth .cards .card {
+  width: 30%;
+  margin: 10px;
+}
+
+#birth .cards .card .card-img{
+  flex: 1 50%;
+  border-radius: 0;
+}
+
+#birth .cards .card .card-username{
+  font-size: 1em;
+}
+#birth .cards .card h4{
+  font-size: 0.9em;
+}
+
+#birth .cards .card .whatsapp {
+  padding: 0.3em 1.5em;
+  margin-top: 1em;
+  border-color: #1b262c;
+}
+
+#birth .cards .card .whatsapp:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #fff;
+}
 /*=== MEDIA QUERY ===*/
 @media only screen and (max-width:1200px) {
   .stage-timeline .stage-timeline-icon:before {
@@ -2334,6 +2381,40 @@ main {
   .stage-timeline .stage-timeline-content {
     margin-top: 115px
   }
+
+  #birth .card-birth {
+    padding-top: 15%;
+  }
+
+  #birth .card-birth img{
+    width: 100%;
+  }
+  
+  #birth .cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3%;
+  }
+  
+  #birth .cards .card {
+    width: 45%;
+    margin: 10px;
+  }
+  
+  #birth .cards .card .card-img{
+    flex: 1 50%;
+    border-radius: 0;
+  }
+  
+  #birth .cards .card .card-username{
+    font-size: 1em;
+  }
+  #birth .cards .card h4{
+    font-size: 0.9em;
+  }  
 }
 
 @media (max-width: 768px) {
@@ -2590,6 +2671,23 @@ main {
   #time h1::before {
     left: -45px;
   }
+
+  #birth .cards .card {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  #birth .cards .card .card-img{
+    flex: 1 50%;
+    border-radius: 0;
+  }
+  
+  #birth .cards .card .card-username{
+    font-size: 1em;
+  }
+  #birth .cards .card h4{
+    font-size: 0.9em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2764,6 +2862,17 @@ main {
   #time::after {
     height: 98%;
     top: 0px;
+  }
+
+  #birth .card-birth {
+    padding-top: 20%;
+  }
+
+  #birth .cards .card{
+    flex-direction: row!important;
+  }
+  #birth .cards .card{
+    font-size: 0.9em;
   }
 }
 
