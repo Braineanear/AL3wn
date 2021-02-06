@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
@@ -51,6 +52,23 @@ def youtube(request):
 def not_found(request, exception):
 	return HttpResponseNotFound(request, '404.html')
 '''
+
+class Birthdays(ListView):
+	template_name = 'core/birth.html'
+	context_object_name = 'date'
+	paginate_by = 6
+
+	def get_queryset(self):
+		return User.objects.all().filter(date_of_birth__month=str(datetime.today().month), date_of_birth__day=str(datetime.today().day))
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(Birthdays, self).get_context_data(*args, **kwargs)
+		tday = datetime.today().date()
+		context['title'] = "Birthdays"
+		context['tday'] = tday
+		return context
+
+
 def stage1(request):
 	context = {'title' : _('Stage 1')}
 	return render (request, 'core/stage1.html', context)

@@ -16,6 +16,7 @@ urlpatterns  =  [
     path('youtube/', views.youtube),
     path('stage1/', views.stage1, name="Stage1"),
     path('stage2/', views.stage2, name="Stage2"),
+    path('birthdays/', views.Birthdays.as_view(), name='Birthday'),
     # Deutsch Akademie
     path('HerrShady/', views.herr_shady, name="HerrShady"),
     path('HerrShady/Lesson/', views.shady_lesson, name='HerrShadyLesson'),
