@@ -19,17 +19,20 @@
                     <!-- Content Area Begin -->
                     <div class="card-content">
                         <!-- Teacher Name -->
-                        <h4 class="card-username">Username: {{ i.username }}</h4>
+                        <h4 style="color: red" class="card-username">Username: {{ i.username }}</h4>
 
                         <h4 class="card-name">Name: {{i.get_full_name}}</h4>
-                        
-                        <h4 class="card-gender">Gender: {{ i.gender }}</h4>
+                        {% if i.gender == "Female" %}
+                            <h4 style="color: green" class="card-gender">Gender: {{ i.gender }}</h4>
+                        {% else %}
+                            <h4 class="card-gender">Gender: {{ i.gender }}</h4>
+                        {% endif %}
 
                         <h4 class="card-year">Birth Year: {{ i.date_of_birth.year }}</h4>
 
                         <h4 class="card-ID">National ID: {{ i.national_id|floatformat:'-0' }}</h4>
 
-                        <a href="https://wa.me/20{{ i.phone_number|floatformat:'-0' }}" class="whatsapp btn btn-solid-border btn-round-full">WhatsApp</a>
+                        <a href="https://wa.me/20{{ i.phone_number|floatformat:'-0' }}" class="whatsapp btn btn-solid-border btn-round-full">WhatsApp Link</a>
                     </div>
                     <!-- Content Area End -->
                 </div>
