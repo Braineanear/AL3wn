@@ -119,23 +119,29 @@ def herr_ali(request):
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
 def first_ali(request):
+	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
-	context = {'title' : _('First Grade'), 'link': link}
-	return render(request, 'AliRashed/first.html', context)
+	exams = OuterExam.objects.all().filter(year='1', publisher='GA').order_by('-date_posted')
+	context = {'title' : _('First Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
 def second_ali(request):
+	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
-	context = {'title' : _('Second Grade'), 'link': link}
-	return render(request, 'AliRashed/second.html', context)
+	exams = OuterExam.objects.all().filter(year='2', publisher='GA').order_by('-date_posted')
+	context = {'title' : _('Second Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
 # @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
 def third_ali(request):
+	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
-	context = {'title' : _('third Grade'), 'link': link}
-	return render(request, 'AliRashed/third.html', context)
+	exams = OuterExam.objects.all().filter(year='3', publisher='GA').order_by('-date_posted')
+	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 # Herr Mohammed Abdel Atty
 def herr_m(request):
