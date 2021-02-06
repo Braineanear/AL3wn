@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.utils.translation import gettext as _
 from django.views.generic import ListView
 
@@ -52,8 +52,12 @@ def youtube(request):
 def not_found(request, exception):
 	return HttpResponseNotFound(request, '404.html')
 '''
+class AdminRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
 
-class Birthdays(ListView):
+	def test_func(self):
+		return self.request.user.is_superuser
+
+class Birthdays(AdminRequiredMixin, ListView):
 	template_name = 'core/birth.html'
 	context_object_name = 'date'
 	paginate_by = 6

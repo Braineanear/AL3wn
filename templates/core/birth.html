@@ -3,11 +3,10 @@
 {% load static %}
 	{% block content %}
   <br><br><br><br><br><br><br>
-    <legend class="border-bottom mb-4">{{ tday }}</legend>
+    <legend class="border-bottom text-center mb-4">{{ tday }}</legend>
         <ol>
           {% for i in date %}
-            <li>Username: {{ i.username }} | Name: {{i.get_full_name}} | Year:{{ i.date_of_birth.year }} || <a style="color: red" href="https://web.WhatsApp.com/send?phone=20
-{{ i.phone_number|floatformat:'-0' }}">WhatsApp Link</a> | ID:{{ i.national_id|floatformat:'-0' }} </li>
+            <li><span style="color: green">{{ i.gender }}</span> Username: {{ i.username }} | Name: {{i.get_full_name}} | Year:{{ i.date_of_birth.year }} || <a style="color: red" href="https://wa.me/20{{ i.phone_number|floatformat:'-0' }}">WhatsApp Link</a> | ID:{{ i.national_id|floatformat:'-0' }} </li>
           {% endfor %}
         </ol>
     {% endblock content %}
