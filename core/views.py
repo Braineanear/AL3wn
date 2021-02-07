@@ -121,7 +121,7 @@ def herr_ali(request):
 	return render(request, 'AliRashed/ali.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.1').exists())
 def first_ali(request):
 	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
@@ -130,7 +130,7 @@ def first_ali(request):
 	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.2').exists())
 def second_ali(request):
 	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
@@ -139,7 +139,7 @@ def second_ali(request):
 	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+# @user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.3').exists())
 def third_ali(request):
 	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
@@ -154,21 +154,21 @@ def herr_m(request):
 	return render(request, 'HerrAbdelAtty/M.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.1').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr M Sec.1').exists())
 def first_m(request):
 	link = HerrMURL.objects.all()[0].link
 	context = {'title' : _('First Grade'), 'link': link}
 	return render(request, 'HerrAbdelAtty/first.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr M Sec.2').exists())
 def second_m(request):
 	link = HerrMURL.objects.all()[0].link
 	context = {'title' : _('Second Grade'), 'link': link}
 	return render(request, 'HerrAbdelAtty/second.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr M Sec.3').exists())
 def third_m(request):
 	link = HerrMURL.objects.all()[0].link
 	context = {'title' : _('third Grade'), 'link': link}
@@ -209,7 +209,7 @@ def third_bakheet(request):
 
 # halem
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Halem').exists())
 def third_halem(request):
 	link = HalemURL.objects.all()[0].link
 	context = {'title' : _('third Grade'), 'link': link}
@@ -329,14 +329,14 @@ def ehab_elshafey(request):
 	return render(request, 'ehab/ehab.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.2').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Ehab Sec.2').exists())
 def second_ehab(request):
 	link = MrEhabURL.objects.all()[0].link
 	context = {'title' : _('Second Grade'), 'link': link}
 	return render(request, 'ehab/second.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Shady Sec.3').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Ehab Sec.3').exists())
 def third_ehab(request):
 	link = MrEhabURL.objects.all()[0].link
 	context = {'title' : _('third Grade'), 'link': link}
