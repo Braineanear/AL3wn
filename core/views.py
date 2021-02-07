@@ -224,10 +224,13 @@ def halem_lesson(request):
 	return response
 
 # bassem
-class FirstBassem(LoginRequiredMixin, ListView):
+class FirstBassem(LoginRequiredMixin, UserPassesTestMixin, ListView):
 	template_name = 'bassem/first.html'
 	context_object_name = 'link'
 	paginate_by = 6
+
+	def test_func(self):
+		return self.request.user.groups.filter(name='Bassem Sec.1').exists()
 
 	def get_queryset(self):
 		return BassemURL.objects.all().filter(kind='1').order_by('-date_posted')
@@ -237,10 +240,13 @@ class FirstBassem(LoginRequiredMixin, ListView):
 		context['title'] = "First Grade"
 		return context
 
-class SecondBassem(LoginRequiredMixin, ListView):
+class SecondBassem(LoginRequiredMixin, UserPassesTestMixin, ListView):
 	template_name = 'bassem/second.html'
 	context_object_name = 'link'
 	paginate_by = 6
+
+	def test_func(self):
+		return self.request.user.groups.filter(name='Bassem Sec.2').exists()
 
 	def get_queryset(self):
 		return BassemURL.objects.all().filter(kind='2').order_by('-date_posted')
@@ -250,10 +256,13 @@ class SecondBassem(LoginRequiredMixin, ListView):
 		context['title'] = "Second Grade"
 		return context
 
-class ThirdBassem(LoginRequiredMixin, ListView):
+class ThirdBassem(LoginRequiredMixin, UserPassesTestMixin, ListView):
 	template_name = 'bassem/third.html'
 	context_object_name = 'link'
 	paginate_by = 6
+
+	def test_func(self):
+		return self.request.user.groups.filter(name='Bassem Sec.3').exists()
 
 	def get_queryset(self):
 		return BassemURL.objects.all().filter(kind='3').order_by('-date_posted')
