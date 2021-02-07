@@ -331,16 +331,20 @@ def ehab_elshafey(request):
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Ehab Sec.2').exists())
 def second_ehab(request):
+	publisher = 'Mr. Ehab El Shafey'
 	link = MrEhabURL.objects.all()[0].link
-	context = {'title' : _('Second Grade'), 'link': link}
-	return render(request, 'ehab/second.html', context)
+	exams = OuterExam.objects.all().filter(year='2', publisher='EE').order_by('-date_posted')
+	context = {'title' : _('Second Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Ehab Sec.3').exists())
 def third_ehab(request):
+	publisher = 'Mr. Ehab El Shafey'
 	link = MrEhabURL.objects.all()[0].link
-	context = {'title' : _('third Grade'), 'link': link}
-	return render(request, 'ehab/third.html', context)
+	exams = OuterExam.objects.all().filter(year='3', publisher='EE').order_by('-date_posted')
+	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 def ehab_trans(request):
 	response = HttpResponse('', status=302)
