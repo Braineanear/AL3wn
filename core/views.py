@@ -121,7 +121,7 @@ def herr_ali(request):
 	return render(request, 'AliRashed/ali.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.1').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.1').exists())
 def first_ali(request):
 	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
@@ -130,7 +130,7 @@ def first_ali(request):
 	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.2').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.2').exists())
 def second_ali(request):
 	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
@@ -139,7 +139,7 @@ def second_ali(request):
 	return render(request, 'dash/exam_lesson.html', context)
 
 @login_required
-# @user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.3').exists())
+@user_passes_test(lambda u: u.groups.filter(name='Herr Ali Sec.3').exists())
 def third_ali(request):
 	publisher = 'Herr Ali Rashed'
 	link = HerrAliURL.objects.all()[0].link
