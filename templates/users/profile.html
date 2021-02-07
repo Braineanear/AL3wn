@@ -3,83 +3,121 @@
 {% load static %}
 {% load crispy_forms_tags %}
     {% block content %}
-        <!-- Start Section Begin -->
-        <section class="start wow fadeIn" data-wow-duration="1s">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="d-block mb-3 text-white text-capitalize">Profile</h1>
-                        <p class="animated fadeInUp mb-5">Hey, {{ user.first_name }}😘!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Start Section End -->
-
-        <section class="profile">
-            <div class="container">
-<!--                 <div class='content-section'>
-                    <div class="media">
-                        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-                        <div class="media-body">
-                            <h2 class="account-heading">{{ user.username }}</h2>
-                            <p class="text-secondary">{{ user.email }}</p>                            
+       <div class="wrap" id="profile">
+                <div class="info">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12">
+                            <div class="user-card-full">
+                                <div class="row m-l-0 m-r-0">
+                                    <div class="col-sm-4 bg-c-lite-green user-profile">
+                                        <div class="card-block text-center">
+                                            <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                                            <h6 class="f-w-600 text-white">Mahmoud Yasser</h6>
+                                            <p class="text-white">Student</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6 my-2">
+                                                    <p class="m-b-10 f-w-600">Username</p>
+                                                    <h6 class="text-muted f-w-400">Braineanear</h6>
+                                                </div>
+                                                <div class="col-sm-6 my-2">
+                                                    <p class="m-b-10 f-w-600">FirstName</p>
+                                                    <h6 class="text-muted f-w-400">Mahmoud</h6>
+                                                </div>
+                                                <div class="col-sm-6 my-2">
+                                                    <p class="m-b-10 f-w-600">LastName</p>
+                                                    <h6 class="text-muted f-w-400">Yasser</h6>
+                                                </div>
+                                                <div class="col-sm-6 my-2">
+                                                    <p class="m-b-10 f-w-600">Email</p>
+                                                    <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                                                </div>
+                                                <div class="col-sm-6 my-2">
+                                                    <p class="m-b-10 f-w-600">Phone</p>
+                                                    <h6 class="text-muted f-w-400">98979989898</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div> -->
-                <!-- Card List Section Begin -->
-    <section class="card-list row px-sm-5">
-      <!-- Card List Head Begin -->
-      <div class="col-12 text-center p-5 wow fadeIn" data-wow-duration="1s">
-        <h1>{% translate "Info" %}</h1>
-      </div>
-      <!-- Card List Head End -->
-
-      <!-- Card Begin -->
-      <div class="card-box col-md-12 col-sm-12 wow fadeIn" data-wow-duration="1s">
-        <div class="card">
-          <!-- Image Area Begin -->
-          <div class="card-img" style="background-image: url({{ user.profile.image.url }});">
-            <!-- Teacher Status -->
-            <div class="card-img-overlay"><span class="badge badge-pill badge-info px-4 py-1">{% translate "Student" %}</span> </div>
-          </div>
-          <!-- Image Area End -->
-
-          <!-- Content Area Begin -->
-          <div class="card-content">
-            <!-- Teacher Name -->
-            <h4 class="card-title">   {{ user.username }}</h4>
-            <br><br>
-            <!-- Teacher Location -->
-            <p class="card-text">   {{ user.first_name }}</p>
-            <p class="card-text">   {{ user.last_name }}</p>
-            <p class="card-text">   {{ user.email }}</p>
-            <br><br><br><br><br>
-
-
-            
-            <!-- Teacher Description -->
-            <p class="card-description"></p>
-            
-              <!-- Start Button -->
-            <!-- <a href="{% url 'HerrShady1' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "First Year" %}</a> -->
-          </div>
-          <!-- Content Area End -->
+                </div>
+            <form class="form validate-form" id="Career">
+                <span class="form-title">
+                    Update Info
+                </span>
+                <div class="wrap-input validate-input" data-validate="First Name is required">
+                    <span class="label-input">First Name*</span>
+                    <input class="input" type="text" name="first" placeholder="Enter your first name">
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="Last Name is required">
+                    <span class="label-input">Last Name*</span>
+                    <input class="input" type="text" name="last" placeholder="Enter your last name">
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="Username is required">
+                    <span class="label-input">Username* (Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.)</span>
+                    <input class="input" type="text" name="username" placeholder="Enter your username">
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="Region is required">
+                    <span class="label-input">Region*</span>
+                    <input class="input" type="text" name="region" placeholder="Enter your region">
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <span class="label-input">Email*</span>
+                    <input class="input" type="text" name="email" placeholder="Enter your email addess">
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input input-select">
+                    <span class="label-input">Gender*</span>
+                    <div>
+                        <select class="selection-2" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="Phone number is required">
+                    <span class="label-input">Phone*</span>
+                    <input class="input" type="text" name="phone" placeholder="Enter your phone number">
+                    <span class="focus-input"></span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="National ID is required">
+                    <span class="label-input">National ID*</span>
+                    <input class="input" type="text" name="national" placeholder="Enter your national id">
+                    <span class="focus-input"></span>
+                </div>
+                <div id="div_id_personal_image" class="form-group"> 
+                    <label for="id_personal_image" class="requiredField">
+                        Personal image*
+                    </label>
+                    <div> 
+                        <input type="file" name="personal_image" accept="image/*"
+                            class="clearablefileinput form-control-file" required id="id_personal_image"> 
+                    </div>
+                </div>
+                <div class="container-form-btn">
+                    <div class="wrap-form-btn">
+                        <div class="form-bgbtn"></div>
+                        <button class="form-btn">
+                            <span>
+                                Update
+                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-      </div>
-      <!-- Card End -->
-    </section>
-    <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">{% translate "Update Info" %}</legend>
-                {{ user_form|crispy }}
-                {{ profile_form|crispy }}
-                <button class="btn btn-outline-info" type="submit">{% translate "Update" %}</button>
-            </fieldset>
-        </form>
-            </div>
-        </section>
-        <br>
+        <div id="dropDownSelect1"></div>
     {% endblock content %}
