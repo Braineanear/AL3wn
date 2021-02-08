@@ -1,168 +1,123 @@
-@font-face {
-    font-family: Poppins-Regular;
-    src: url(../fonts/poppins/Poppins-Regular.ttf)
-}
-
-@font-face {
-    font-family: Poppins-Medium;
-    src: url(../fonts/poppins/Poppins-Medium.ttf)
-}
-
-@font-face {
-    font-family: Poppins-Bold;
-    src: url(../fonts/poppins/Poppins-Bold.ttf)
-}
-
-@font-face {
-    font-family: Poppins-SemiBold;
-    src: url(../fonts/poppins/Poppins-SemiBold.ttf)
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-
-body,
-html {
-    height: 100%;
-    font-family: Poppins-Regular, sans-serif
-}
-
-a {
-    font-family: Poppins-Regular;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #666;
-    margin: 0;
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
-    -moz-transition: all .4s
-}
-
-a:focus {
+.wrap a:focus {
     outline: none !important
 }
 
-a:hover {
+.wrap a:hover {
     text-decoration: none
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.wrap h1,
+.wrap h2,
+.wrap h3,
+.wrap h4,
+.wrap h5,
+.wrap h6 {
     margin: 0
 }
 
-p {
-    font-family: Poppins-Regular;
+.wrap p {
     font-size: 14px;
     line-height: 1.7;
     color: #666;
     margin: 0
 }
 
-ul,
-li {
+.wrap ul,
+.wrap li {
     margin: 0;
     list-style-type: none
 }
 
-input {
+.wrap input {
     outline: none;
     border: none
 }
 
-textarea {
+.wrap textarea {
     outline: none;
     border: none
 }
 
-textarea:focus,
-input:focus {
+.wrap textarea:focus,
+.wrap input:focus {
     border-color: transparent !important
 }
 
-input:focus::-webkit-input-placeholder {
+.wrap input:focus::-webkit-input-placeholder {
     color: transparent
 }
 
-input:focus:-moz-placeholder {
+.wrap input:focus:-moz-placeholder {
     color: transparent
 }
 
-input:focus::-moz-placeholder {
+.wrap input:focus::-moz-placeholder {
     color: transparent
 }
 
-input:focus:-ms-input-placeholder {
+.wrap input:focus:-ms-input-placeholder {
     color: transparent
 }
 
-textarea:focus::-webkit-input-placeholder {
+.wrap textarea:focus::-webkit-input-placeholder {
     color: transparent
 }
 
-textarea:focus:-moz-placeholder {
+.wrap textarea:focus:-moz-placeholder {
     color: transparent
 }
 
-textarea:focus::-moz-placeholder {
+.wrap textarea:focus::-moz-placeholder {
     color: transparent
 }
 
-textarea:focus:-ms-input-placeholder {
+.wrap textarea:focus:-ms-input-placeholder {
     color: transparent
 }
 
-input::-webkit-input-placeholder {
+.wrap input::-webkit-input-placeholder {
     color: #adadad
 }
 
-input:-moz-placeholder {
+.wrap input:-moz-placeholder {
     color: #adadad
 }
 
-input::-moz-placeholder {
+.wrap input::-moz-placeholder {
     color: #adadad
 }
 
-input:-ms-input-placeholder {
+.wrap input:-ms-input-placeholder {
     color: #adadad
 }
 
-textarea::-webkit-input-placeholder {
+.wrap textarea::-webkit-input-placeholder {
     color: #adadad
 }
 
-textarea:-moz-placeholder {
+.wrap textarea:-moz-placeholder {
     color: #adadad
 }
 
-textarea::-moz-placeholder {
+.wrap textarea::-moz-placeholder {
     color: #adadad
 }
 
-textarea:-ms-input-placeholder {
+.wrap textarea:-ms-input-placeholder {
     color: #adadad
 }
 
-button {
+.wrap button {
     outline: none !important;
     border: none;
     background: 0 0
 }
 
-button:hover {
+.wrap button:hover {
     cursor: pointer
 }
 
-iframe {
+.wrap iframe {
     border: none !important
 }
 
