@@ -573,12 +573,12 @@ p.text-muted {
     margin-bottom: 25px
 }
 
-.img-radius {
-    border-radius: 200px;
-}
-
-.user-profile img {
+.user-profile .img {
     width: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 1000px;
     height: 300px;
 }
 
