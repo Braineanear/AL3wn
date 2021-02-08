@@ -39,7 +39,7 @@ def profile(request):
 		'profile_form': profile_form,
 		'title' : request.user.username
 	}
-	return render(request, 'users/profile.html', context)
+	return render(request, 'users/oprofile.html', context)
 
 
 def career(request):
