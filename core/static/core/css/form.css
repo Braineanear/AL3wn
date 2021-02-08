@@ -15,11 +15,15 @@
     margin: 0
 }
 
-.wrap p {
-    font-size: 14px;
+.wrap .user-profile p {
+    font-size: 20px;
     line-height: 1.7;
     color: #666;
     margin: 0
+}
+
+.wrap .user-profile h6{
+    font-size: 20px;
 }
 
 .wrap ul,
@@ -557,11 +561,12 @@ p.text-muted {
 }
 
 .user-profile {
-    padding: 20px 0
+    padding: 20px 0;
 }
 
 .card-block {
-    padding: 1.25rem
+    padding: 1.25rem;
+    padding-top: 90px;
 }
 
 .m-b-25 {
@@ -569,16 +574,12 @@ p.text-muted {
 }
 
 .img-radius {
-    border-radius: 100px;
+    border-radius: 200px;
 }
 
 .user-profile img {
-    width: 140px;
-    height: 140px;
-}
-
-h6 {
-    font-size: 14px
+    width: 300px;
+    height: 300px;
 }
 
 .card .card-block p {
