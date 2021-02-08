@@ -569,7 +569,12 @@ p.text-muted {
 }
 
 .img-radius {
-    border-radius: 5px
+    border-radius: 100px;
+}
+
+.user-profile img {
+    width: 15%;
+    height: auto;
 }
 
 h6 {
