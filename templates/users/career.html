@@ -1,9 +1,7 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% load crispy_forms_tags %}
-
 {% block content %}
-<br>
 <div class="wrap">
             <div class="row align-items-center justify-content-center mb-5">
                 <h1>Careers</h1>
@@ -11,16 +9,16 @@
             <div class="jobs">
                 <div class="card job-card">
                     <div class="job-card-title">
-                        <p class="heading">Lead Product Design</p>
+                        <p class="heading">Part time PR</p>
                     </div>
-                    <p class="text-muted">You will be responsible for the visual design<br>for multi device.Understand basic design,<br>User journey, Ideation and Wireframing, etc...</p>
+                    <p class="text-muted">You will be responsible for the communication<br>with our customers old or potential,<br>Face to face, Phone or online</p>
                     <ol class="list-group">
                         <li class="list-group-item"><b>Requirements</b></li>
-                        <li class="list-group-item">1- Cras justo odio</li>
-                        <li class="list-group-item">2- Dapibus ac facilisis in</li>
-                        <li class="list-group-item">3- Morbi leo risus</li>
-                        <li class="list-group-item">4- Porta ac consectetur ac</li>
-                        <li class="list-group-item">5- Vestibulum at eros</li>
+                        <li class="list-group-item">1) Communication</li>
+                        <li class="list-group-item">2) persuasion</li>
+                        <li class="list-group-item">3) Patience</li>
+                        <li class="list-group-item">4) On Time</li>
+                        <li class="list-group-item">5) From Benha</li>
                       </ol>
                     <div class="row btnsubmit mt-4">
                         <div class="col-md-6 col-6"> <a class="btn btn-primary btn-lg" href="#Career"><span>Apply Now</span></a> </div>
@@ -29,16 +27,16 @@
                 </div>
                 <div class="card job-card">
                     <div class="job-card-title">
-                        <p class="heading">Lead Product Design</p>
+                        <p class="heading">Online Customer Service</p>
                     </div>
-                    <p class="text-muted">You will be responsible for the visual design<br>for multi device.Understand basic design,<br>User journey, Ideation and Wireframing, etc...</p>
+                    <p class="text-muted">You will be responsible for the communication<br>with our users to solve any problem,<br>using whatsapp</p>
                     <ol class="list-group">
                         <li class="list-group-item"><b>Requirements</b></li>
-                        <li class="list-group-item">1- Cras justo odio</li>
-                        <li class="list-group-item">2- Dapibus ac facilisis in</li>
-                        <li class="list-group-item">3- Morbi leo risus</li>
-                        <li class="list-group-item">4- Porta ac consectetur ac</li>
-                        <li class="list-group-item">5- Vestibulum at eros</li>
+                        <li class="list-group-item">1) Patience</li>
+                        <li class="list-group-item">2) Calm</li>
+                        <li class="list-group-item">3) Great listener</li>
+                        <li class="list-group-item">4) Always online</li>
+                        <li class="list-group-item">5) From Benha</li>
                       </ol>
                     <div class="row btnsubmit mt-4">
                         <div class="col-md-6 col-6"> <a class="btn btn-primary btn-lg" href="#Career"><span>Apply Now</span></a> </div>
@@ -49,13 +47,17 @@
             <form class="form validate-form" id="Career" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <span class="form-title">
-                    Join Now (This will take no more than 4 minute to fill out💪✅🔥)
+                    {% translate "Join Now" %} ✅
                 </span>
-                <div class="wrap-input validate-input" data-validate="Name is required">
+                <legend class="border-bottom mb-4"><small class="text-muted">{% translate "(This will take no more than 4 minute to fill out💪✅🔥)" %}</small></legend>
+                {{ form|crispy }}
+<!--                 <div class="wrap-input validate-input" data-validate="Name is required">
                     <span class="label-input">Your Name*</span>
                     <input class="input" type="text" name="name" placeholder="Enter your name">
                     <span class="focus-input"></span>
                 </div>
+                <br><hr>
+
                 <div class="wrap-input validate-input" data-validate="Valid email is required: ex@abc.xyz">
                     <span class="label-input">Email*</span>
                     <input class="input" type="text" name="email" placeholder="Enter your email addess">
@@ -135,13 +137,13 @@
                     <span class="label-input">Why Do you want to join us?*</span>
                     <textarea class="input" name="join" placeholder="Your message here..."></textarea>
                     <span class="focus-input"></span>
-                </div>
+                </div> -->
                 <div class="container-form-btn">
                     <div class="wrap-form-btn">
                         <div class="form-bgbtn"></div>
-                        <button class="form-btn">
+                        <button class="form-btn" type="submit">
                             <span>
-                                Submit
+                                {% translate "Send" %}
                                 <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
                             </span>
                         </button>
