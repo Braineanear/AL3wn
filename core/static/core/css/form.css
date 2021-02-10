@@ -563,6 +563,13 @@ p.text-muted {
     margin-top: 150px;
 }
 
+.card-block h3{
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 35px;
+    letter-spacing:2px;
+}
+
 .user-profile img {
     border-radius: 100%;
 	margin: 0 20px;
