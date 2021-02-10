@@ -176,6 +176,17 @@ article h2 {
     transition: all 0.5s ease
 }
 
+#pills-maintab3-tab{
+    position: relative;
+    top: -15px;
+}
+
+.subjects .nav-item a{
+    background-color: #F44336;
+    margin: 0 4px;
+    color:#fff;
+}
+
 @media (max-width: 1366px) {
     .video {
         width: 23%
