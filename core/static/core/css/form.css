@@ -153,7 +153,6 @@
 
 .form-title {
     display: block;
-    font-family: Poppins-Bold;
     font-size: 29px;
     color: #333;
     line-height: 1.2;
@@ -170,7 +169,6 @@
 }
 
 .label-input {
-    font-family: Poppins-Regular;
     font-size: 16px;
     color: #666;
     line-height: 1.5;
@@ -278,7 +276,6 @@ textarea.input {
     padding: 0 20px;
     width: 100%;
     height: 50px;
-    font-family: Poppins-Medium;
     font-size: 16px;
     color: #fff;
     line-height: 1.2
@@ -329,7 +326,6 @@ textarea.input {
     transform: translateY(-50%);
     right: 2px;
     pointer-events: none;
-    font-family: Poppins-Regular;
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -461,7 +457,6 @@ textarea.input {
 }
 
 .select2-results__options {
-    font-family: Poppins-Regular;
     font-size: 15px;
     color: #333;
     line-height: 1.2
@@ -470,7 +465,6 @@ textarea.input {
 .select2-search--dropdown .select2-search__field {
     border: 1px solid #aaa;
     outline: none;
-    font-family: Poppins-Regular;
     font-size: 15px;
     color: #333;
     line-height: 1.2
@@ -561,25 +555,20 @@ p.text-muted {
 }
 
 .user-profile {
-    padding: 20px 0;
+    padding-bottom: 30px;
 }
 
 .card-block {
     padding: 1.25rem;
-    padding-top: 90px;
+    margin-top: 150px;
 }
 
-.m-b-25 {
-    margin-bottom: 25px
-}
-
-.user-profile .img {
-    width: 400px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    border-radius: 1000px;
-    height: 400px;
+.user-profile img {
+    border-radius: 100%;
+	margin: 0 20px;
+	width: 200px;
+    margin-bottom: 30px;
+	border:2px solid #f1f1f1;
 }
 
 .card .card-block p {
