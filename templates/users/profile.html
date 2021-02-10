@@ -3,27 +3,26 @@
 {% load static %}
 {% load crispy_forms_tags %}
     {% block content %}
-    <br><br>
+    <br>
        <div class="wrap" id="profile">
-                <div class="info">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <div class="col-12">
-                            <div class="user-card-full pt-5">
-                                <div class="row m-l-0 m-r-0">
-                                    <div class="col-12 bg-c-lite-green user-profile pt-5">
-                                        <div class="card-block text-center">
-                                            <div class="m-b-25 d-flex justify-content-center"> 
-                                                <div style="background-image: url(https://img.icons8.com/bubbles/100/000000/user.png)" class="img"></div>
-                                            </div>
-                                            <h6 class="f-w-600 text-white">Mahmoud Yasser</h6>
-                                            <p class="text-white">Student</p>
-                                        </div>
+            <div class="info">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12">
+                        <div class="user-card-full">
+                            <div class="row m-l-0 m-r-0">
+                                <div class="col-12 bg-c-lite-green user-profile">
+                                    <div class="card-block text-center">
+                                        <img src="https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/139612453_1348831788814084_7381875573611349419_o.jpg?_nc_cat=103&ccb=3&_nc_sid=09cbfe&_nc_ohc=oqLiZPJQrkoAX-f83DU&_nc_ht=scontent-hbe1-1.xx&oh=cda9897ce0a21e96aa447ebc8247b09c&oe=6049E22D"
+                                            alt="profile">
+                                        <h6 class="f-w-600 text-white">Mahmoud Yasser</h6>
+                                        <p class="text-white">Student</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             <form class="form validate-form" id="Career">
                 <span class="form-title">
                     Update Info
@@ -39,7 +38,8 @@
                     <span class="focus-input"></span>
                 </div>
                 <div class="wrap-input validate-input" data-validate="Username is required">
-                    <span class="label-input">Username* (Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.)</span>
+                    <span class="label-input">Username* (Required. 150 characters or fewer. Letters, digits and
+                        @/./+/-/_ only.)</span>
                     <input class="input" type="text" name="username" placeholder="Enter your username">
                     <span class="focus-input"></span>
                 </div>
@@ -73,13 +73,13 @@
                     <input class="input" type="text" name="national" placeholder="Enter your national id">
                     <span class="focus-input"></span>
                 </div>
-                <div id="div_id_personal_image" class="form-group"> 
+                <div id="div_id_personal_image" class="form-group">
                     <label for="id_personal_image" class="requiredField">
                         Personal image*
                     </label>
-                    <div> 
+                    <div>
                         <input type="file" name="personal_image" accept="image/*"
-                            class="clearablefileinput form-control-file" required id="id_personal_image"> 
+                            class="clearablefileinput form-control-file" required id="id_personal_image">
                     </div>
                 </div>
                 <div class="container-form-btn">
