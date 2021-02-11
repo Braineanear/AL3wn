@@ -20,28 +20,6 @@ def register(request):
 
 
 @login_required
-def oprofile(request):
-	if request.method == "POST":
-		user_form = UserUpdateForm(request.POST, instance=request.user)
-		profile_form = ProfileUpdateForm(request.POST, request.FILES,instance=request.user.profile)
-		if user_form.is_valid() and profile_form.is_valid():
-			user_form.save()
-			profile_form.save()
-			messages.success(request, f'Your account has been Updated')
-			return redirect('Profile')
-	else:
-		user_form = UserUpdateForm(instance=request.user)
-		profile_form = ProfileUpdateForm(instance=request.user.profile)
-
-
-	context = {
-		'user_form': user_form,
-		'profile_form': profile_form,
-		'title' : request.user.username
-	}
-	return render(request, 'users/oprofile.html', context)
-
-@login_required
 def profile(request):
 	if request.method == "POST":
 		user_form = UserUpdateForm(request.POST, instance=request.user)
