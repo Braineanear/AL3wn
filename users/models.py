@@ -16,7 +16,8 @@ SCHOOL_YEAR = (
 	)
 POSITIONS_CHOICE = (
 	('PR', "PR"),
-	("Customer Service", "Customer Service")
+	("Customer Service", "Customer Service"),
+	('technical support agent', 'technical support agent')
 	)
 
 class User(AbstractUser):
