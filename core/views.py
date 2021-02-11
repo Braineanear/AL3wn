@@ -315,7 +315,7 @@ class InnovateBassem(ListView):
 class VideosBassem(ListView):
 	model = BassemYouTubeURL
 	template_name = 'bassem/subjects.html'
-	context_object_name = 'link'
+	context_object_name = 'videos'
 	ordering = ['-date_posted']
 	paginate_by = 6
 

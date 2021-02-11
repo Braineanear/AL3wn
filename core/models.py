@@ -34,6 +34,34 @@ SCHOOL_YEAR = (
 	('3', '3')
 	)
 
+BASSEM_MAIN_SORT = (
+	('maintab1', '1'),
+	('maintab2', '2'),
+	('maintab3', '3'),
+	('maintab4', 'النحو'),
+	('maintab5', 'البلاغة'),
+	('maintab6', 'المتحرر'),
+	('maintab7', 'ارتق'),
+	('maintab8', 'دقيقتين'),
+	('maintab9', 'تكات'),
+	('maintab10', 'تحفيزي')
+	)
+
+BASSEM_SORT2 =(
+	('subtab1', 'النحو'),
+	('subtab2', 'البلاغة'),
+	('subtab3', 'المتحرر'),
+	('subtab4', 'أدب'),
+	('subtab5', 'منوعات'),
+	('subtab6', 'تحفيزي'),
+	('subtab7', 'دقيقتين'),
+	('subtab8', 'تكات'),
+	('subtab9', 'ارتق'),
+	('subtab10', 'اعراب'),
+	('subtab11', 'دروس بلاغة')
+	)
+
+
 class OuterExam(models.Model):
 	title = models.CharField(max_length=255)
 	writer = models.CharField(_('Writer'), choices=WRITERS, max_length=255)
@@ -66,11 +94,14 @@ class BassemURL(models.Model):
 
 class BassemYouTubeURL(models.Model):
 	title = models.CharField(max_length=255)
-	link = models.URLField(default='http://al3wn.com/', max_length=512)
+	video_id = models.CharField(max_length=512)
+	main_sort = models.CharField(choices=BASSEM_MAIN_SORT, max_length=255)
+	sort2 = models.CharField(choices=BASSEM_SORT2, max_length=255, blank=True, null=True)
+	featured = models.BooleanField(default=False)
 	date_posted = models.DateTimeField(default=timezone.now)
 
 	def __str__(self):
-		return "Bassem Youtube URL"
+		return self.title
 
 
 class HerrShadyURL(models.Model):

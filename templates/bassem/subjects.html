@@ -7,66 +7,15 @@
                 <h1>Latest Videos</h1>
             </div>
             <div class="latest-videos slider m-5">
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/default.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
-                <div class="slide">
-                    <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/RM6-5yJXNMA"><img
-                            class="videoThumb" src="https://img.youtube.com/vi/RM6-5yJXNMA/hqdefault.jpg
-                                "></a>
-                </div>
+                {% for i in videos %}
+                    {% if i.featured == True %}
+                    <div class="slide">
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/{{ i.video_id }}"><img
+                                class="videoThumb" src="https://img.youtube.com/vi/{{ i.video_id }}/default.jpg
+                                    "></a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </section>
 
@@ -150,84 +99,23 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-maintab1-subtab1" role="tabpanel"
-                                aria-labelledby="pills-maintab1-subtab1-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">اولي ثانوي نحو</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab1-subtab2" role="tabpanel"
-                                aria-labelledby="pills-maintab1-subtab2-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">اولي ثانوي بلاغة</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab1-subtab3" role="tabpanel"
-                                aria-labelledby="pills-maintab1-subtab3-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">اولي ثانوي متحرر</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab1-subtab4" role="tabpanel"
-                                aria-labelledby="pills-maintab1-subtab4-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">اولي ثانوي أدب</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab1-subtab5" role="tabpanel"
-                                aria-labelledby="pills-maintab1-subtab5-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">اولي ثانوي منوعات</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab1-subtab6" role="tabpanel"
-                                aria-labelledby="pills-maintab1-subtab6-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">اولي ثانوي تحفيزي</h2>
-                                    </article>
-                                </section>
-                            </div>
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab1' %}
+                                <div class="tab-pane fade" id="pills-maintab1-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="pills-maintab1-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-maintab2" role="tabpanel" aria-labelledby="pills-maintab2-tab">
@@ -264,84 +152,23 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-maintab2-subtab1" role="tabpanel"
-                                aria-labelledby="pills-maintab2-subtab1-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثاني الثانوي نحو</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab2-subtab2" role="tabpanel"
-                                aria-labelledby="pills-maintab2-subtab2-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثاني الثانوي بلاغة</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab2-subtab3" role="tabpanel"
-                                aria-labelledby="pills-maintab2-subtab3-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثاني الثانوي متحرر</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab2-subtab4" role="tabpanel"
-                                aria-labelledby="pills-maintab2-subtab4-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثاني الثانوي أدب</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab2-subtab5" role="tabpanel"
-                                aria-labelledby="pills-maintab2-subtab5-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثاني الثانوي منوعات</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab2-subtab6" role="tabpanel"
-                                aria-labelledby="pills-maintab2-subtab6-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثاني الثانوي تحفيزي</h2>
-                                    </article>
-                                </section>
-                            </div>
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab2' %}
+                                <div class="tab-pane fade" id="pills-maintab2-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="pills-maintab2-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-maintab3" role="tabpanel" aria-labelledby="pills-maintab3-tab">
@@ -378,84 +205,23 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-maintab3-subtab1" role="tabpanel"
-                                aria-labelledby="pills-maintab3-subtab1-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثالث الثانوي نحو</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab3-subtab2" role="tabpanel"
-                                aria-labelledby="pills-maintab3-subtab2-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثالث الثانوي بلاغة</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab3-subtab3" role="tabpanel"
-                                aria-labelledby="pills-maintab3-subtab3-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle"> الصف الثالث الثانوي متحرر</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab3-subtab4" role="tabpanel"
-                                aria-labelledby="pills-maintab3-subtab4-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثالث الثانوي أدب</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <!-- <div class="tab-pane fade" id="pills-maintab3-subtab5" role="tabpanel"
-                                aria-labelledby="pills-maintab3-subtab5-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثالث الثانوي منوعات</h2>
-                                    </article>
-                                </section>
-                            </div> -->
-                            <div class="tab-pane fade" id="pills-maintab3-subtab6" role="tabpanel"
-                                aria-labelledby="pills-maintab3-subtab6-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">الصف الثالث الثانوي تحفيزي</h2>
-                                    </article>
-                                </section>
-                            </div>
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab3' %}
+                                <div class="tab-pane fade" id="pills-maintab3-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="pills-maintab3-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-maintab4" role="tabpanel" aria-labelledby="pills-maintab4-tab">
@@ -482,58 +248,23 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-maintab4-subtab1" role="tabpanel"
-                                aria-labelledby="pills-maintab4-subtab1-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">نحو دقيقتين وبس</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab4-subtab2" role="tabpanel"
-                                aria-labelledby="pills-maintab4-subtab2-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">نحو تكات نحوية</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab4-subtab3" role="tabpanel"
-                                aria-labelledby="pills-maintab4-subtab3-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">نحو إعراب</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab4-subtab4" role="tabpanel"
-                                aria-labelledby="pills-maintab4-subtab4-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">نحو متنوع</h2>
-                                    </article>
-                                </section>
-                            </div>
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab4' %}
+                                <div class="tab-pane fade" id="pills-maintab4-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="pills-maintab4-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-maintab5" role="tabpanel" aria-labelledby="pills-maintab5-tab">
@@ -550,32 +281,23 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-maintab5-subtab1" role="tabpanel"
-                                aria-labelledby="pills-maintab5-subtab1-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">بلاغة دقيقتين وبس</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab5-subtab2" role="tabpanel"
-                                aria-labelledby="pills-maintab5-subtab2-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">بلاغة دروس بلاغة</h2>
-                                    </article>
-                                </section>
-                            </div>
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab5' %}
+                                <div class="tab-pane fade" id="pills-maintab5-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="pills-maintab5-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-maintab6" role="tabpanel" aria-labelledby="pills-maintab6-tab">
@@ -592,82 +314,89 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-maintab6-subtab1" role="tabpanel"
-                                aria-labelledby="pills-maintab6-subtab1-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">المتحرر ارتق</h2>
-                                    </article>
-                                </section>
-                            </div>
-                            <div class="tab-pane fade" id="pills-maintab6-subtab2" role="tabpanel"
-                                aria-labelledby="pills-maintab6-subtab2-tab">
-                                <section class="second">
-                                    <article class="video">
-                                        <figure>
-                                            <a class="fancybox fancybox.iframe"
-                                                href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb"
-                                                    src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                        </figure>
-                                        <h2 class="videoTitle">المتحرر متنوع</h2>
-                                    </article>
-                                </section>
-                            </div>
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab6' %}
+                                <div class="tab-pane fade" id="pills-maintab6-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="pills-maintab6-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-maintab7" role="tabpanel" aria-labelledby="pills-maintab7-tab">
-                        <section class="second">
-                            <article class="video">
-                                <figure>
-                                    <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/zH3ZohGnjcg"><img
-                                            class="videoThumb"
-                                            src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                </figure>
-                                <h2 class="videoTitle"> ارتق</h2>
-                            </article>
-                        </section>
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab7' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="tab-pane fade" id="pills-maintab8" role="tabpanel" aria-labelledby="pills-maintab8-tab">
-                        <section class="second">
-                            <article class="video">
-                                <figure>
-                                    <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/zH3ZohGnjcg"><img
-                                            class="videoThumb"
-                                            src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                </figure>
-                                <h2 class="videoTitle">دقيقتين وبس</h2>
-                            </article>
-                        </section>
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab8' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="tab-pane fade" id="pills-maintab9" role="tabpanel" aria-labelledby="pills-maintab9-tab">
-                        <section class="second">
-                            <article class="video">
-                                <figure>
-                                    <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/zH3ZohGnjcg"><img
-                                            class="videoThumb"
-                                            src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                </figure>
-                                <h2 class="videoTitle">تكات نحوية</h2>
-                            </article>
-                        </section>
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab9' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="tab-pane fade" id="pills-maintab10" role="tabpanel"
                         aria-labelledby="pills-maintab10-tab">
-                        <section class="second">
-                            <article class="video">
-                                <figure>
-                                    <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/zH3ZohGnjcg"><img
-                                            class="videoThumb"
-                                            src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
-                                </figure>
-                                <h2 class="videoTitle">تحفيزي ومتنوع</h2>
-                            </article>
-                        </section>
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab10' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
