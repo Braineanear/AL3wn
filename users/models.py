@@ -16,6 +16,7 @@ SCHOOL_YEAR = (
 	)
 POSITIONS_CHOICE = (
 	('PR', "PR"),
+	("Customer Service", "Customer Service")
 	)
 
 class User(AbstractUser):
@@ -84,7 +85,7 @@ class Applicant(models.Model):
 	how = models.TextField(_("How did you know about us"))
 	what = models.TextField(_('What Skills do you have besides PR skills?'))
 	position = models.CharField(_('Position'), choices=POSITIONS_CHOICE,
-	 max_length=255, default='PR')
+	 max_length=255)
 	timestamp = models.DateTimeField(auto_now_add=True)
 	email = models.EmailField()
 	# Interview Stuff
