@@ -16,17 +16,6 @@ article h2 {
     white-space: nowrap
 }
 
-@media (max-width: 1200px) {
-    article h2 {
-        font-size: 15px
-    }
-}
-
-/* section {
-    padding: 10% 5%;
-    width: 100%
-} */
-
 .second {
     display:flex;
     justify-content:center;
@@ -166,7 +155,7 @@ article h2 {
 .video {
     background: #fff;
     padding-bottom: 15px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
     width: 18%;
     margin: 1%;
     float: left;
@@ -174,17 +163,6 @@ article h2 {
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
-}
-
-#pills-maintab3-tab{
-    position: relative;
-    top: -15px;
-}
-
-.subjects .nav-item a{
-    background-color: #F44336;
-    margin: 0 4px;
-    color:#fff;
 }
 
 @media (max-width: 1366px) {
@@ -228,6 +206,25 @@ article h2 {
 .video img:active,
 .video img:focus {
     opacity: 0.75
+}
+
+#maintab3-tab{
+    border: 2px dashed #000;
+}
+
+.subjects .container>ul {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #000;
+}
+
+.nav-item{
+    margin: 5px 0;
+}
+
+.subjects .nav-item a{
+    background-color: #F44336;
+    margin: 0 4px;
+    color:#fff;
 }
 
 img {
