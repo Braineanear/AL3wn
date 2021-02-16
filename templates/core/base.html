@@ -15,10 +15,25 @@
 		<title>{% translate "Al3wn" %}</title>
 	{% endif %}
 
-	<link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
+	<!-- ========= JavaScript ========= -->
 
+	<script src="{% static 'core/js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'core/js/popper.min.js' %}"></script>
+	<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'core/js/slick.min.js' %}"></script>
+	<script src="{% static 'core/js/wow.min.js' %}"></script>
+	<script src="{% static 'core/js/select2.min.js' %}"></script>
+	<script src="{% static 'core/js/moment.min.js' %}"></script>
+	<script src="{% static 'core/js/daterangepicker.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+	<script src="{% static 'core/js/script.js' %}"></script>
+	
+	<!-- ========= CSS ========= -->
+
+	<link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 	<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
 	<link rel="stylesheet" href="{% static 'core/css/animate.min.css' %}">
 	<link rel="stylesheet" href="{% static 'core/css/slick.min.css' %}">
@@ -224,25 +239,13 @@
 		<!-- Footer Section End -->
 	</div>
 	<!-- Main Wrapper End -->
-
-	<!-- ========= JavaScript ========= -->
-
-	<script src="{% static 'core/js/jquery-3.4.1.min.js' %}"></script>
-	<script src="{% static 'core/js/popper.min.js' %}"></script>
-	<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'core/js/slick.min.js' %}"></script>
-	<script src="{% static 'core/js/wow.min.js' %}"></script>
-	<script src="{% static 'core/js/select2.min.js' %}"></script>
+	
 	<script>
         $( ".selection-2" ).select2( {
             minimumResultsForSearch: 20,
             dropdownParent: $( '#dropDownSelect1' )
         } );
     	</script>
-	<script src="{% static 'core/js/moment.min.js' %}"></script>
-	<script src="{% static 'core/js/daterangepicker.min.js' %}"></script>
-	<script src="{% static 'core/js/script.js' %}"></script>
-
 </body>
 
 </html>
