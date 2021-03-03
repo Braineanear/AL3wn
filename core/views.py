@@ -273,7 +273,7 @@ class ThirdBassem(LoginRequiredMixin, UserPassesTestMixin, ListView):
 		return context
 
 class UpBassem(ListView):
-	template_name = 'bassem/up.html'
+	template_name = 'bassem/perfect.html'
 	context_object_name = 'link'
 	paginate_by = 6
 
@@ -284,6 +284,7 @@ class UpBassem(ListView):
 	def get_context_data(self, *args, **kwargs):
 		context = super(UpBassem, self).get_context_data(*args, **kwargs)
 		context['title'] = "Up"
+		context['ar_title'] = "ارتقٍ  "
 		return context
 
 class PerfectBassem(ListView):
@@ -297,6 +298,7 @@ class PerfectBassem(ListView):
 	def get_context_data(self, *args, **kwargs):
 		context = super(PerfectBassem, self).get_context_data(*args, **kwargs)
 		context['title'] = "Perfect"
+		context['ar_title'] = "أتقن"
 		return context
 
 class InnovateBassem(ListView):
@@ -310,7 +312,25 @@ class InnovateBassem(ListView):
 	def get_context_data(self, *args, **kwargs):
 		context = super(InnovateBassem, self).get_context_data(*args, **kwargs)
 		context['title'] = "Innovate"
+		context['ar_title'] = "أبدع"
 		return context
+
+
+class ReadBassem(ListView):
+	template_name = 'bassem/perfect.html'
+	context_object_name = 'link'
+	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='read').order_by('-date_posted')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(ReadBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Read"
+		context['ar_title'] = "أقرأ"
+		return context
+
+
 
 class VideosBassem(ListView):
 	model = BassemYouTubeURL
