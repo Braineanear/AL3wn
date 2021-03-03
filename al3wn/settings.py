@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fb_bot.apps.FbBotConfig',
     'users.apps.UsersConfig',
+    'shortner.apps.ShortnerConfig',
     'crispy_forms',
     'storages',
 
