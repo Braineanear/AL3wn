@@ -254,6 +254,37 @@
 
       <!-- Card Begin -->
       <div class="card-box col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s">
+        <div id="EhabGaber" class="card">
+          <!-- Image Area Begin -->
+          <div class="card-img" style="background-image: url({% static 'core/images/EhabGaber.jpg' %});">
+            <!-- Teacher Status -->
+            <div class="card-img-overlay"><span class="badge badge-pill badge-warning px-4 py-1">{% translate "silver" %}</span> </div>
+          </div>
+          <!-- Image Area End -->
+
+          <!-- Content Area Begin -->
+          <div class="card-content">
+            <!-- Teacher Name -->
+            <h4 class="card-title">{% translate "Ehab Gaber" %}</h4>
+            <br>
+            <a href="#"><div id="rate9"></div></a>
+            <!-- Teacher Location -->
+            <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {% translate "Benha , Qalubyia" %}</p>
+            
+            <!-- Teacher Description -->
+            <p class="card-description">{% translate "My object is to create an excellent learning environment and to help each student to improve their Geology abilities." %}</p>
+            
+              <!-- Start Button -->
+            <a href="{% url 'EhabGaber3' %}" class="join-teacher btn btn-solid-border btn-round-full">{% translate "Third Year" %}</a>
+            
+          </div>
+          <!-- Content Area End -->
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Card Begin -->
+      <div class="card-box col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s">
         <div class="card">
           <!-- Image Area Begin -->
           <div class="card-img" style="background-image: url(https://scontent-hbe1-1.xx.fbcdn.net/v/t31.0-8/12697156_1698704173718658_8130524581477810298_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_eui2=AeHP40IVVVTv3FtfKuhcy4qeb7B1nr3WWuRvsHWevdZa5MMamRmSYxITaimThNeG5X0GFMNhXPgO24O1kCxiq3rU&_nc_ohc=M7eqKabiZscAX-FTfHa&_nc_ht=scontent-hbe1-1.xx&oh=aec8da7f081577892b1e04b7da658cb1&oe=601AE9A8);">
@@ -318,6 +349,10 @@
           } );
           $( "#rate8" ).rateYo( {
             rating: 5,
+            readOnly: true
+          } );
+          $( "#rate9" ).rateYo( {
+            rating: 3.6,
             readOnly: true
           } );
         } )( jQuery );

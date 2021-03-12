@@ -14,6 +14,7 @@ Bassem_TYPES = (
 
 PUBLISHERS = (
 	('EE', 'Mr. Ehab El Shafey'),
+	('EG', 'Mr. Ehab Gaber'),
 	('GA', 'Herr Ali Rashed'),
 	('GM', 'Herr Mohammed Abdel Atty'),
 	('AH', 'Mohammed Abdel Halem'),

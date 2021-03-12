@@ -55,6 +55,8 @@ urlpatterns  =  [
     path('Ehab/translation/', views.ehab_trans ,name='EhabTranslation'),
     path('EhabElShafey/', views.ehab_elshafey ,name='Ehab'),
     path('Ehab/2/', views.second_ehab ,name='Ehab2'),
-    path('Ehab/3/', views.third_ehab ,name='Ehab3')
+    path('Ehab/3/', views.third_ehab ,name='Ehab3'),
+    # Ehab Gaber
+    path('EhabGaber/3/', views.third_ehab_gaber, name="EhabGaber3")
 
 ]
