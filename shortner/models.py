@@ -7,4 +7,4 @@ class Url(models.Model):
     user = models.BooleanField(default=False)
 
     def __str__(self):
-		return self.uuid
+    	return self.uuid
