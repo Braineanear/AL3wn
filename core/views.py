@@ -375,12 +375,6 @@ def third_ehab(request):
 	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
 	return render(request, 'dash/exam_lesson.html', context)
 
-def ehab_trans(request):
-	response = HttpResponse('', status=302)
-	# Zoom Link
-	response['Location'] = 'https://docs.google.com/forms/d/e/1FAIpQLScHdyI0KbWSiRQRitDH8i3yrqqY5xyzgids3kaQgDNx1PUv7g/viewform?usp=sf_link'
-	return response
-
 # Ehab Gaber
 
 @login_required
