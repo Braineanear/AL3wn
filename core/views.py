@@ -381,7 +381,7 @@ def third_ehab(request):
 @user_passes_test(lambda u: u.groups.filter(name='Ehab Gaber Sec.3').exists())
 def third_ehab_gaber(request):
 	publisher = 'Mr. Ehab Gaber'
-	link = 'http://al3wn.com/'
+	link = MrEhabURL.objects.all()[1].link
 	exams = OuterExam.objects.all().filter(year='3', publisher='EG').order_by('-date_posted')
 	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
 	return render(request, 'dash/exam_lesson.html', context)

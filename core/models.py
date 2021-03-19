@@ -141,4 +141,4 @@ class MrEhabURL(models.Model):
 	link = models.URLField(default='http://al3wn.com/', max_length=512)
 
 	def __str__(self):
-		return "Mr Ehab URL"
+		return self.title
