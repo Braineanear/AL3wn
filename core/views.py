@@ -331,6 +331,20 @@ class ReadBassem(ListView):
 		return context
 
 
+class BankBassem(ListView):
+	template_name = 'bassem/perfect.html'
+	context_object_name = 'link'
+	paginate_by = 6
+
+	def get_queryset(self):
+		return BassemURL.objects.all().filter(kind='bank').order_by('-date_posted')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(BankBassem, self).get_context_data(*args, **kwargs)
+		context['title'] = "Bank"
+		context['ar_title'] = "بَنْك الْمَعْرِفَة "
+		return context
+
 
 class VideosBassem(ListView):
 	model = BassemYouTubeURL

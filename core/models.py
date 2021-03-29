@@ -9,6 +9,7 @@ Bassem_TYPES = (
 	('up', 'up'),
 	('perfect', 'perfect'),
 	('read', 'read'),
+	('bank', 'bank'),
 	('innovate','innovate')
 	)
 
