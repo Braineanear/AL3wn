@@ -358,6 +358,18 @@ class VideosBassem(ListView):
 		context['title'] = "Videos"
 		return context
 
+class Firsts(ListView):
+	template_name = 'core/firsts.html'
+	context_object_name = 'date'
+	paginate_by = 6
+
+	def get_queryset(self):
+		return User.objects.all().filter(groups__name__exact='test')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(Firsts, self).get_context_data(*args, **kwargs)
+		context['title'] = "Firsts"
+		return context
 
 def bassem_youtube(request):
 	response = HttpResponse('', status=302)

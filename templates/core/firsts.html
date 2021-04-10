@@ -1,0 +1,58 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load static %}
+ {% block content %}
+  <section id="birth">
+            
+            <div class="card-birth">
+                <img src="https://raw.githubusercontent.com/DenverCoder1/Responsive-Birthday-Card/main/birthday.svg"
+                    alt="birthday" class="birthday">
+                <h1 style="color: green">لَوْحَة الشَّرَف </h1>
+            </div>
+            <div class="cards">
+                {% for i in date %}
+                <div class="card">
+                    <!-- Image Area Begin -->
+
+                    {% if i.gender == "Female" %}
+                            {% if i.is_student %}
+                                <div class="card-img" style="background-image: url({{ i.profile.image.url }});"></div>
+                            {% else %}
+                                <div class="card-img" style="background-image: url(https://images.pexels.com/photos/3790492/pexels-photo-3790492.jpeg?cs=srgb&dl=pexels-wildan-zainul-faki-3790492.jpg&fm=jpg);"></div>
+                            {% endif %}
+                    {% else %}
+                            {% if i.is_student %}
+                                <div class="card-img" style="background-image: url({{ i.profile.image.url }});"></div>
+                            {% else %}
+                                <div class="card-img" style="background-image: url(https://images.pexels.com/photos/935948/pexels-photo-935948.jpeg?cs=srgb&dl=pexels-nappy-935948.jpg&fm=jpg);"></div>
+                            {% endif %}
+                    {% endif %}
+
+                    <!-- Image Area End -->
+
+                    <!-- Content Area Begin -->
+                    <div class="card-content">
+                        <!-- Teacher Name -->
+                        <h4 style="color: red" class="card-username">Username: {{ i.username }}</h4>
+
+                        <h4 class="card-name">Name: {{i.get_full_name}}</h4>
+                        {% if i.gender == "Female" %}
+                            <h4 style="color: green" class="card-gender">Gender: {{ i.gender }}</h4>
+                        {% else %}
+                            <h4 class="card-gender">Gender: {{ i.gender }}</h4>
+                        {% endif %}
+
+                        <h4 class="card-year">Grade: {{ i.year }}</h4>
+
+                        <h4 class="card-year">Teacher : Mr.Bassem Badr</h4>
+
+                        <h4 class="card-year">Result : > 56</h4>
+
+
+                    </div>
+                    <!-- Content Area End -->
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endblock content %}

@@ -51,6 +51,7 @@ urlpatterns  =  [
     path('Bassem/read/', views.ReadBassem.as_view(),name='BassemRead'),
     path('Bassem/bank/', views.BankBassem.as_view(),name='BassemBank'),
     path("Bassem/videos/", views.VideosBassem.as_view(), name='BassemVideos'),
+    path("Bassem/firsts/", views.Firsts.as_view(), name='BassemFirsts'),
     path("Bassem/youtube/", views.bassem_youtube, name='BassemYoutube'),
     # Ehab
     path('EhabElShafey/', views.ehab_elshafey ,name='Ehab'),
