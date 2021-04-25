@@ -9,6 +9,7 @@ Author : Brainean
   --subtitle: #323edd;
   --border: #323edd;
   --btn-main-color: #fff;
+  --whatsapp: #25d366;
 }
 
 .dark {
@@ -19,6 +20,7 @@ Author : Brainean
   --subtitle: #fff;
   --border: #323edd;
   --btn-main-color: #000;
+  --whatsapp: #252a41;
 }
 
 * {
@@ -2104,6 +2106,52 @@ main {
 
 
 /* Contact and Footer Section Style */
+.contact-icon {
+  vertical-align: middle;
+}
+
+.contact-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 0px;
+  width: 100px;
+}
+
+.contact-buttons .contact {
+  padding: 4px;
+}
+
+.main-contact-button .contact-button {
+  margin-left: 7px;
+}
+
+.contact-button {
+  padding-bottom: 5px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-link span {
+  background-color: #4e4c4c;
+  padding: 7px;
+  border-radius: 2px;
+  margin-right: 2px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.contact-link i.fa {
+  font-size: 30px;
+  display: inline-block;
+  border-radius: 60px;
+  background-color: var(--whatsapp);
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+
 .contact a {
   padding: 1em 2em;
 }
