@@ -1890,6 +1890,19 @@ ul#countdown li .label {
   border-bottom-color: #2fcea5
 }
 
+#profile{
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.form-title{
+  color: var(--text-color)!important;
+}
+
+.table-responsive  .table{
+  color: var(--text-color)!important;
+}
+
 .p2 a {
   text-transform: uppercase;
   font-weight: 800;
