@@ -458,11 +458,6 @@ a:focus {
   font-size: 14px;
 }
 
-.dropdown-item:hover {
-  background: var(--subtitle);
-  color: #fff;
-}
-
 ul.dropdown-menu li {
   padding-left: 0px !important;
 }
