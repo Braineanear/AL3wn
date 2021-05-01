@@ -10,6 +10,9 @@ Author : Brainean
   --border: #323edd;
   --btn-main-color: #fff;
   --whatsapp: #25d366;
+  --star-size: 30px;
+  --star-color: rgb(185, 181, 181);
+  --star-background: #fc0;
 }
 
 .dark {
@@ -1054,21 +1057,19 @@ box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.92);
   line-height: 1em;
 }
 
-.ratyli .rate {
-  color: #FDCC0D;
-  font-size: 24px;
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  margin-left: -10px;
 }
-
-.ratyli .rate-empty {
-  color: #666;
-}
-
-.ratyli.rated .rate-full {
-  color: #fe5845;
-}
-
-.ratyli .rate-active {
-  color: #a94039;
+.Stars::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .join-teacher {
