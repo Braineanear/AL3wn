@@ -1,4 +1,5 @@
-# AL3wn
+# AL3wn Educational Platform Website.
+
 
 
 ## Running this project
