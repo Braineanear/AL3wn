@@ -2,6 +2,7 @@
 
 	'use strict';
 
+	$(".ratyli").ratyli({disable:true});
 	
 	const darkBtn = document.querySelector('.fa-moon-o');
 	const bodyEl = document.querySelector('body');
