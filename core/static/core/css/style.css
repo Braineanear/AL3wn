@@ -1054,6 +1054,23 @@ box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.92);
   line-height: 1em;
 }
 
+.ratyli .rate {
+  color: #FDCC0D;
+  font-size: 24px;
+}
+
+.ratyli .rate-empty {
+  color: #666;
+}
+
+.ratyli.rated .rate-full {
+  color: #fe5845;
+}
+
+.ratyli .rate-active {
+  color: #a94039;
+}
+
 .join-teacher {
   padding: 0.3em 1.5em;
   margin-top: 1em;
