@@ -781,7 +781,7 @@ box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.92);
 .our-team .title {
   font-size: 18px;
   font-weight: bold;
-  color: var(--text-color);
+  color: #2a4284;
   text-transform: capitalize;
   margin: 0 0 20px;
   position: relative;
@@ -834,7 +834,7 @@ box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.92);
 .our-team .post {
   display: inline-block;
   font-size: 15px;
-  color: var(--text-color);
+  color: #1b262c;
   text-transform: capitalize;
 }
 
