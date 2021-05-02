@@ -401,13 +401,20 @@ def third_ehab(request):
 	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
 	return render(request, 'dash/exam_lesson.html', context)
 
+@login_required
+def third_ehab_open(request):
+	publisher = 'Mr. Ehab El Shafey'
+	link = OuterExam.objects.all().filter(year='3Open', publisher='EE').order_by('-date_posted')
+	context = {'title' : _('third Grade'),'link':link , 'publisher': publisher}
+	return render(request, 'bassem/perfect.html', context)
+
 # Ehab Gaber
 
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Ehab Gaber Sec.3').exists())
 def third_ehab_gaber(request):
 	publisher = 'Mr. Ehab Gaber'
-	link = MrEhabURL.objects.all()[1].link
+	link = MrEhabURL.objects.all().filter(title='Mr. Ehab Gaber')[0].link
 	exams = OuterExam.objects.all().filter(year='3', publisher='EG').order_by('-date_posted')
 	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
 	return render(request, 'dash/exam_lesson.html', context)

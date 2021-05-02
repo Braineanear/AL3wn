@@ -34,7 +34,9 @@ WRITERS = (
 SCHOOL_YEAR = (
 	('1', '1'),
 	('2', '2'),
-	('3', '3')
+	('3', '3'),
+	('3Open', '3open')
+
 	)
 
 BASSEM_MAIN_SORT = (
