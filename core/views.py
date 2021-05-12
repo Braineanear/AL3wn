@@ -73,6 +73,22 @@ class Birthdays(AdminRequiredMixin, ListView):
 		return context
 
 
+class AllBirthdays(AdminRequiredMixin, ListView):
+	template_name = 'core/birth.html'
+	context_object_name = 'date'
+	paginate_by = 6
+
+	def get_queryset(self, **kwargs):
+		return User.objects.all().filter(date_of_birth__month=str(self.kwargs['month']), date_of_birth__day=str(self.kwargs['day']))
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(AllBirthdays, self).get_context_data(*args, **kwargs)
+		tday = datetime(year=2021, month=self.kwargs['month'], day=self.kwargs['day'])
+		context['title'] = "Birthdays"
+		context['tday'] = tday
+		return context
+
+
 def stage1(request):
 	context = {'title' : _('Stage 1')}
 	return render (request, 'core/stage1.html', context)
