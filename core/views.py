@@ -377,7 +377,6 @@ class VideosBassem(ListView):
 class Firsts(ListView):
 	template_name = 'core/firsts.html'
 	context_object_name = 'date'
-	paginate_by = 6
 
 	def get_queryset(self):
 		return User.objects.all().filter(groups__name__exact='test')
