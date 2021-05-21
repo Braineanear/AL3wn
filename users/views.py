@@ -7,18 +7,22 @@ from django.utils.translation import gettext as _
 from .forms import UserResgiterForm, UserUpdateForm, ProfileUpdateForm, ApplicantForm
 
 def register(request):
-	if request.method == "POST":
-		form = UserResgiterForm(request.POST)
-		if form.is_valid():
-			form.save()
-			username = form.cleaned_data.get("username")
-			messages.success(request, f'{username}, your account has been created! You can Log In')
-			return redirect('Login')
+	if request.user.is_authenticated:
+		messages.success(request, f'You already have an Account!')
+		return redirect('Profile')
 	else:
-		form = UserResgiterForm()
-	return render(request, 'users/register.html', {'form' : form, 'title' : _('Register')})
+		if request.method == "POST":
+			form = UserResgiterForm(request.POST)
+			if form.is_valid():
+				form.save()
+				username = form.cleaned_data.get("username")
+				messages.success(request, f'{username}, your account has been created! You can Log In')
+				return redirect('Login')
+		else:
+			form = UserResgiterForm()
+		return render(request, 'users/register.html', {'form' : form, 'title' : _('Register')})
 
-
+	
 @login_required
 def profile(request):
 	if request.method == "POST":
