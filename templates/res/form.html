@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<!-- Start Section Begin -->
+		<section class="start about-start wow fadeIn" data-wow-duration="1s">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="d-block mb-3 text-white text-capitalize">{% translate "Join Now" %}💖</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Start Section End -->
+<section class="intro">
+	<div class="container">
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">{% translate "Join Now" %} 😊💖✅</legend>
+				{{ form|crispy }}
+				<button class="btn btn-outline-info" type="submit">{% translate "Sign Up" %}</button>
+			</fieldset>
+		</form>
+	</div>
+</section>	
+{% endblock content %}
