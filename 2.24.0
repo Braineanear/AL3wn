@@ -1,0 +1,5 @@
+Requirement already satisfied: requests in e:\programming\python\dj\al3wn\env\lib\site-packages (2.25.1)
+Requirement already satisfied: certifi>=2017.4.17 in e:\programming\python\dj\al3wn\env\lib\site-packages (from requests) (2020.12.5)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in e:\programming\python\dj\al3wn\env\lib\site-packages (from requests) (1.26.4)
+Requirement already satisfied: idna<3,>=2.5 in e:\programming\python\dj\al3wn\env\lib\site-packages (from requests) (2.10)
+Requirement already satisfied: chardet<5,>=3.0.2 in e:\programming\python\dj\al3wn\env\lib\site-packages (from requests) (4.0.0)
