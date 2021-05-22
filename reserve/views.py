@@ -56,18 +56,20 @@ def All(request, teacher, year):
 				clas.number = num
 				clas.save()
 				applicant.uuid = f'{d}{s}{num}'
+				i = applicant.uuid
 				form.save()
 				messages.success(request, f'Your account has been Updated')
-				return redirect('ReserveHome')
+				return redirect(f'/new/report/{i}')
 			else:
 				messages.warning(request, f'This Class is Full. Try joining another Class!')
-				return HttpResponseRedirect(self.request.path_info)
+				return HttpResponseRedirect('#')
 	else:
 		form = ApplicantForm()
 		form.fields['classe'].queryset = Class.objects.all().filter(teacher_id__slug=teacher,
 		 year_id__slug=year)
 
-	context = {'form': form}
+	title = 'L.' + str(year) + ' ' + teacher
+	context = {'form': form, 'title': title}
 	return render (request, 'res/form.html', context)
 
 
