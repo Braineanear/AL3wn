@@ -16,6 +16,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('fb_bot/', include('fb_bot.urls')),
     path('', include('core.urls')),
+    path('new/', include('reserve.urls')),
     path('careers/', career, name='Career'),
     path('register/', register , name="Register"),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html') , name="Login"),
