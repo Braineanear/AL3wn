@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.staticfiles import finders
 from django.template.loader import get_template
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 from .models import Applicant, Teacher, Class
@@ -73,21 +74,34 @@ def All(request, teacher, year):
 	return render (request, 'res/form.html', context)
 
 
-class ApplicantListView(ListView):
+class StaffRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
+
+	def test_func(self):
+		return self.request.user.is_staff
+
+
+class ApplicantListView(StaffRequiredMixin, ListView):
 	template_name = 'res/view.html'
 	context_object_name = 'students'
-	# paginate_by = 8
+	paginate_by = 100
 
-	def get_queryset(self):
-		# query
-		return Applicant.objects.all().order_by('-timestamp')
+	def get_queryset(self, **kwargs):
+		return Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher']).order_by('-timestamp')
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(ApplicantListView, self).get_context_data(*args, **kwargs)
-		# query
-		full = Applicant.objects.all().count()
-		context['title'] = "New Students"
+		full = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher']).count()
+		first = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
+			classe__year__slug=10).count()
+		sece = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
+			classe__year__slug=11).count()
+		third = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
+			classe__year__slug=12).count()
+		context['title'] = self.kwargs['teacher']
 		context['full'] = full
+		context['first'] = first
+		context['sece'] = sece
+		context['third'] = third
 		return context
 
 def applicant_render_pdf_view(request, *args, **kwargs):
