@@ -14,4 +14,5 @@ class ApplicantForm(forms.ModelForm):
 
 	class Meta:
 		model = Applicant
-		fields = ['name', 'gender','address' ,'phone_number','school_type', 'a_phone_number', 'classe']
+		fields = ['name', 'gender', 'email','address' ,'phone_number', 'a_phone_number',
+		'school_type', 'classe']
