@@ -65,7 +65,7 @@ class Teacher(models.Model):
 class Class(models.Model):
 	uuid = models.CharField(max_length=10)
 	name = models.CharField(max_length=255)
-	number = models.IntegerField()
+	number = models.IntegerField(default=0)
 	start_at = models.DateTimeField()
 	max_number = models.IntegerField()
 	teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
@@ -94,7 +94,7 @@ class Applicant(models.Model):
 	address = models.CharField(_('Address'), max_length=512)
 	uuid = models.CharField(max_length=10)
 	phone_number = models.FloatField(_('Phone Number'))
-	a_phone_number = models.FloatField(_('Parent Phone Number'), blank=True, null=True)
+	a_phone_number = models.FloatField(_('Parent Phone Number'))
 	timestamp = models.DateTimeField(auto_now_add=True)
 	gender = models.CharField(_('Gender'), choices=GENDER_CHOICE, max_length=255)
 	school_type = models.CharField(choices=category_choice, default="عام" ,max_length=255)
