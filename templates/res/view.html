@@ -1,0 +1,137 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<br><br><br>
+	<link rel="stylesheet" href="{% static 'core/vendor/vendor/animate/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'core/vendor/vendor/select2/select2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/vendor/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+	<link rel="stylesheet" href="{% static 'core/vendor/css/util.css' %}">
+	<link rel="stylesheet" href="{% static 'core/vendor/css/main.css' %}">
+    </section>
+    <!-- Card List Section End -->
+
+		<!-- Counter Section Start -->
+		<section class="counter">
+			<div class="container">
+				<div class="counter__content">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{first}}</h2>
+									<p>{% translate "First Year" %}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item second__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{sece}}</h2>
+									<p>{% translate "Second Year" %}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item third__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{third}}</h2>
+									<p>{% translate "Third Year" %}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item four__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{full}}</h2>
+									<p>{% translate "All Students" %}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Counter Section End -->
+		<section>
+			<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Address</th>
+								<th class="column2">ID</th>
+								<th class="column3">Name</th>
+								<th class="column4">Class</th>
+								<th class="column2" style="text-align:center;">Type</th>
+								<th class="column6">Phone Number</th>
+								<th class="column6">Parent Phone</th>
+								<th class="column8">Email</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							{% for i in students %}
+								<tr>
+									<td class="column1">{{ i.address }}</td>
+									<td class="column2">{{ i.uuid }}</td>
+									<td class="column3">{{ i.name }}</td>
+									<td class="column4">{{ i.classe }}</td>
+									<td class="column5">{{ i.school_type }}</td>
+									<td class="column6">{{ i.phone_number }}</td>
+									<td class="column6">{{ i.a_phone_number }}</td>
+									<td class="column6">{{ i.email }}</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	{% if is_paginated %}
+                                    <!-- Pagination Begin -->
+                                    <div class="col-12 wow fadeIn" data-wow-duration="1s">
+                                        <ul class="pagination justify-content-center">
+                                            {% if page_obj.has_previous %}
+                                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% for num in page_obj.paginator.page_range %}
+                                                {% if page_obj.number == num %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if page_obj.has_next %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                    <!-- Pagination End -->
+                                    {% endif %}
+                                    <br><br>
+	<script src="{% static 'core/vendor/js/main.js' %}"></script>
+	<script src="{% static 'core/vendor/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'core/vendor/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'core/vendor/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'core/vendor/vendor/select2/select2.min.js' %}"></script>
+{% endblock content %}
