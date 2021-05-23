@@ -43,7 +43,7 @@
             <p class="card-text"><i class="fa fa-map" aria-hidden="true"></i> {{ i.address }}</p>
             
             <!-- Teacher Description -->
-            <p class="card-description">{{ i.description }}</p>
+            <p class="card-description">{{ i.description|linebreaks }}</p>
             
               <!-- Start Button -->
              {% for year in i.years.all %}
