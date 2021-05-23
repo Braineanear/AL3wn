@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDF</title>
+	<meta charset="utf-8">
+	<link href="http://fonts.cdnfonts.com/css/markazi-text" rel="stylesheet">
+	<style>
+        @import url('http://fonts.cdnfonts.com/css/markazi-text');
+	</style>
+                
+	<style>
+
+    p { font-family: 'Markazi Text'; }
+		
+		h1 {
+			text-align:center;
+		}
+		q {
+			text-align:center;
+		}
+		ul {
+			margin: 10px;
+		}
+
+		li{
+			font-size: 16px;
+		}
+
+		b{
+			color: red;
+		}
+
+		.footer {
+			  position: fixed;
+			  left: 0;
+			  bottom: 0;
+			  width: 100%;
+			  background-color: black;
+			  color: white;
+			  text-align: center;
+			}
+	</style>
+</head>
+<body>
+	<div>
+    	<img src="https://scontent.fcai21-4.fna.fbcdn.net/v/t1.6435-0/p180x540/119114336_178668180390295_5700133787451268208_n.png?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=k2TABqY-_CYAX9bAHzA&_nc_ht=scontent.fcai21-4.fna&tp=30&oh=5f424cd6f8e4bc33dce2a00f448a7c2f&oe=60CDCF3F">
+        <h1><b>IMPORTANT!</b> Download This File </h1>
+        <q>Submitted at : {{ student.timestamp }}</q>
+    </div>
+            <div>
+				<pdf:language name="arabic"/>
+            </div>
+	<ul>
+		<li>Student's Name: {{ student.name }}</li>
+		<li>Student's Address : {{ student.address }}</li>
+		<li>Student's ID : {{ student.uuid }}</li>
+		<li>Student's Passcode : {{ student.passcode }}</li>
+		<li>Student's number : {{ student.phone_number }}</li>
+		<li>Teacher's Name : {{ student.classe.teacher.name }}</li>
+		<li>Teacher's Address : {{ student.classe.teacher.address }}</li>
+		<li><p>Class : {{ student.classe.name }}</p></li>
+		<li>Class Starts at : {{ student.classe.start_at }}</li>
+	</ul>
+
+	<div class="footer">
+  		<p>Report Version 1.0.0 || Copyright <script>document.write(new Date().getFullYear());</script> &copy; Reserved to <span class="text-color"><a href="https://am6.tech/">AM6</a></span></p>
+	</div>
+
+</body>
+</html>
