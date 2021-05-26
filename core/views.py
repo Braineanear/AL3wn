@@ -227,9 +227,11 @@ def third_bakheet(request):
 @login_required
 @user_passes_test(lambda u: u.groups.filter(name='Halem').exists())
 def third_halem(request):
+	publisher = 'Mr. Mohammed Abdel Halem'
 	link = HalemURL.objects.all()[0].link
-	context = {'title' : _('third Grade'), 'link': link}
-	return render(request, 'halem/third.html', context)
+	exams = OuterExam.objects.all().filter(year='3', publisher='AH').order_by('-date_posted')
+	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
 
 
 @login_required
