@@ -85,8 +85,8 @@
 									<td class="column3">{{ i.name }}</td>
 									<td class="column4">{{ i.classe }}</td>
 									<td class="column5">{{ i.school_type }}</td>
-									<td class="column6">{{ i.phone_number }}</td>
-									<td class="column6">{{ i.a_phone_number }}</td>
+									<td class="column6">0{{ i.phone_number|floatformat:"0" }}</td>
+									<td class="column6">0{{ i.a_phone_number|floatformat:"0" }}</td>
 									<td class="column6">{{ i.email }}</td>
 								</tr>
 							{% endfor %}
