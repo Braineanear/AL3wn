@@ -7,7 +7,7 @@
             <div class="card-birth">
                 <img src="https://raw.githubusercontent.com/DenverCoder1/Responsive-Birthday-Card/main/birthday.svg"
                     alt="birthday" class="birthday">
-                <h1>Happy Birthday! ({{ tday }})</h1>
+                <h1>Happy Birthday! ({{ tday }}) {{ count }}</h1>
             </div>
             <div class="cards">
                 {% for i in date %}
@@ -37,6 +37,37 @@
                     <!-- Content Area End -->
                 </div>
                 {% endfor %}
+                {% if is_paginated %}
+                                    <!-- Pagination Begin -->
+                                    <div class="col-12 wow fadeIn" data-wow-duration="1s">
+                                        <ul class="pagination justify-content-center">
+                                            {% if page_obj.has_previous %}
+                                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% for num in page_obj.paginator.page_range %}
+                                                {% if page_obj.number == num %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if page_obj.has_next %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                    <!-- Pagination End -->
+                                    {% endif %}
             </div>
         </section>
     {% endblock content %}
