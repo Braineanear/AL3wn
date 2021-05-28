@@ -4,7 +4,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from users.views import register, career, profile
+from users.views import register, career, profile, AllUsers
 
 # Improving DJ Admin
 admin.site.site_title = 'AM6 Site Admin'
@@ -19,6 +19,7 @@ urlpatterns = [
     path('new/', include('reserve.urls')),
     path('careers/', career, name='Career'),
     path('register/', register , name="Register"),
+    path('u/<year>/', AllUsers.as_view()),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html') , name="Login"),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html') , name="Logout"),
     path('profile/', profile, name='Profile'),

@@ -1,10 +1,15 @@
 from django.contrib import messages
+from django.views.generic import ListView
 from django.shortcuts import render, redirect
+from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
 
-
 from .forms import UserResgiterForm, UserUpdateForm, ProfileUpdateForm, ApplicantForm
+
+from core.views import AdminRequiredMixin
+
+User = get_user_model()
 
 def register(request):
 	if request.user.is_authenticated:
@@ -55,3 +60,20 @@ def career(request):
 	else:
 		form = ApplicantForm()
 	return render(request, 'users/career.html', {'form' : form, 'title' : _('Careers')})
+
+
+class AllUsers(AdminRequiredMixin, ListView):
+	template_name = 'core/birth.html'
+	context_object_name = 'date'
+	paginate_by = 12
+
+	def get_queryset(self, **kwargs):
+		return User.objects.all().filter(date_of_birth__year=str(self.kwargs['year']))
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(AllUsers, self).get_context_data(*args, **kwargs)
+		y = str(self.kwargs['year'])
+		count = User.objects.all().filter(date_of_birth__year=str(self.kwargs['year'])).count()
+		context['title'] = f"{y} Users"
+		context['count'] = count
+		return context
