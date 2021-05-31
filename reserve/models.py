@@ -85,6 +85,13 @@ class Class(models.Model):
 		else:
 			return False
 
+	def remaining(self):
+		num = self.max_number - self.number
+		if num > 100:
+			return 'Open'
+		else:
+			return num
+
 	class Meta:
 		verbose_name_plural = "classes"
 

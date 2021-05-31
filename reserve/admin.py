@@ -22,7 +22,21 @@ class ApplicantAdmin(admin.ModelAdmin):
     list_filter = ('gender','school_type','classe__is_online', 'classe__year',
      'classe__teacher','classe__teacher__subject',)
 
+class ClassAdmin(admin.ModelAdmin):
+	fieldsets = (
+        (_("Info"), {
+            'fields': ('name','uuid','teacher', 'is_privte', 'is_online', 'girls_only')
+        }),
+        (_('Number'), {
+            'fields': ('year', 'number','max_number', 'start_at', 'semster')
+        }))
+	list_display = ['name', 'uuid','remaining', 'has_place', 'is_privte', 'is_online', 'girls_only']
+	search_fields = ('name','uuid','teacher',)
+	ordering = ('start_at',)
+	list_filter = ('year', 'teacher', 'semster')
+
+
 admin.site.register(Year, YearAdmin)
 admin.site.register(Teacher)
-admin.site.register(Class)
+admin.site.register(Class, ClassAdmin)
 admin.site.register(Applicant, ApplicantAdmin)
