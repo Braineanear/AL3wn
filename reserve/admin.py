@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Year, Teacher, Class, Applicant
 from django.utils.translation import ugettext_lazy as _
 
+class YearAdmin(admin.ModelAdmin):
+	list_display = ['name', 'slug']
 
 class ApplicantAdmin(admin.ModelAdmin):
     fieldsets = (
@@ -20,7 +22,7 @@ class ApplicantAdmin(admin.ModelAdmin):
     list_filter = ('gender','school_type','classe__is_online', 'classe__year',
      'classe__teacher','classe__teacher__subject',)
 
-admin.site.register(Year)
+admin.site.register(Year, YearAdmin)
 admin.site.register(Teacher)
 admin.site.register(Class)
 admin.site.register(Applicant, ApplicantAdmin)
