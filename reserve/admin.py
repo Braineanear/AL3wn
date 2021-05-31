@@ -35,8 +35,13 @@ class ClassAdmin(admin.ModelAdmin):
 	ordering = ('start_at',)
 	list_filter = ('year', 'teacher', 'semster')
 
+class TeacherAdmin(admin.ModelAdmin):
+	list_display = ['name', 'slug', 'subject', 'rating']
+	list_filter = ('years', 'subject', 'address')
+	ordering = ('-rating',)
+
 
 admin.site.register(Year, YearAdmin)
-admin.site.register(Teacher)
+admin.site.register(Teacher, TeacherAdmin)
 admin.site.register(Class, ClassAdmin)
 admin.site.register(Applicant, ApplicantAdmin)
