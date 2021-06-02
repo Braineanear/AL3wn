@@ -425,6 +425,18 @@ def third_ehab_open(request):
 	context = {'title' : _('third Grade'),'link':link , 'publisher': publisher}
 	return render(request, 'bassem/perfect.html', context)
 
+# Anis Fawzy
+
+@login_required
+@user_passes_test(lambda u: u.groups.filter(name='Anis Sec.3').exists())
+def third_Anis_Fawzy(request):
+	publisher = 'Mr. Anis Fawzy'
+	link = 'https://am6.tech/'
+	exams = OuterExam.objects.all().filter(year='3', publisher='EA').order_by('-date_posted')
+	context = {'title' : _('third Grade'),'exams':exams, 'link': link, 'publisher': publisher}
+	return render(request, 'dash/exam_lesson.html', context)
+
+
 # Ehab Gaber
 
 @login_required

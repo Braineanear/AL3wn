@@ -15,6 +15,7 @@ Bassem_TYPES = (
 
 PUBLISHERS = (
 	('EE', 'Mr. Ehab El Shafey'),
+	('EA', 'Mr. Anis Fawzy'),
 	('EG', 'Mr. Ehab Gaber'),
 	('GA', 'Herr Ali Rashed'),
 	('GM', 'Herr Mohammed Abdel Atty'),
@@ -28,7 +29,8 @@ WRITERS = (
 	('AA', 'Ashraf'),
 	('HA', 'Hala'),
 	('MM', 'Maryam'),
-	('MG', 'Gouda')
+	('MG', 'Gouda'),
+	('A2', '2001')
 	)
 
 SCHOOL_YEAR = (
