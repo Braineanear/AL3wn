@@ -33,6 +33,7 @@ SUBJECT_CHOICE=(
 	('Chinese', 'Chinese'),
 	('Spanish', 'Spanish'),
 	('Studies', 'Studies'),
+	('None', 'None'),
 	)
 
 category_choice=(
