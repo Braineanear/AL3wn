@@ -376,7 +376,13 @@ class VideosBassem(ListView):
 		context['title'] = "Videos"
 		return context
 
-class Firsts(ListView):
+
+def firsts(request):
+	context = {'title' : _('Firsts')}
+	return render (request, 'bassem/firsts.html', context)
+
+
+class Firsts01(ListView):
 	template_name = 'core/firsts.html'
 	context_object_name = 'date'
 
@@ -384,7 +390,20 @@ class Firsts(ListView):
 		return User.objects.all().filter(groups__name__exact='test')
 
 	def get_context_data(self, *args, **kwargs):
-		context = super(Firsts, self).get_context_data(*args, **kwargs)
+		context = super(Firsts01, self).get_context_data(*args, **kwargs)
+		context['title'] = "Firsts"
+		return context
+
+
+class Firsts02(ListView):
+	template_name = 'core/firsts.html'
+	context_object_name = 'date'
+
+	def get_queryset(self):
+		return User.objects.all().filter(groups__name__exact='test1')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(Firsts02, self).get_context_data(*args, **kwargs)
 		context['title'] = "Firsts"
 		return context
 
