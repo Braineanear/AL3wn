@@ -13,6 +13,9 @@ from django.views.generic import ListView
 from .models import OuterExam, HalemURL, HerrShadyURL, HerrAliURL, MrEhabURL, HerrMURL, BassemURL, BassemYouTubeURL, HerrKhaledURL
 
 from users.models import Applicant
+from reserve.models import Applicant as NewStudent
+from reserve.models import Teacher
+
 
 User = get_user_model()
 
@@ -22,10 +25,18 @@ def home(request):
 	return render (request, 'core/index.html', context)
 
 def about(request):
-	usernumb = User.objects.all().count() + Applicant.objects.all().count()
+	usernumb0 = User.objects.all().count() + Applicant.objects.all().count()
+	usernumb = 0
+	for i in Group.objects.all():
+		num = i.user_set.count()
+		usernumb = usernumb + num
+
+	ALL = usernumb + usernumb0 + NewStudent.objects.all().count()
 	courses = Group.objects.all().count()
 	staff = User.objects.all().filter(is_staff=True).count()
-	context = {'usernumb' : usernumb, 'courses': courses, 'staff':staff ,'title' : _('About Us')}
+	teach = Teacher.objects.all().count() * 2
+	context = {'usernumb' : ALL, 'courses': courses, 'teach':teach,
+	 'staff':staff , 'title' : _('About Us')}
 	return render (request, 'core/about.html', context)
 
 def dev(request):
