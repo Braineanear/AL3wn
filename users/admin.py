@@ -119,8 +119,11 @@ class GroupAdmin(originalGroupAdmin):
     Customized GroupAdmin class that uses the customized form to allow
     management of users within a group.
     """
+    def user_count(self, obj):
+        return obj.user_set.count()
+
     form = GroupAdminForm
-    list_display = ["name", "pk"]
+    list_display = ["name", 'user_count']
 
 
 class ApplicantAdmin(admin.ModelAdmin):
