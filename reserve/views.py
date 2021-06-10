@@ -52,11 +52,20 @@ def All(request, teacher, year):
 				s = applicant.classe.year.slug
 				num = applicant.classe.number
 				num = num+1
+				dede = f'{d}{s}{num}'
+				try:
+					Applicant.objects.get(uuid=dede)
+				except Applicant.DoesNotExist:
+					applicant.uuid = dede
+				else:
+					num = num + 1
+					dede = f'{d}{s}{num}'
+					applicant.uuid = dede	
+
 				pks = applicant.classe.pk
 				clas = get_object_or_404(Class, pk=pks)
 				clas.number = num
 				clas.save()
-				applicant.uuid = f'{d}{s}{num}'
 				i = applicant.uuid
 				form.save()
 				messages.success(request, f'Your account has been Updated')
