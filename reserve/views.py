@@ -17,6 +17,7 @@ from .forms import ApplicantForm
 
 
 from xhtml2pdf import pisa
+from excel_response import ExcelResponse
 
 
 class Home(ListView):
@@ -112,6 +113,12 @@ class ApplicantListView(StaffRequiredMixin, ListView):
 		context['sece'] = sece
 		context['third'] = third
 		return context
+
+
+def excelview(request, *args, **kwargs):
+	objs = Applicant.objects.all().filter(classe__teacher_id__slug=kwargs.get('teacher')).order_by('-timestamp')
+	return ExcelResponse(objs)
+
 
 def applicant_render_pdf_view(request, *args, **kwargs):
 	uuid = kwargs.get('uuid')

@@ -7,13 +7,17 @@ chardet==4.0.0
 dj-database-url==0.5.0
 Django==3.2.3
 django-crispy-forms==1.11.2
+django-excel-response==2.0.5
 django-heroku==0.3.1
 django-storages==1.11.1
+et-xmlfile==1.1.0
 future==0.18.2
 gunicorn==20.1.0
 html5lib==1.1
 idna==2.10
+jdcal==1.4.1
 jmespath==0.10.0
+openpyxl==2.4.11
 Pillow==8.2.0
 psycopg2==2.8.6
 PyPDF2==1.26.0
