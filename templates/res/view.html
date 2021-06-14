@@ -21,8 +21,8 @@
 							<div class="counter__item">
 								<div class="counter__item__text">
 									<img src="{% static 'core/images/ci-2.png' %}" alt="">
-									<h2 class="counter_num">{{first}}</h2>
-									<p>{% translate "First Year" %}</p>
+									<h2 class="counter_num">{{full}}</h2>
+									<p>{% translate "All Students" %}</p>
 								</div>
 							</div>
 						</div>
@@ -30,8 +30,9 @@
 							<div class="counter__item second__item">
 								<div class="counter__item__text">
 									<img src="{% static 'core/images/ci-2.png' %}" alt="">
-									<h2 class="counter_num">{{sece}}</h2>
-									<p>{% translate "Second Year" %}</p>
+									<!-- <h2 class="counter_num">{{sece}}</h2> -->
+									<h2 class="counter_num">{{ N12 }}</h2>
+									<p>{{ L12 }}</p>
 								</div>
 							</div>
 						</div>
@@ -39,8 +40,8 @@
 							<div class="counter__item third__item">
 								<div class="counter__item__text">
 									<img src="{% static 'core/images/ci-2.png' %}" alt="">
-									<h2 class="counter_num">{{third}}</h2>
-									<p>{% translate "Third Year" %}</p>
+									<h2 class="counter_num">{{ N11 }}</h2>
+									<p>{{ L11 }}</p>
 								</div>
 							</div>
 						</div>
@@ -48,8 +49,8 @@
 							<div class="counter__item four__item">
 								<div class="counter__item__text">
 									<img src="{% static 'core/images/ci-2.png' %}" alt="">
-									<h2 class="counter_num">{{full}}</h2>
-									<p>{% translate "All Students" %}</p>
+									<h2 class="counter_num">{{ N10 }}</h2>
+									<p>{{ L10 }}</p>
 								</div>
 							</div>
 						</div>
@@ -57,6 +58,150 @@
 				</div>
 			</div>
 		</section>
+
+			{% if L06 is True or L07 is True or L08 is True or L09 is True %}
+			<div class="container">
+				<div class="counter__content">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N09 }}</h2>
+									<p>{{ L09 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item second__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<!-- <h2 class="counter_num">{{sece}}</h2> -->
+									<h2 class="counter_num">{{ N08 }}</h2>
+									<p>{{ L08 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item third__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N07 }}</h2>
+									<p>{{ L07 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item four__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N06 }}</h2>
+									<p>{{ L06 }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+
+		{% if L02 is True or L03 is True or L04 is True or L05 is True %}
+
+		<section class="counter">
+			<div class="container">
+				<div class="counter__content">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{N05}}</h2>
+									<p>{{L05}}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item second__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<!-- <h2 class="counter_num">{{sece}}</h2> -->
+									<h2 class="counter_num">{{ N04 }}</h2>
+									<p>{{ L04 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item third__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N03 }}</h2>
+									<p>{{ L03 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item four__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N02 }}</h2>
+									<p>{{ L02 }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endif %}
+
+		{% if L01 is True or L3 is True or L00 is True or L0 is True %}
+		<section class="counter">
+			<div class="container">
+				<div class="counter__content">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{N01}}</h2>
+									<p>{{L01}}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item second__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<!-- <h2 class="counter_num">{{sece}}</h2> -->
+									<h2 class="counter_num">{{ N3 }}</h2>
+									<p>{{ L3 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item third__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N00 }}</h2>
+									<p>{{ L00 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="counter__item four__item">
+								<div class="counter__item__text">
+									<img src="{% static 'core/images/ci-2.png' %}" alt="">
+									<h2 class="counter_num">{{ N0 }}</h2>
+									<p>{{ L0 }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endif %}
+
 		<!-- Counter Section End -->
 		<section>
 			<div class="limiter">

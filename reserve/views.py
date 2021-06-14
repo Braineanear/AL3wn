@@ -12,7 +12,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
-from .models import Applicant, Teacher, Class
+from .models import Applicant, Teacher, Class, Year
 from .forms import ApplicantForm
 
 
@@ -101,17 +101,15 @@ class ApplicantListView(StaffRequiredMixin, ListView):
 	def get_context_data(self, *args, **kwargs):
 		context = super(ApplicantListView, self).get_context_data(*args, **kwargs)
 		full = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher']).count()
-		first = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
-			classe__year__slug=10).count()
-		sece = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
-			classe__year__slug=11).count()
-		third = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
-			classe__year__slug=12).count()
+		ys = Year.objects.all().filter(teacher__slug=self.kwargs['teacher'])
+		for y in ys:
+			context[f'L{y.slug}'] = y.name
+			context[f'N{y.slug}'] = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
+			classe__year__slug=y.slug).count()
+
 		context['title'] = self.kwargs['teacher']
 		context['full'] = full
-		context['first'] = first
-		context['sece'] = sece
-		context['third'] = third
+
 		return context
 
 
