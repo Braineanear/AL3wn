@@ -45,35 +45,43 @@ def All(request, teacher, year):
 		form = ApplicantForm(request.POST)
 		if form.is_valid():
 			applicant = form.save(commit=False)
-			if applicant.classe.has_place():
-				numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-				passcode = ''.join(random.choice(numbers) for i in range(6))
-				applicant.passcode = passcode
-				d = applicant.classe.uuid
-				s = applicant.classe.year.slug
-				num = applicant.classe.number
-				num = num+1
-				dede = f'{d}{s}{num}'
-				try:
-					Applicant.objects.get(uuid=dede)
-				except Applicant.DoesNotExist:
-					applicant.uuid = dede
-				else:
-					num = num + 1
+			b = applicant.name
+			try:
+				Applicant.objects.get(name=b)
+			except Applicant.DoesNotExist:
+				if applicant.classe.has_place():
+					numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+					passcode = ''.join(random.choice(numbers) for i in range(6))
+					applicant.passcode = passcode
+					d = applicant.classe.uuid
+					s = applicant.classe.year.slug
+					num = applicant.classe.number
+					num = num+1
 					dede = f'{d}{s}{num}'
-					applicant.uuid = dede	
+					try:
+						Applicant.objects.get(uuid=dede)
+					except Applicant.DoesNotExist:
+						applicant.uuid = dede
+					else:
+						num = num + 1
+						dede = f'{d}{s}{num}'
+						applicant.uuid = dede	
 
-				pks = applicant.classe.pk
-				clas = get_object_or_404(Class, pk=pks)
-				clas.number = num
-				clas.save()
-				i = applicant.uuid
-				form.save()
-				messages.success(request, f'Your account has been Updated')
-				return redirect(f'/new/report/{i}')
+					pks = applicant.classe.pk
+					clas = get_object_or_404(Class, pk=pks)
+					clas.number = num
+					clas.save()
+					i = applicant.uuid
+					form.save()
+					messages.success(request, f'Your account has been Updated')
+					return redirect(f'/new/report/{i}')
+				else:
+					messages.warning(request, f'This Class is Full. Try joining another Class!')
+					return HttpResponseRedirect('#')
 			else:
-				messages.warning(request, f'This Class is Full. Try joining another Class!')
-				return HttpResponseRedirect('#')
+				messages.warning(request, f'You already have joined this Class!')
+				haha = Applicant.objects.get(name=b)
+				return redirect(f'/new/report/{haha.uuid}')
 	else:
 		form = ApplicantForm()
 		form.fields['classe'].queryset = Class.objects.all().filter(teacher_id__slug=teacher,
