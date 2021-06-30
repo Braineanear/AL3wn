@@ -17,7 +17,8 @@ SCHOOL_YEAR = (
 POSITIONS_CHOICE = (
 	('PR', "PR"),
 	("Customer Service", "Customer Service"),
-	('technical support agent', 'technical support agent')
+	("Graphic Designer", "Graphic Designer"),
+	('technical support agent', 'technical support agent'),
 	)
 
 class User(AbstractUser):
@@ -75,6 +76,7 @@ class Applicant(models.Model):
 	personal_image = models.ImageField(upload_to='applicant_pics')
 	date_of_birth = models.DateField(_('Date of Birth'))
 	address = models.CharField(_('Address'), max_length=512)
+	link = models.URLField(blank=True, null=True)
 	phone_number = models.FloatField(_('Phone Number'))
 	a_phone_number = models.FloatField(_('Phone Number (optional)'), blank=True, null=True)
 	national_id = models.FloatField(_('National Id'), unique=True)
@@ -84,7 +86,7 @@ class Applicant(models.Model):
 	gender = models.CharField(_('Gender'), choices=GENDER_CHOICE, max_length=255)
 	why = models.TextField(_('Why Do you want to join us?'))
 	how = models.TextField(_("How did you know about us"))
-	what = models.TextField(_('What Skills do you have besides PR skills?'))
+	what = models.TextField(_('What Skills do you have besides the requirements?'))
 	position = models.CharField(_('Position'), choices=POSITIONS_CHOICE,
 	 max_length=255)
 	timestamp = models.DateTimeField(auto_now_add=True)

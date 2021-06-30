@@ -81,10 +81,11 @@ class ApplicantForm(forms.ModelForm):
 		widget=forms.Textarea, min_length=20)
 	why = forms.CharField(label=_('Why Do you want to join us?'),
 		widget=forms.Textarea, min_length=20)
+	link = forms.CharField(label=_("Online link for your work (Website/FB Page/behance...etc)"))
 	class Meta:
 		model = Applicant
 		fields = ['full_name', 'email', 'date_of_birth',
 		'gender','position', 'available', 'personal_image',
-		'address', 'phone_number','a_phone_number',
+		'address', 'link' ,'phone_number','a_phone_number',
 		'national_id', 'college', 'year',
 		'how', 'what', 'why']
