@@ -77,7 +77,7 @@ class ApplicantForm(forms.ModelForm):
 	max_value=10)
 	how = forms.CharField(label=_("How did you know about us"),
 		widget=forms.Textarea, min_length=20)
-	what = forms.CharField(label=_('What Skills do you have besides PR skills?'),
+	what = forms.CharField(label=_('What Skills do you have besides the requirements?'),
 		widget=forms.Textarea, min_length=20)
 	why = forms.CharField(label=_('Why Do you want to join us?'),
 		widget=forms.Textarea, min_length=20)
