@@ -11,6 +11,9 @@ class ApplicantForm(forms.ModelForm):
 	phone_number = forms.FloatField(label=_('Phone Number'),
 	max_value=1599999999, min_value=101111111)
 	# classe = forms.ModelChoiceField(Class.objects.none(), widget=forms.RadioSelect)
+	name = forms.CharField(label=_('Full Name (Write in English Please!)'))
+	address = forms.CharField(label=_('Address (Write in English Please!)'))
+	classe = forms.CharField(label=_('Class/Group'))
 
 	class Meta:
 		model = Applicant
