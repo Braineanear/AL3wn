@@ -76,7 +76,7 @@ class Applicant(models.Model):
 	personal_image = models.ImageField(upload_to='applicant_pics')
 	date_of_birth = models.DateField(_('Date of Birth'))
 	address = models.CharField(_('Address'), max_length=512)
-	link = models.URLField(blank=True, null=True)
+	link = models.URLField(_('Link'), blank=True, null=True)
 	phone_number = models.FloatField(_('Phone Number'))
 	a_phone_number = models.FloatField(_('Phone Number (optional)'), blank=True, null=True)
 	national_id = models.FloatField(_('National Id'), unique=True)
