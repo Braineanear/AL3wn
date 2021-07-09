@@ -127,21 +127,13 @@ class GroupAdmin(originalGroupAdmin):
 
 
 class ApplicantAdmin(admin.ModelAdmin):
-    add_fieldsets = (
-        (None, {
-            'fields': ('full_name', 'personal_image', 'date_of_birth',
-        'address', 'phone_number','a_phone_number', 'email',
-        'national_id', 'available', 'college', 'year', 'gender',
-        'why', 'how', 'what' ,'position')
-        })
-    )
     fieldsets = (
         (_('Pic'), {
             'fields': ('personal_image', 'image_tag')
         }),
         (_("Info"), {
             'fields': ('full_name','address',
-        'phone_number','a_phone_number', 'email',
+        'phone_number','a_phone_number', 'email', 'link',
         'national_id', 'available', 'college', 'year', 'gender',
         'why', 'how', 'what' ,'position')
         }),
