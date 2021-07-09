@@ -13,7 +13,6 @@ class ApplicantForm(forms.ModelForm):
 	# classe = forms.ModelChoiceField(Class.objects.none(), widget=forms.RadioSelect)
 	name = forms.CharField(label=_('Full Name (Write in English Please!)'))
 	address = forms.CharField(label=_('Address (Write in English Please!)'))
-	classe = forms.CharField(label=_('Class/Group'))
 
 	class Meta:
 		model = Applicant
