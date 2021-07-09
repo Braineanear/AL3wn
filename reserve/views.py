@@ -13,7 +13,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 from .models import Applicant, Teacher, Class, Year
-from .forms import ApplicantForm
+from .forms import ApplicantForm, FilterForm
 
 
 from xhtml2pdf import pisa
@@ -33,11 +33,45 @@ class Home(ListView):
 		full = Applicant.objects.all().count()
 		classes = Class.objects.all().count()
 		Teachers = Teacher.objects.all().count()
+		context['form'] = FilterForm
 		context['title'] = "New Students"
 		context['full'] = full
 		context['classes'] = classes
 		context['Teachers'] = Teachers
 		return context
+
+	def post(self, request):
+		form = FilterForm(request.POST)
+		if form.is_valid():
+			answer = form.cleaned_data.get('subject')
+			return redirect('ReserveSubject', subject=answer)
+
+
+class SubjectFilter(ListView):
+	template_name = 'res/index.html'
+	context_object_name = 'teachers'
+	paginate_by = 10
+
+	def get_queryset(self, **kwargs):
+		return Teacher.objects.all().filter(subject=self.kwargs['subject']).order_by('-rating')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(SubjectFilter, self).get_context_data(*args, **kwargs)
+		full = Applicant.objects.all().count()
+		classes = Class.objects.all().count()
+		Teachers = Teacher.objects.all().count()
+		context['form'] = FilterForm
+		context['title'] = f"New Students {self.kwargs['subject']} Only"
+		context['full'] = full
+		context['classes'] = classes
+		context['Teachers'] = Teachers
+		return context
+
+	def post(self, request, **kwargs):
+		form = FilterForm(request.POST)
+		if form.is_valid():
+			answer = form.cleaned_data.get('subject')
+			return redirect('ReserveSubject', subject=answer)
 
 
 def All(request, teacher, year):
