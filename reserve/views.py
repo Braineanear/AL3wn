@@ -155,6 +155,30 @@ class ApplicantListView(StaffRequiredMixin, ListView):
 		return context
 
 
+class ClassListView(StaffRequiredMixin, ListView):
+	template_name = 'res/view.html'
+	context_object_name = 'students'
+	paginate_by = 100
+
+	def get_queryset(self, **kwargs):
+		return Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
+		classe__uuid=self.kwargs['classe']).order_by('-timestamp')
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(ClassListView, self).get_context_data(*args, **kwargs)
+		full = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher']).count()
+		ys = Year.objects.all().filter(teacher__slug=self.kwargs['teacher'])
+		for y in ys:
+			context[f'L{y.slug}'] = y.name
+			context[f'N{y.slug}'] = Applicant.objects.all().filter(classe__teacher_id__slug=self.kwargs['teacher'],
+			classe__year__slug=y.slug).count()
+
+		context['title'] = self.kwargs['teacher']
+		context['full'] = full
+
+		return context
+
+
 def excelview(request, *args, **kwargs):
 	objs = Applicant.objects.all().filter(classe__teacher_id__slug=kwargs.get('teacher')).order_by('-timestamp')
 	return ExcelResponse(objs)

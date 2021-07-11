@@ -6,6 +6,7 @@ urlpatterns  =  [
 	path("<str:subject>/", views.SubjectFilter.as_view(), name='ReserveSubject'),
 	path("view/", views.ApplicantListView.as_view(), name='view'),
 	path("view/<slug:teacher>/", views.ApplicantListView.as_view(), name='ViewTeacher'),
+	path("view/<slug:teacher>/<classe>/", views.ClassListView.as_view(), name='ViewClass'),
 	path("view/<slug:teacher>/excel/", views.excelview, name='Excel'),
 	path("report/", views.render_pdf_view, name='report'),
 	path("report/<uuid>", views.applicant_render_pdf_view, name='Report'),
