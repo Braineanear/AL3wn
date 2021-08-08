@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br><br><br><br><br>
+{% for i in students %}
+
+									<p>{{ i.username }}</p>
+							{% endfor %}
+
+							{% if is_paginated %}
+                                    <!-- Pagination Begin -->
+                                    <div class="col-12 wow fadeIn" data-wow-duration="1s">
+                                        <ul class="pagination justify-content-center">
+                                            {% if page_obj.has_previous %}
+                                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% for num in page_obj.paginator.page_range %}
+                                                {% if page_obj.number == num %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if page_obj.has_next %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                    <!-- Pagination End -->
+                                    {% endif %}
+{% endblock content %}
