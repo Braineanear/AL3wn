@@ -17,6 +17,7 @@ urlpatterns = [
     path('fb_bot/', include('fb_bot.urls')),
     path('', include('core.urls')),
     path('new/', include('reserve.urls')),
+    path('report/', include('report.urls')),
     path('careers/', career, name='Career'),
     path('register/', register , name="Register"),
     path('u/<year>/', AllUsers.as_view()),
