@@ -48,7 +48,7 @@
             
               <!-- Start Button -->
              {% for year in teacher.years.all %}
-                <a href="{% url 'Form' teacher=teacher.slug year=year.slug %}" class="join-teacher btn btn-solid-border btn-round-full">{{ year.name }}</a>
+                <a href="{% url 'Year' teacher=teacher.slug year=year.slug %}" class="join-teacher btn btn-solid-border btn-round-full">{{ year.name }}</a>
             {% endfor %}
           </div>
           <!-- Content Area End -->
