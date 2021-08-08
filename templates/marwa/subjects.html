@@ -1,0 +1,403 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% load static %}
+    {% block content %}
+        <section class="latest mt-5">
+            <div class="w-100 text-center">
+                <h1>Latest Videos</h1>
+            </div>
+            <div class="latest-videos slider m-5">
+                {% for i in videos %}
+                    {% if i.featured == True %}
+                    <div class="slide">
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/{{ i.video_id }}"><img
+                                class="videoThumb" src="https://img.youtube.com/vi/{{ i.video_id }}/default.jpg
+                                    "></a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="subjects mt-5">
+            <div class="container">
+                <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="maintab1-tab" data-toggle="pill" href="#maintab1"
+                            role="tab" aria-controls="maintab1" aria-selected="true">الصف الأول الثانوي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab2-tab" data-toggle="pill" href="#maintab2" role="tab"
+                            aria-controls="maintab2" aria-selected="false">الصف الثاني الثانوي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab3-tab" data-toggle="pill" href="#maintab3" role="tab"
+                            aria-controls="maintab3" aria-selected="false">الصف الثالث الثانوي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab4-tab" data-toggle="pill" href="#maintab4" role="tab"
+                            aria-controls="maintab4" aria-selected="false">النحو</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab5-tab" data-toggle="pill" href="#maintab5" role="tab"
+                            aria-controls="maintab5" aria-selected="false">البلاغة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab6-tab" data-toggle="pill" href="#maintab6" role="tab"
+                            aria-controls="maintab6" aria-selected="false">المتحرر</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab7-tab" data-toggle="pill" href="#maintab7" role="tab"
+                            aria-controls="maintab7" aria-selected="false">ارتق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab8-tab" data-toggle="pill" href="#maintab8" role="tab"
+                            aria-controls="maintab8" aria-selected="false">دقيقتين وبس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab9-tab" data-toggle="pill" href="#maintab9" role="tab"
+                            aria-controls="maintab9" aria-selected="false">تكات نحوية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maintab10-tab" data-toggle="pill" href="#maintab10"
+                            role="tab" aria-controls="maintab10" aria-selected="false">تحفيزي ومنوع</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="maintab1" role="tabpanel"
+                        aria-labelledby="maintab1-tab">
+                        <ul class="sub nav justify-content-center nav-pills my-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="maintab1-subtab1-tab" data-toggle="pill"
+                                    href="#maintab1-subtab1" role="tab" aria-controls="maintab1-subtab1"
+                                    aria-selected="true">نحو</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab1-subtab2-tab" data-toggle="pill"
+                                    href="#maintab1-subtab2" role="tab" aria-controls="maintab1-subtab2"
+                                    aria-selected="false">بلاغة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab1-subtab3-tab" data-toggle="pill"
+                                    href="#maintab1-subtab3" role="tab" aria-controls="maintab1-subtab3"
+                                    aria-selected="false">متحرر</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab1-subtab4-tab" data-toggle="pill"
+                                    href="#maintab1-subtab4" role="tab" aria-controls="maintab1-subtab4"
+                                    aria-selected="false">أدب</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab1-subtab5-tab" data-toggle="pill"
+                                    href="#maintab1-subtab5" role="tab" aria-controls="maintab1-subtab5"
+                                    aria-selected="false">منوعات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab1-subtab6-tab" data-toggle="pill"
+                                    href="#maintab1-subtab6" role="tab" aria-controls="maintab1-subtab6"
+                                    aria-selected="false">تحفيزي</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab1' %}
+                                <div class="tab-pane fade" id="maintab1-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="maintab1-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="maintab2" role="tabpanel" aria-labelledby="maintab2-tab">
+                        <ul class="sub nav justify-content-center nav-pills my-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="maintab2-subtab1-tab" data-toggle="pill"
+                                    href="#maintab2-subtab1" role="tab" aria-controls="maintab2-subtab1"
+                                    aria-selected="true">نحو</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab2-subtab2-tab" data-toggle="pill"
+                                    href="#maintab2-subtab2" role="tab" aria-controls="maintab2-subtab2"
+                                    aria-selected="false">بلاغة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab2-subtab3-tab" data-toggle="pill"
+                                    href="#maintab2-subtab3" role="tab" aria-controls="maintab2-subtab3"
+                                    aria-selected="false">متحرر</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab2-subtab4-tab" data-toggle="pill"
+                                    href="#maintab2-subtab4" role="tab" aria-controls="maintab2-subtab4"
+                                    aria-selected="false">أدب</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab2-subtab5-tab" data-toggle="pill"
+                                    href="#maintab2-subtab5" role="tab" aria-controls="maintab2-subtab5"
+                                    aria-selected="false">منوعات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab2-subtab6-tab" data-toggle="pill"
+                                    href="#maintab2-subtab6" role="tab" aria-controls="maintab2-subtab6"
+                                    aria-selected="false">تحفيزي</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab2' %}
+                                <div class="tab-pane fade" id="maintab2-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="maintab2-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="maintab3" role="tabpanel" aria-labelledby="maintab3-tab">
+                        <ul class="sub nav justify-content-center nav-pills my-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="maintab3-subtab1-tab" data-toggle="pill"
+                                    href="#maintab3-subtab1" role="tab" aria-controls="maintab3-subtab1"
+                                    aria-selected="true">نحو</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab3-subtab2-tab" data-toggle="pill"
+                                    href="#maintab3-subtab2" role="tab" aria-controls="maintab3-subtab2"
+                                    aria-selected="false">بلاغة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab3-subtab3-tab" data-toggle="pill"
+                                    href="#maintab3-subtab3" role="tab" aria-controls="maintab3-subtab3"
+                                    aria-selected="false">متحرر</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab3-subtab4-tab" data-toggle="pill"
+                                    href="#maintab3-subtab4" role="tab" aria-controls="maintab3-subtab4"
+                                    aria-selected="false">أدب</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab3-subtab5-tab" data-toggle="pill"
+                                    href="#maintab3-subtab5" role="tab" aria-controls="maintab3-subtab5"
+                                    aria-selected="false">منوعات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab3-subtab6-tab" data-toggle="pill"
+                                    href="#maintab3-subtab6" role="tab" aria-controls="maintab3-subtab6"
+                                    aria-selected="false">تحفيزي</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab3' %}
+                                <div class="tab-pane fade" id="maintab3-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="maintab3-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="maintab4" role="tabpanel" aria-labelledby="maintab4-tab">
+                        <ul class="sub nav justify-content-center nav-pills my-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="maintab4-subtab7-tab" data-toggle="pill"
+                                    href="#maintab4-subtab7" role="tab" aria-controls="maintab4-subtab7"
+                                    aria-selected="true">دقيقتين وبس</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id=maintab4-subtab8-tab" data-toggle="pill"
+                                    href="#maintab4-subtab8" role="tab" aria-controls="maintab4-subtab8"
+                                    aria-selected="false">تكات نحوية</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab4-subtab10-tab" data-toggle="pill"
+                                    href="#maintab4-subtab10" role="tab" aria-controls="maintab4-subtab10"
+                                    aria-selected="false">إعراب</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab4-subtab5-tab" data-toggle="pill"
+                                    href="#maintab4-subtab5" role="tab" aria-controls="maintab4-subtab5"
+                                    aria-selected="false">متنوع</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab4' %}
+                                <div class="tab-pane fade" id="maintab4-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="maintab4-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="maintab5" role="tabpanel" aria-labelledby="maintab5-tab">
+                        <ul class="sub nav justify-content-center nav-pills my-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="maintab5-subtab7-tab" data-toggle="pill"
+                                    href="#maintab5-subtab7" role="tab" aria-controls="maintab5-subtab7"
+                                    aria-selected="true">دقيقتين وبس</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab5-subtab11-tab" data-toggle="pill"
+                                    href="#maintab5-subtab11" role="tab" aria-controls="maintab5-subtab11"
+                                    aria-selected="false">دروس بلاغة</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab5' %}
+                                <div class="tab-pane fade" id="maintab5-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="maintab5-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="maintab6" role="tabpanel" aria-labelledby="maintab6-tab">
+                        <ul class="sub nav justify-content-center nav-pills my-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="maintab6-subtab9-tab" data-toggle="pill"
+                                    href="#maintab6-subtab9" role="tab" aria-controls="maintab6-subtab9"
+                                    aria-selected="true">ارتق</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="maintab6-subtab5-tab" data-toggle="pill"
+                                    href="#maintab6-subtab5" role="tab" aria-controls="maintab6-subtab5"
+                                    aria-selected="false">متنوع</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            {% for i in videos %}
+                                {% if i.main_sort == 'maintab6' %}
+                                <div class="tab-pane fade" id="maintab6-{{ i.sort2 }}" role="tabpanel"
+                                    aria-labelledby="maintab6-{{ i.sort2 }}-tab">
+                                    <section class="second">
+                                        <article class="video">
+                                            <figure>
+                                                <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                            </figure>
+                                            <h2 class="videoTitle">{{ i.title }}</h2>
+                                        </article>
+                                    </section>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="maintab7" role="tabpanel" aria-labelledby="maintab7-tab">
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab7' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="tab-pane fade" id="maintab8" role="tabpanel" aria-labelledby="maintab8-tab">
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab8' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="tab-pane fade" id="maintab9" role="tabpanel" aria-labelledby="maintab9-tab">
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab9' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="tab-pane fade" id="maintab10" role="tabpanel" aria-labelledby="maintab10-tab">
+                        {% for i in videos %}
+                            {% if i.main_sort == 'maintab10' %}
+                                <section class="second">
+                                    <article class="video">
+                                        <figure>
+                                            <a class="fancybox fancybox.iframe"
+                                                    href="//www.youtube.com/embed/{{ i.video_id }}"><img class="videoThumb"
+                                                        src="http://i1.ytimg.com/vi/{{ i.video_id }}/mqdefault.jpg"></a>
+                                        </figure>
+                                        <h2 class="videoTitle">{{ i.title }}</h2>
+                                    </article>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock content %}
