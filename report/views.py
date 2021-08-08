@@ -5,7 +5,9 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
 
-from reserve.models import Applicant, Teacher, Class, Year
+from .models import Class
+
+from reserve.models import Applicant, Teacher, Year
 from reserve.views import StaffRequiredMixin
 
 User = get_user_model()
@@ -26,11 +28,10 @@ class TeacherView(DetailView):
 
 class StudentListView(StaffRequiredMixin, ListView):
 	template_name = 'report/view.html'
-	context_object_name = 'students'
-	paginate_by = 100
+	context_object_name = 'class'
 
 	def get_queryset(self, **kwargs):
-		return Group.objects.get(name="Anis Sec.3").user_set.all()
+		return Class.objects.all().filter(teacher_id__slug=self.kwargs['teacher'], year_id__slug=self.kwargs['year'])
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(StudentListView, self).get_context_data(*args, **kwargs)

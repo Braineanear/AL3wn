@@ -1,13 +1,38 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% load crispy_forms_tags %}
-
 {% block content %}
-<br><br><br><br><br>
-{% for i in students %}
 
-									<p>{{ i.username }}</p>
-							{% endfor %}
+<style type="text/css">
+    fieldset {
+    border:1px solid ;
+    border-radius:20px;
+    box-shadow:0 0 10px #999;
+}
+    legend { 
+      display: block;
+      padding-left: 35%;
+      padding-right: 35%;    
+    }
+</style>
+
+<br><br><br><br><br>
+
+
+{% for i in class %}
+<div class="container classes">
+    <fieldset>
+  <legend>{{ i.name }}</legend>
+    <ol>
+    {% for s in i.students.all %}
+        <li>{{ s.get_full_name }} <a href="#" class="btn btn-info btn-round-full">{% translate "Edit" %}</a>  <a href="#" class="btn btn-success btn-round-full">{% translate "View" %}</a></li>
+        <br>
+    {% endfor %}                                 
+    </ol>
+</div>
+</fieldset>
+<br><br>
+{% endfor %}
 
 							{% if is_paginated %}
                                     <!-- Pagination Begin -->

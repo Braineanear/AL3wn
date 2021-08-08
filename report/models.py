@@ -24,7 +24,8 @@ class WorkDay(models.Model):
 	date = models.DateField()
 
 	def __str__(self):
-		return self.date
+		date = str(self.date)
+		return date
 
 
 class Class(models.Model):
@@ -54,7 +55,9 @@ class Class(models.Model):
 
 # TODO
 '''
+class exam
 class Grade
+when student change class, his grades stic with him
 class attendance
 class fee
 '''
