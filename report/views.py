@@ -1,11 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from django.views.generic import ListView, DetailView
 from django.contrib.auth.models import Group
+from django.forms import modelformset_factory
 from django.contrib.auth import get_user_model
+from django.views.generic import ListView, DetailView
+from django.contrib.auth.decorators import login_required
 
-from .models import Class
+from .models import Class, Fee
+# from .forms import FeeUpdateForm
 
 from reserve.models import Applicant, Teacher, Year
 from reserve.views import StaffRequiredMixin
@@ -38,3 +41,46 @@ class StudentListView(StaffRequiredMixin, ListView):
 		context['title'] = self.kwargs['teacher']
 
 		return context
+
+
+@login_required
+def StudentPage(request, *args, **kwargs):
+	teach = kwargs.get('teacher')
+	year = kwargs.get('year')
+	classe = kwargs.get('classe')
+	student = kwargs.get('student')
+	FeeFormSet = modelformset_factory(Fee, fields=('is_paid',))
+	if request.method == "POST":
+		feeformset = FeeFormSet(
+			request.POST, queryset=Fee.objects.all().filter(student__username=student, classa=classe).order_by('-month'),
+			)
+		if feeformset.is_valid():
+			feeformset.save()
+			messages.success(request, f'Your account has been Updated')
+	else:
+		feeformset = FeeFormSet(queryset=Fee.objects.all().filter(student__username=student, classa=classe).order_by('-month'))
+
+	namee = f'{teach} for {year} in {classe}: {student}'
+	context = {
+		'feeformset' : feeformset,
+		'title' : namee
+	}
+	return render(request, 'report/profile.html', context)
+
+
+	'''
+	if request.method == "POST":
+		user_form = UserUpdateForm(request.POST, instance=request.user)
+		profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
+		if user_form.is_valid() and profile_form.is_valid():
+			user_form.save()
+			profile_form.save()
+			messages.success(request, f'Your account has been Updated')
+			return redirect('Student')
+	else:
+		# grades
+		# Attendance
+		# Fee
+		user_form = UserUpdateForm(instance=request.user)
+		profile_form = ProfileUpdateForm(instance=request.user.profile)
+	'''

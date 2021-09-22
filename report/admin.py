@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
-from .models import Class, Day, WorkDay
+from .models import Class, Day, WorkDay, Fee
 
 
 class ClassAdmin(admin.ModelAdmin):
@@ -19,6 +19,10 @@ class ClassAdmin(admin.ModelAdmin):
 	search_fields = ('name','uuid','teacher',)
 	list_filter = ('year', 'teacher', 'semster', 'start_at')
 
+class FeeAdmin(admin.ModelAdmin):
+    list_filter = ['is_paid']
+
 admin.site.register(Day)
 admin.site.register(WorkDay)
+admin.site.register(Fee, FeeAdmin)
 admin.site.register(Class, ClassAdmin)
