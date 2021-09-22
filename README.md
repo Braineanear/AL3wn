@@ -12,7 +12,7 @@ activate the env with this command on
 mac/linux:
 
 ```
-source dj/bin/active
+source dj/bin/activate
 ```
 
 windows:
@@ -53,7 +53,7 @@ That will create a new folder `dj` in your project directory. Next activate it w
 mac/linux:
 
 ```
-source dj/bin/active
+source dj/bin/activate
 ```
 
 windows:
