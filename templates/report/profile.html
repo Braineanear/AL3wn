@@ -1,6 +1,7 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% load static %}
+{% load functions %}
 {% load crispy_forms_tags %}
     {% block content %}
        <div class="wrap" id="profile">
@@ -30,14 +31,11 @@
                 </span>
                 {% csrf_token %}
                 <legend class="border-bottom mb-4">{% translate "Update Info" %}</legend>
-                {{ feeformset.management_form }}
-                {% for form in feeformset %}
-                {% if not forloop.last %}
-                    {{ form.month }}
-                    {{form|crispy}}
-                    
-                {% endif %}
+                <ul>
+                {% for e in qs %}
+                    <li><input type="checkbox" disabled {{ e.is_paid|yesno:"checked,," }} /> {{ e.month|monthname }}</li>
                 {% endfor %}
+                </ul>
                 <!-- {{ profile_form|crispy }} -->
                 <div class="container-form-btn">
                     <div class="wrap-form-btn">
