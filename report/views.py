@@ -57,12 +57,13 @@ def StudentPage(request, *args, **kwargs):
 		if feeformset.is_valid():
 			feeformset.save()
 			messages.success(request, f'Your account has been Updated')
+		my_queryset = Fee.objects.all().filter(student__username=student, classa=classe).order_by('month')
 	else:
-		feeformset = FeeFormSet(queryset=Fee.objects.all().filter(student__username=student, classa=classe).order_by('-month'))
+		my_queryset = Fee.objects.all().filter(student__username=student, classa=classe).order_by('month')
 
 	namee = f'{teach} for {year} in {classe}: {student}'
 	context = {
-		'feeformset' : feeformset,
+		'qs' : my_queryset,
 		'title' : namee
 	}
 	return render(request, 'report/profile.html', context)

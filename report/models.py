@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.core.validators import MinValueValidator, MaxValueValidator
+from django.utils.dates import MONTHS
 from django.utils.translation import ugettext_lazy as _
 
 from reserve.models import Teacher, Year
@@ -10,22 +12,6 @@ SCHOOL_YEAR = (
 	('1', '1'),
 	('2', '2'),
 	('3', '3')
-	)
-
-
-MONTHS = (
-	('1', _('January')),
-	('2', _('February')),
-	('3', _('March')),
-	('4', _('April')),
-	('5', _('May')),
-	('6', _('June')),
-	('7', _('July')),
-	('8', _('August')),
-	('9', _('September')),
-	('10', _('October')),
-	('11', _('November')),
-	('12', _('December'))
 	)
 
 class Day(models.Model):
@@ -107,7 +93,7 @@ class Fee(models.Model):
 	timestamp = models.DateTimeField(auto_now_add=True)
 	student = models.ForeignKey(User, on_delete=models.CASCADE)
 	classa = models.ForeignKey(Class, on_delete=models.CASCADE)
-	month = models.CharField(choices=MONTHS, max_length=2)
+	month = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])
 	is_paid = models.BooleanField(default=False)
 
 	def __str__(self):

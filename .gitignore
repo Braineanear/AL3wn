@@ -1,6 +1,10 @@
 dj_noor
 shutter
 .vscode
+.idea
+dj
+.env
+env/
 # Created by https://www.gitignore.io/api/django
 # Edit at https://www.gitignore.io/?templates=django
 
@@ -8,7 +12,7 @@ shutter
 *.log
 *.pot
 *.pyc
-__pycache__/
+__pycache__
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
