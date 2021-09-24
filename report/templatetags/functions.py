@@ -7,4 +7,5 @@ register = template.Library()
 @register.filter(name='monthname')
 def monthname(value):
     """Removes all values of arg from the given string"""
-    return MONTHS[value]
+    print(MONTHS)
+    return MONTHS.get(value, value)
